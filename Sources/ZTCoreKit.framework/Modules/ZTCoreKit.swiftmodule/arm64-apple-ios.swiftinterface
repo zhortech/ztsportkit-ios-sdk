@@ -1,0 +1,1882 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTCoreKit
+import Alamofire
+import CoreBluetooth
+import CoreTelephony
+import Foundation
+import ObjectMapper
+import ObjectiveC
+import Swift
+import SystemConfiguration
+import UIKit
+import iOSDFULibrary
+import os.log
+import os
+extension Data {
+  public func macAddress() -> Swift.String?
+  public var hexDescription: Swift.String {
+    get
+  }
+  public init?(hex: Swift.String)
+  public func getUInt(offset: Swift.Int) -> Swift.UInt16
+  public func getFloat(offset: Swift.Int) -> Swift.Float
+  public func getByte(at index: Swift.Int) -> Swift.Int8
+  public func getUnsignedInteger(at index: Swift.Int, bigEndian: Swift.Bool = true) -> Swift.UInt32
+  public func getUnsignedInt16(at index: Swift.Int) -> Swift.UInt16
+  public func getUnsignedInt32(at index: Swift.Int, bigEndian: Swift.Bool = true) -> Swift.UInt32
+  public func getUnsignedLong(at index: Swift.Int, bigEndian: Swift.Bool = true) -> Swift.UInt64
+  public mutating func append(byte data: Swift.Int8)
+  public mutating func append(unsignedInteger data: Swift.UInt32, bigEndian: Swift.Bool = true)
+  public mutating func append(unsignedLong data: Swift.UInt64, bigEndian: Swift.Bool = true)
+}
+extension UserDefaults {
+  public subscript(key: ZTCoreKit.ZTDefaultsKey<Swift.Float>) -> Swift.Float {
+    get
+    set
+  }
+  public subscript(key: ZTCoreKit.ZTDefaultsKey<Swift.Double>) -> Swift.Double {
+    get
+    set
+  }
+  public subscript<T>(key: ZTCoreKit.ZTDefaultsKey<T>) -> T? {
+    get
+    set
+  }
+  public subscript(key: ZTCoreKit.ZTDefaultsKey<Swift.String>) -> Swift.String? {
+    get
+    set
+  }
+  public subscript(key: ZTCoreKit.ZTDefaultsKey<Foundation.Data>) -> Foundation.Data? {
+    get
+    set
+  }
+  public subscript(key: ZTCoreKit.ZTDefaultsKey<Foundation.Date>) -> Foundation.Date? {
+    get
+    set
+  }
+  public subscript(key: ZTCoreKit.ZTDefaultsKey<Foundation.URL>) -> Foundation.URL? {
+    get
+    set
+  }
+  public subscript(key: ZTCoreKit.ZTDefaultsKey<[Foundation.URL]>) -> [Foundation.URL]? {
+    get
+    set
+  }
+  public subscript(key: ZTCoreKit.ZTDefaultsKey<[Swift.String : Foundation.URL]>) -> [Swift.String : Foundation.URL]? {
+    get
+    set
+  }
+  public subscript<T>(key: ZTCoreKit.ZTDefaultsKey<T>) -> T? where T : Swift.Decodable, T : Swift.Encodable {
+    get
+    set
+  }
+  public subscript(key: Swift.String) -> Any? {
+    get
+    set(value)
+  }
+  public func value<T>(forKey key: Swift.String) -> T?
+  public func clear(_ key: Swift.String)
+  public func clear<T>(_ key: ZTCoreKit.ZTDefaultsKey<T>)
+  public func clearAll()
+}
+extension String {
+  public func binary(with character: Swift.String = "0", toLength length: Swift.Int = 8) -> Swift.String
+  public var fromBase64: Swift.String? {
+    get
+  }
+  public var toBase64: Swift.String {
+    get
+  }
+  public func serialNumber() -> Swift.String
+  public func fileName() -> Swift.String
+}
+extension Int {
+  public func toByteArray(size: Swift.Int = 4) -> [Swift.UInt8]
+}
+extension UInt8 {
+  public var bits: [Swift.UInt8] {
+    get
+  }
+  public var hexValue: Swift.String {
+    get
+  }
+}
+extension Double {
+  public var milliseconds: Swift.Int64 {
+    get
+  }
+}
+extension Array where Element == Swift.UInt8 {
+  public var hex: Swift.String {
+    get
+  }
+}
+extension Dictionary {
+  public func merge(dict: Swift.Dictionary<Key, Value>) -> Swift.Dictionary<Key, Value>
+}
+extension Date {
+  public var timestamp: Swift.Int64 {
+    get
+  }
+  public var apiFormat: Swift.String {
+    get
+  }
+}
+extension Array where Element : CoreBluetooth.CBPeripheral {
+  public func has(peripheral: CoreBluetooth.CBPeripheral) -> Swift.Bool
+}
+extension Array {
+  public func chunked(into size: Swift.Int = 1000) -> [[Element]]
+}
+extension Array where Element == Swift.String {
+  public func stringify() -> Swift.String
+}
+extension CBCharacteristic {
+  public func notifyValue(_ isEnabled: Swift.Bool)
+  public func readValue()
+  @discardableResult
+  public func write(_ data: Foundation.Data, writeType: CoreBluetooth.CBCharacteristicWriteType) -> Swift.Bool
+}
+public enum ZTEnvironment {
+  case dev
+  case staging
+  case production
+  public static func == (a: ZTCoreKit.ZTEnvironment, b: ZTCoreKit.ZTEnvironment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZTModuleSide : Swift.String {
+  case left
+  case right
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+final public class ZTSignal<T> {
+  public typealias ZTSignalCallback = (T) -> Swift.Void
+  final public var fireCount: Swift.Int {
+    get
+  }
+  final public var retainLastData: Swift.Bool {
+    get
+    set
+  }
+  final public var lastDataFired: T? {
+    get
+  }
+  final public var observers: [Swift.AnyObject] {
+    get
+  }
+  public init(retainLastData: Swift.Bool = false)
+  @discardableResult
+  final public func subscribe(with observer: Swift.AnyObject, callback: @escaping ZTCoreKit.ZTSignal<T>.ZTSignalCallback) -> ZTCoreKit.ZTSignalSubscription<T>
+  @discardableResult
+  final public func subscribeOnce(with observer: Swift.AnyObject, callback: @escaping ZTCoreKit.ZTSignal<T>.ZTSignalCallback) -> ZTCoreKit.ZTSignalSubscription<T>
+  @discardableResult
+  final public func subscribePast(with observer: Swift.AnyObject, callback: @escaping ZTCoreKit.ZTSignal<T>.ZTSignalCallback) -> ZTCoreKit.ZTSignalSubscription<T>
+  @discardableResult
+  final public func subscribePastOnce(with observer: Swift.AnyObject, callback: @escaping ZTCoreKit.ZTSignal<T>.ZTSignalCallback) -> ZTCoreKit.ZTSignalSubscription<T>
+  final public func fire(_ data: T)
+  final public func cancelSubscription(for observer: Swift.AnyObject)
+  final public func cancelAllSubscriptions()
+  final public func clearLastData()
+  @objc deinit
+}
+extension ZTSignal where T == Swift.Void {
+  final public func fire()
+}
+@_hasMissingDesignatedInitializers final public class ZTSignalSubscription<T> {
+  public typealias ZTSignalCallback = (T) -> Swift.Void
+  public typealias ZTSignalFilter = (T) -> Swift.Bool
+  weak final public var observer: Swift.AnyObject?
+  final public var once: Swift.Bool
+  @discardableResult
+  final public func filter(_ predicate: @escaping ZTCoreKit.ZTSignalSubscription<T>.ZTSignalFilter) -> ZTCoreKit.ZTSignalSubscription<T>
+  @discardableResult
+  final public func sample(every sampleInterval: Foundation.TimeInterval) -> ZTCoreKit.ZTSignalSubscription<T>
+  @discardableResult
+  final public func onQueue(_ queue: Dispatch.DispatchQueue) -> ZTCoreKit.ZTSignalSubscription<T>
+  final public func cancel()
+  @objc deinit
+}
+infix operator => : AssignmentPrecedence
+public func => <T>(signal: ZTCoreKit.ZTSignal<T>, data: T)
+public class ZTDateTransform : ObjectMapper.TransformType {
+  public typealias Object = Foundation.Date
+  public typealias JSON = Swift.String
+  public init()
+  public func transformFromJSON(_ value: Any?) -> Foundation.Date?
+  public func transformToJSON(_ value: Foundation.Date?) -> Swift.String?
+  @objc deinit
+}
+public class ZTDateTransformUTC : ObjectMapper.TransformType {
+  public typealias Object = Foundation.Date
+  public typealias JSON = Swift.String
+  public init()
+  public func transformFromJSON(_ value: Any?) -> Foundation.Date?
+  public func transformToJSON(_ value: Foundation.Date?) -> Swift.String?
+  @objc deinit
+}
+open class ZTCharacteristic {
+  weak public var service: ZTCoreKit.ZTService? {
+    get
+  }
+  public var value: Foundation.Data? {
+    get
+  }
+  public var characteristic: CoreBluetooth.CBCharacteristic! {
+    get
+  }
+  public var valueUpdatedTimeInterval: Swift.Double? {
+    get
+  }
+  public var valueWrittenTimeInterval: Swift.Double? {
+    get
+  }
+  final public let onValueUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTCharacteristic>
+  final public let onValueWritten: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic, Swift.Bool)>
+  final public let onNotificationUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTCharacteristic>
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  open func valueUpdated()
+  open func valueWritten()
+  public func readValue()
+  open func notificationUpdated()
+  @objc deinit
+}
+open class ZTService {
+  weak public var device: ZTCoreKit.ZTDevice! {
+    get
+  }
+  final public let service: CoreBluetooth.CBService
+  public static var serviceType: ZTCoreKit.ZTService.Type {
+    get
+  }
+  public var characteristics: [Swift.String : ZTCoreKit.ZTCharacteristic] {
+    get
+  }
+  public func characteristic<T>(_ uuid: Swift.String? = nil) -> T? where T : ZTCoreKit.ZTCharacteristic
+  required public init(device: ZTCoreKit.ZTDevice, service: CoreBluetooth.CBService)
+  @objc deinit
+}
+extension ZTService : Swift.Equatable {
+  public static func == (lhs: ZTCoreKit.ZTService, rhs: ZTCoreKit.ZTService) -> Swift.Bool
+}
+public protocol ZTServiceProtocol : AnyObject {
+  static var uuid: Swift.String { get }
+  static var serviceType: ZTCoreKit.ZTService.Type { get }
+  static var characteristicTypes: Swift.Dictionary<Swift.String, ZTCoreKit.ZTCharacteristic.Type> { get }
+}
+extension ZTServiceProtocol where Self : ZTCoreKit.ZTService {
+  public static var serviceType: ZTCoreKit.ZTService.Type {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class ZTButtonlessDfuCharacteristic : ZTCoreKit.ZTCharacteristic {
+  public static let uuid: Swift.String
+  open var data: Foundation.Data? {
+    get
+  }
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  override open func valueUpdated()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZTDfuService : ZTCoreKit.ZTService, ZTCoreKit.ZTServiceProtocol {
+  public static let uuid: Swift.String
+  public static var characteristicTypes: [Swift.String : ZTCoreKit.ZTCharacteristic.Type]
+  required public init(device: ZTCoreKit.ZTDevice, service: CoreBluetooth.CBService)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZTFirmwareCharacteristic : ZTCoreKit.ZTTextCharacteristic {
+  public static let uuid: Swift.String
+  open var data: Foundation.Data? {
+    get
+  }
+  override open func valueUpdated()
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZTHardwareCharacteristic : ZTCoreKit.ZTTextCharacteristic {
+  public static var uuid: Swift.String
+  open var data: Foundation.Data? {
+    get
+  }
+  override open func valueUpdated()
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZTInformationService : ZTCoreKit.ZTService, ZTCoreKit.ZTServiceProtocol {
+  public static var uuid: Swift.String {
+    get
+  }
+  public static var characteristicTypes: [Swift.String : ZTCoreKit.ZTCharacteristic.Type]
+  open var manufacturerName: ZTCoreKit.ZTManufacturerNameCharacteristic? {
+    get
+  }
+  open var modelNumber: ZTCoreKit.ZTModelNumberCharacteristic? {
+    get
+  }
+  open var serialNumber: ZTCoreKit.ZTSerialNumberCharacteristic? {
+    get
+  }
+  open var firmwareRevision: ZTCoreKit.ZTFirmwareCharacteristic? {
+    get
+  }
+  open var hardwareRevision: ZTCoreKit.ZTHardwareCharacteristic? {
+    get
+  }
+  required public init(device: ZTCoreKit.ZTDevice, service: CoreBluetooth.CBService)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers open class ZTManufacturerNameCharacteristic : ZTCoreKit.ZTTextCharacteristic {
+  public static var uuid: Swift.String
+  open var data: Foundation.Data? {
+    get
+  }
+  override open func valueUpdated()
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers open class ZTModelNumberCharacteristic : ZTCoreKit.ZTTextCharacteristic {
+  public static var uuid: Swift.String
+  open var data: Foundation.Data? {
+    get
+  }
+  override open func valueUpdated()
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers open class ZTSerialNumberCharacteristic : ZTCoreKit.ZTTextCharacteristic {
+  public static var uuid: Swift.String
+  open var data: Foundation.Data? {
+    get
+  }
+  override open func valueUpdated()
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers open class ZTTextCharacteristic : ZTCoreKit.ZTCharacteristic {
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  public var stringValue: Swift.String? {
+    get
+  }
+  @objc deinit
+}
+public struct ZTBatteryLevel : Swift.CustomStringConvertible, Swift.Codable {
+  public let right: Swift.UInt8
+  public let left: Swift.UInt8
+  public var min: Swift.UInt8 {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ZTMessageActivity : Swift.CustomStringConvertible, Swift.Codable {
+  public init(bytes: [Swift.UInt8])
+  public var isRight: Swift.Bool {
+    get
+  }
+  public var isLeft: Swift.Bool {
+    get
+  }
+  public var selectedMode: ZTCoreKit.ZTActivityMode? {
+    get
+  }
+  public var timeInterval: Swift.Int? {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ZTMessageBootloaderInfo : Swift.CustomStringConvertible, Swift.Codable {
+  public var byte0: Swift.UInt8? {
+    get
+  }
+  public var byte1: Swift.UInt8? {
+    get
+  }
+  public var byte2: Swift.UInt8? {
+    get
+  }
+  public init(bytes: [Swift.UInt8])
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension ZTMessageBootloaderInfo {
+  public var bootloaderVersion: Swift.String {
+    get
+  }
+  public var appSupportVersion: Swift.String {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+public struct ZTMessageGeneralState : Swift.CustomStringConvertible, Swift.Codable {
+  public var byte0: Swift.UInt8? {
+    get
+  }
+  public var byte1: Swift.UInt8? {
+    get
+  }
+  public var byte2: Swift.UInt8? {
+    get
+  }
+  public var byte3: Swift.UInt8? {
+    get
+  }
+  public init(bytes: [Swift.UInt8])
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension ZTMessageGeneralState {
+  public var activityStartedRight: Swift.Bool {
+    get
+  }
+  public var activityStartedLeft: Swift.Bool {
+    get
+  }
+  public var pairIsConnected: Swift.Bool {
+    get
+  }
+  public var memsHasError: Swift.Bool {
+    get
+  }
+  public var firmwareDifferent: Swift.Bool {
+    get
+  }
+  public var actualState: ZTCoreKit.ZTDeviceActualState {
+    get
+  }
+  public var previousState: ZTCoreKit.ZTDeviceActualState {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+public struct ZTMessageSoftware : Swift.CustomStringConvertible, Swift.Codable {
+  public init(bytes: [Swift.UInt8])
+  public var isRight: Swift.Bool {
+    get
+  }
+  public var isLeft: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ZTPairedDevice : Swift.Codable {
+  public var macAddress: Swift.String {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers public class ZTBatteryCharacteristic : ZTCoreKit.ZTCharacteristic {
+  public static let uuid: Swift.String
+  public var batteryLevel: ZTCoreKit.ZTBatteryLevel? {
+    get
+  }
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  override open func valueUpdated()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZTCommandsCharacteristic : ZTCoreKit.ZTCharacteristic {
+  public static let uuid: Swift.String
+  open var data: Foundation.Data? {
+    get
+  }
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  override open func valueUpdated()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZTIndicateCharacteristic : ZTCoreKit.ZTCharacteristic {
+  public static var uuid: Swift.String
+  open var data: Foundation.Data? {
+    get
+  }
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  override open func valueUpdated()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZTNotifyCharacteristic : ZTCoreKit.ZTCharacteristic {
+  public static let uuid: Swift.String
+  open var data: Foundation.Data? {
+    get
+  }
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  override open func valueUpdated()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZTPairedSolesCharacteristic : ZTCoreKit.ZTCharacteristic {
+  public static let uuid: Swift.String
+  open var data: Foundation.Data? {
+    get
+  }
+  required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
+  override open func valueUpdated()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZTPrimaryOldService : ZTCoreKit.ZTService, ZTCoreKit.ZTServiceProtocol {
+  public static var uuid: Swift.String {
+    get
+  }
+  public static var characteristicTypes: [Swift.String : ZTCoreKit.ZTCharacteristic.Type]
+  required public init(device: ZTCoreKit.ZTDevice, service: CoreBluetooth.CBService)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ZTPrimaryService : ZTCoreKit.ZTService, ZTCoreKit.ZTServiceProtocol {
+  public static var uuid: Swift.String {
+    get
+  }
+  public static var characteristicTypes: [Swift.String : ZTCoreKit.ZTCharacteristic.Type]
+  required public init(device: ZTCoreKit.ZTDevice, service: CoreBluetooth.CBService)
+  @objc deinit
+}
+public enum ZTBleManagerState {
+  case off
+  case idle
+  case scanning
+  case on
+  case unauthorized
+  public static func == (a: ZTCoreKit.ZTBleManagerState, b: ZTCoreKit.ZTBleManagerState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ZTCommand : Swift.UInt8 {
+  case generalState
+  case startNewActivity
+  case stopNewActivity
+  case resendData
+  case detailedBattery
+  case firmwareInformation
+  case bootloaderVersion
+  case selectActivitySegment
+  case selectAlgorithm
+  case disableHeating
+  case setHeating
+  case setTimer
+  case getConsigne
+  case getTimer
+  case startPostureCalibration
+  case resetCalibration
+  case getCalibrationState
+  case setUserParameters
+  case disconnect
+  case startDFULeft
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZTCommandResponse {
+  public var bytes: [Swift.UInt8]
+  public var rightModule: Swift.Bool {
+    get
+  }
+  public var leftModule: Swift.Bool {
+    get
+  }
+  public var command: ZTCoreKit.ZTCommand? {
+    get
+  }
+  public var status: ZTCoreKit.ZTCommandStatus? {
+    get
+  }
+  @objc deinit
+}
+public enum ZTCommandStatus : Swift.UInt8 {
+  case success
+  case busy
+  case invalidParam
+  case invalidState
+  case unknownCommand
+  case commandInProgress
+  case noPeerresponse
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZTDefaults {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ZTDefaultsKey<T> : ZTCoreKit.ZTDefaults {
+  final public let stringValue: Swift.String
+  public init(_ value: Swift.String)
+  @objc deinit
+}
+extension ZTDevice : CoreBluetooth.CBPeripheralDelegate {
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didReadRSSI RSSI: Foundation.NSNumber, error: Swift.Error?)
+  public func sendCommand(_ command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil)
+}
+@objc public class ZTDevice : ObjectiveC.NSObject {
+  public var id: Swift.String
+  public var serialNumber: Swift.String {
+    get
+  }
+  public var name: Swift.String? {
+    get
+  }
+  public var rssi: Swift.Int {
+    get
+  }
+  public var manufacturer: Swift.String? {
+    get
+  }
+  public var hardwareRevision: Swift.String? {
+    get
+  }
+  public var firmwareRevision: ZTCoreKit.ZTFirmwareRevision? {
+    get
+  }
+  public var uuid: Swift.String {
+    get
+  }
+  public var isConnected: Swift.Bool {
+    get
+  }
+  public var isActivityRunning: Swift.Bool {
+    get
+  }
+  public var info: ZTCoreKit.ZTDeviceInfo? {
+    get
+    set
+  }
+  public var peripheral: CoreBluetooth.CBPeripheral? {
+    get
+  }
+  public var batterylevel: ZTCoreKit.ZTBatteryLevel? {
+    get
+  }
+  public var lastActivityDate: Foundation.Date {
+    get
+  }
+  public var generalState: ZTCoreKit.ZTMessageGeneralState? {
+    get
+    set
+  }
+  public var softwareInfo: ZTCoreKit.ZTMessageSoftware? {
+    get
+    set
+  }
+  public var activityInfo: ZTCoreKit.ZTMessageActivity? {
+    get
+    set
+  }
+  public var bootloaderInfo: ZTCoreKit.ZTMessageBootloaderInfo? {
+    get
+    set
+  }
+  public var actualState: ZTCoreKit.ZTDeviceActualState
+  public var previousState: ZTCoreKit.ZTDeviceActualState
+  public var hasUpdate: Swift.Bool {
+    get
+  }
+  final public let onStateChanged: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice?, Swift.Error?)>
+  final public let onRSSIChanged: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, Swift.Int)>
+  final public let onServiceDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTService)>
+  final public let onServiceFeaturesIdentified: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTService)>
+  final public let onCharacteristicDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTCharacteristic)>
+  final public let onAllCharacteristicsDiscovered: ZTCoreKit.ZTSignal<()>
+  final public let onCharacteristicValueUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTCharacteristic)>
+  final public let onCharacteristicValueWritten: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTCharacteristic)>
+  final public let onCommandCharacteristicDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTCharacteristic)>
+  final public let onNotifyValueUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.GroupID, Swift.UInt8, [Swift.UInt8]?)>
+  final public let onBatteryValueUpdated: ZTCoreKit.ZTSignal<()>
+  final public let onDeviceInformationValueUpdated: ZTCoreKit.ZTSignal<()>
+  final public let onGeneralStateUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDeviceActualState)>
+  final public let onActivityInfoUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTActivityMode?)>
+  final public let onSoftwareUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageSoftware?)>
+  final public let onNotifyCommonGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.CommonMessageId, [Swift.UInt8]?)>
+  final public let onNotifyWarmGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.WarmMessageId, [Swift.UInt8]?)>
+  final public let onNotifyRunningGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.RunningMessageId, [Swift.UInt8]?)>
+  final public let onNotifyCyclingGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.CyclingMessageId, [Swift.UInt8]?)>
+  final public let onNotifySafetyGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.SafetyMessageId, [Swift.UInt8]?)>
+  final public let onCommandUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandResponse?)>
+  final public let onCommandAck: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandStatus?)>
+  final public let onIndicateValueUpdated: ZTCoreKit.ZTSignal<(Foundation.Data?)>
+  required public init(peripheral: CoreBluetooth.CBPeripheral)
+  public func connect()
+  public func disconnect()
+  @objc deinit
+  @objc override dynamic open func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  public func service<T>(_ uuid: Swift.String? = nil) -> T? where T : ZTCoreKit.ZTService
+  public func checkBattery(completion: @escaping ((Swift.UInt8, Swift.Bool) -> Swift.Void))
+  public func readGeneralState()
+  @objc override dynamic public init()
+}
+extension ZTDevice {
+  public static func == (lhs: ZTCoreKit.ZTDevice, rhs: ZTCoreKit.ZTDevice) -> Swift.Bool
+  public var isLowBattery: Swift.Bool? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZTDeviceInfo {
+  public var project: ZTCoreKit.ZTProjectCodeType? {
+    get
+  }
+  public var productCode: ZTCoreKit.ZTProductCodeType? {
+    get
+  }
+  public var manufacturer: ZTCoreKit.ZTManufacturerCodeType? {
+    get
+  }
+  public var productType: ZTCoreKit.ZTProductTypeCode? {
+    get
+  }
+  public var hardwareVersion: Swift.Int8? {
+    get
+  }
+  public var boardVersion: Swift.Int8? {
+    get
+  }
+  public var testeur: Swift.String? {
+    get
+  }
+  public var sizeRaw: Swift.String? {
+    get
+  }
+  public var year: Swift.Int? {
+    get
+  }
+  public var week: Swift.Int? {
+    get
+  }
+  public var SN: Swift.String? {
+    get
+  }
+  public var serialNumber: Swift.String
+  public var deviceIdentifier: Swift.String
+  public var macAddressRight: Swift.String? {
+    get
+  }
+  public var macAddressLeft: Swift.String? {
+    get
+  }
+  public var code: Swift.String? {
+    get
+  }
+  @objc deinit
+}
+extension ZTDeviceInfo {
+  public var size: Swift.Int? {
+    get
+  }
+  public var gender: Swift.String? {
+    get
+  }
+}
+public enum ZTProductType : Swift.String {
+  case sports
+  case warm
+  case safety
+  case podoSmart
+  case dfu
+  public var activityType: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZTProjectCodeType : Swift.String {
+  case zt1
+  case zt2
+  case zt3
+  case zt4
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZTProductCodeType : Swift.String {
+  case WS
+  case SP
+  case SF
+  case PS
+  case SI
+  public var activityType: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZTManufacturerCodeType : Swift.String {
+  case a
+  case b
+  case c
+  case d
+  case e
+  case f
+  case z
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZTProductTypeCode : Swift.String {
+  case ix
+  case sx
+  case xx
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZTGenderCodeType : Swift.String {
+  case man
+  case woman
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZTGenderSizeCodeType : Swift.String {
+  case a
+  case b
+  case c
+  case d
+  case e
+  case f
+  case g
+  case h
+  case i
+  case j
+  case n
+  case o
+  case p
+  case q
+  case r
+  case s
+  case t
+  case u
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZTUnitSizeCodeType : Swift.String {
+  case a
+  case b
+  case c
+  case d
+  case e
+  case f
+  case n
+  case o
+  case p
+  case q
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZTError {
+  case scanning(type: ZTCoreKit.ZTError.Enums.ScanningError)
+  case ble(type: ZTCoreKit.ZTError.Enums.BleError)
+  case network(type: ZTCoreKit.ZTError.Enums.NetworkError)
+  case store(type: ZTCoreKit.ZTError.Enums.StoreError)
+  case custom(errorDescription: Swift.String?)
+  case decoding(type: ZTCoreKit.ZTError.Enums.DecodableError)
+  case activity(type: ZTCoreKit.ZTError.Enums.ActivityError)
+  case dfu(type: ZTCoreKit.ZTError.Enums.DfuError)
+  @_hasMissingDesignatedInitializers public class Enums {
+    @objc deinit
+  }
+}
+extension ZTError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension ZTError.Enums {
+  public enum ScanningError {
+    case cameraPermission
+    case wrongCode
+    case unknown
+    public static func == (a: ZTCoreKit.ZTError.Enums.ScanningError, b: ZTCoreKit.ZTError.Enums.ScanningError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension ZTError.Enums.ScanningError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension ZTError.Enums {
+  public enum BleError {
+    case invalidState
+    case resetting
+    case poweredOff
+    case unsupported
+    case timeout
+    case unauthorized
+    case notConnected
+    case notConnectedLeft
+    case activityIsRunning
+    public static func == (a: ZTCoreKit.ZTError.Enums.BleError, b: ZTCoreKit.ZTError.Enums.BleError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension ZTError.Enums.BleError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension ZTError.Enums {
+  public enum DfuError {
+    case noLeftModule
+    case noUpdate
+    case wrongFile
+    case noStart
+    case aborted
+    case abortedRight
+    case abortedLeft
+    case unsupported
+    case lowBattery
+    public static func == (a: ZTCoreKit.ZTError.Enums.DfuError, b: ZTCoreKit.ZTError.Enums.DfuError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension ZTError.Enums.DfuError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension ZTError.Enums {
+  public enum StoreError {
+    case missing(Swift.String)
+    case invalid(Swift.String, Any?)
+    case wrong(Swift.String)
+    case unknown
+  }
+}
+extension ZTError.Enums.StoreError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension ZTError.Enums {
+  public enum ActivityError {
+    case notStarted
+    case notStartedLeft
+    case notStopped
+    case unknown
+    case modeNotSetActivityIsRunning
+    case previousNotStopped
+    case previousRestoring
+    public static func == (a: ZTCoreKit.ZTError.Enums.ActivityError, b: ZTCoreKit.ZTError.Enums.ActivityError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension ZTError.Enums.ActivityError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension ZTError.Enums {
+  public enum NetworkError {
+    case inaccessible
+    case urlError(Foundation.URLError)
+    case generalError(Swift.Error)
+    case noResponse
+    case invalidResponseType(Foundation.URLResponse)
+    case noResponseData(Foundation.HTTPURLResponse)
+    case endpointError(Foundation.HTTPURLResponse, Foundation.Data?)
+    case custom(errorCode: Swift.Int?, errorDescription: Swift.String?)
+  }
+}
+extension ZTError.Enums.NetworkError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension ZTError.Enums {
+  public enum DecodableError {
+    case invalidKeyPath
+    case emptyKeyPath
+    case invalidJSON
+    public static func == (a: ZTCoreKit.ZTError.Enums.DecodableError, b: ZTCoreKit.ZTError.Enums.DecodableError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension ZTError.Enums.DecodableError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZTFirmwareRevision {
+  public var build: Swift.String? {
+    get
+  }
+  public var productType: ZTCoreKit.ZTProductCodeType? {
+    get
+  }
+  public var codeVersion: Swift.String? {
+    get
+  }
+  public var date: Foundation.Date? {
+    get
+  }
+  public var code: Swift.String {
+    get
+  }
+  public var fwVersion: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public enum ZTLogLevel : Swift.String {
+  case all
+  case debug
+  case info
+  case error
+  case fatal
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension ZTLogLevel : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum ZTLogCategory : Swift.String {
+  case networkAgent
+  case modules
+  case sdk
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension ZTLogCategory : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum ZTNotifyData {
+  public enum GroupID : Swift.UInt8 {
+    case common
+    case warm
+    case running
+    case cycling
+    case safety
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public enum CommonMessageId : Swift.UInt8 {
+    case MSG_GENERAL_STATES
+    case MSG_BATTERY_LEVEL
+    case MSG_MEMS
+    case MSG_FLASH
+    case MSG_TIME
+    case MSG_HARDWARE
+    case MSG_SOFTWARE
+    case MSG_ACTIVITY_INFO
+    case MSG_BTLOADER_INFO
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+}
+extension ZTNotifyData {
+  public enum WarmMessageId : Swift.UInt8 {
+    case MSG_HEATING_TEMP_1
+    case MSG_HEATING_TEMP_2
+    case MSG_HEATING_STEP_R_CNT
+    case MSG_HEATING_STEP_L_CNT
+    case MSG_HEATING_SETPOINT_R
+    case MSG_HEATING_SETPOINT_L
+    case MSG_GET_HEAT_TIMER
+    case MSG_HEATING_DEBUG_R
+    case MSG_HEATING_DEBUG_L
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+}
+extension ZTNotifyData {
+  public enum RunningMessageId : Swift.UInt8 {
+    case UNKNOWN
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+}
+extension ZTNotifyData {
+  public enum CyclingMessageId : Swift.UInt8 {
+    case MSG_CADENCE
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+}
+extension ZTNotifyData {
+  public enum SafetyMessageId : Swift.UInt8 {
+    case MSG_CALIBRATION_SAFETY
+    case MSG_ALGO_RT_EVENT
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+}
+public enum ZTDeviceActualState : Swift.UInt8, Swift.Codable {
+  case activityNone
+  case activityStarting
+  case eraseMemory
+  case activityRunning
+  case activityPaused
+  case activityStopping
+  case activityPendData
+  case activitySendData
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public typealias ZTScannerResultBlock = (ZTCoreKit.ZTScannerResult) -> Swift.Void
+public enum ZTScannerResult {
+  case success(device: ZTCoreKit.ZTDevice)
+  case cancelled
+  case failed(Swift.Error?)
+}
+public enum ZTServices {
+  public enum Primary {
+    public static let uid: Swift.String
+    public static let uuid: CoreBluetooth.CBUUID
+    public enum Characteristic {
+      case commands
+      case notifyData
+      case indicateData
+      case batteryLevel
+      case pairedSoles
+      public var uid: Swift.String {
+        get
+      }
+      public static func == (a: ZTCoreKit.ZTServices.Primary.Characteristic, b: ZTCoreKit.ZTServices.Primary.Characteristic) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+  }
+  public enum PrimaryOld {
+    public static let uid: Swift.String
+    public static let uuid: CoreBluetooth.CBUUID
+    public enum Characteristic {
+      case commands
+      case notifyData
+      case indicateData
+      case batteryLevel
+      case pairedSoles
+      public var uid: Swift.String {
+        get
+      }
+      public static func == (a: ZTCoreKit.ZTServices.PrimaryOld.Characteristic, b: ZTCoreKit.ZTServices.PrimaryOld.Characteristic) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+  }
+  public enum DeviceInformation {
+    public static let uid: Swift.String
+    public static let uuid: CoreBluetooth.CBUUID
+    public enum Characteristic {
+      case manufacturerName
+      case modelNumber
+      case serialNumber
+      case firmwareRevision
+      case hardwareRevision
+      public var uid: Swift.String {
+        get
+      }
+      public static func == (a: ZTCoreKit.ZTServices.DeviceInformation.Characteristic, b: ZTCoreKit.ZTServices.DeviceInformation.Characteristic) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+  }
+  public enum DeviceDFU {
+    public static let uid: Swift.String
+    public static let uuid: CoreBluetooth.CBUUID
+    public enum Characteristic {
+      case dfu
+      public var uid: Swift.String {
+        get
+      }
+      public static func == (a: ZTCoreKit.ZTServices.DeviceDFU.Characteristic, b: ZTCoreKit.ZTServices.DeviceDFU.Characteristic) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+  }
+}
+public enum ZTActivityMode : Swift.UInt8 {
+  case safety
+  case walking
+  case running
+  case cycling
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public class ZTUser : ObjectMapper.Mappable {
+  public var attributes: [Swift.String : Any]
+  public var id: Swift.String?
+  public var organizationId: Swift.String?
+  public var appId: Swift.String?
+  public var createdAt: Swift.String?
+  public var updatedAt: Swift.String?
+  public var userId: Swift.String?
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public class ZTAchievement : ObjectMapper.Mappable {
+  public var id: Swift.String?
+  public var type: Swift.String?
+  public var activityId: Swift.String?
+  public var code: Swift.String?
+  public var appuserId: Swift.String?
+  public var data: [Swift.String : Any]?
+  public var duration: Swift.Int64?
+  public var calories: Swift.Double?
+  public var createdAt: Foundation.Date?
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+open class ZTActivity : Swift.Codable {
+  public var id: Swift.String {
+    get
+    set
+  }
+  public var activityIdentifier: Swift.String
+  public var appId: Swift.String?
+  public var activityType: Swift.String
+  public var endDate: Foundation.Date?
+  public var startDate: Foundation.Date?
+  public var tz: Swift.String?
+  public var status: Swift.String?
+  public var state: ZTCoreKit.ZTDeviceActualState {
+    get
+    set
+  }
+  public init()
+  open func save()
+  @objc deinit
+  open func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension ZTActivity {
+  public var duration: Swift.Double {
+    get
+  }
+}
+public class ZTActivityComment : ObjectMapper.Mappable {
+  public var id: Swift.String?
+  public var timeZone: Swift.String?
+  public var timestamp: Foundation.Date?
+  public var text: Swift.String?
+  public var activityId: Swift.String?
+  public var createdAt: Foundation.Date?
+  public var updatedAt: Foundation.Date?
+  public var mediaFiles: [ZTCoreKit.ZTMediaFile]?
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+open class ZTSegmentData : Swift.Codable {
+  public var id: Swift.UInt16
+  public var activityId: Swift.String?
+  public var timestamp: Swift.Int64?
+  public var duration: Swift.Int?
+  public var rawData: Foundation.Data?
+  public var status: ZTCoreKit.ZTSegmentData.Status
+  public enum Status : Swift.Int8, Swift.Decodable {
+    case new
+    case sent
+    case sending
+    case error
+    public init?(rawValue: Swift.Int8)
+    public typealias RawValue = Swift.Int8
+    public var rawValue: Swift.Int8 {
+      get
+    }
+  }
+  public init(data: Foundation.Data)
+  public init(data: Foundation.Data, activityId: Swift.String)
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public func save()
+  public static func lastSegmentId(activityId: Swift.String) -> Swift.Int
+  public static func segmentsCount(activityId: Swift.String) -> Swift.Int
+  public static func loadUnsent(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
+  public static func clear(activityId: Swift.String?)
+  public static func checkMissedChunks(activityId: Swift.String) -> Swift.Bool
+  @objc deinit
+}
+public enum ZTActivitySummaryStatus : Swift.String {
+  case started
+  case complete
+  case processing
+  case errored
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+open class ZTActivitySummary : ObjectMapper.Mappable {
+  public var id: Swift.String
+  public var activityType: Swift.String
+  public var activityIdentifier: Swift.String
+  public var start: Swift.String?
+  public var end: Swift.String?
+  public var duration: Swift.Int?
+  public var tz: Swift.String?
+  public var startDate: Foundation.Date?
+  public var endDate: Foundation.Date?
+  public var status: ZTCoreKit.ZTActivitySummaryStatus?
+  required public init?(map: ObjectMapper.Map)
+  open func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public struct ZTArrayEncoding : Alamofire.ParameterEncoding {
+  public let options: Foundation.JSONSerialization.WritingOptions
+  public init(options: Foundation.JSONSerialization.WritingOptions = [])
+  public func encode(_ urlRequest: Alamofire.URLRequestConvertible, with parameters: Alamofire.Parameters?) throws -> Foundation.URLRequest
+}
+public class ZTMediaFile : ObjectMapper.Mappable {
+  public var id: Swift.String?
+  public var name: Swift.String?
+  public var mimeType: Swift.String?
+  public var key: Swift.String?
+  public var url: Swift.String?
+  public var mfableId: Swift.String?
+  public var mfableType: Swift.String?
+  public var createdAt: Foundation.Date?
+  public var updatedAt: Foundation.Date?
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ZTMediaFileTemplate : ObjectMapper.Mappable {
+  public var name: Swift.String
+  public var description: Swift.String?
+  public var mimeType: Swift.String?
+  public var key: Swift.String?
+  public var url: Swift.String?
+  public var data: Foundation.Data?
+  convenience public init(data: Foundation.Data?, fileName: Swift.String? = nil, mimeType: Swift.String? = nil, description: Swift.String? = nil)
+  required convenience public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public enum ZTPeriod : Swift.String {
+  case day
+  case week
+  case month
+  case year
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class ZTUserShoe : ObjectMapper.Mappable {
+  public var id: Swift.String?
+  public var code: Swift.String?
+  public var attributes: [Swift.String : Any]?
+  public var firmware: ZTCoreKit.ZTUserShoe.Firmware?
+  public var organizationId: Swift.String?
+  public var createdAt: Foundation.Date?
+  public var updatedAt: Foundation.Date?
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  public class Firmware : ObjectMapper.Mappable {
+    public var type: Swift.String?
+    public var arch: Swift.String?
+    public var version: Swift.String?
+    public var updatedAt: Foundation.Date?
+    required public init?(map: ObjectMapper.Map)
+    public func mapping(map: ObjectMapper.Map)
+    @objc deinit
+  }
+  @objc deinit
+}
+public enum ZTLoggerComponent : Swift.String {
+  case api
+  case app
+  case sdk
+  case firmware
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZTLoggerSeverity : Swift.String {
+  case debug
+  case error
+  case info
+  case warn
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension DataRequest {
+  public static func ObjectMapperSerializer<T>(_ keyPath: Swift.String?, mapToObject object: T? = nil, context: ObjectMapper.MapContext? = nil) -> ZTCoreKit.MappableResponseSerializer<T> where T : ObjectMapper.BaseMappable
+  public static func ObjectMapperImmutableSerializer<T>(_ keyPath: Swift.String?, context: ObjectMapper.MapContext? = nil) -> ZTCoreKit.MappableResponseSerializer<T> where T : ObjectMapper.ImmutableMappable
+  @discardableResult
+  public func responseObject<T>(queue: Dispatch.DispatchQueue = .main, keyPath: Swift.String? = nil, mapToObject object: T? = nil, context: ObjectMapper.MapContext? = nil, completionHandler: @escaping (Alamofire.AFDataResponse<T>) -> Swift.Void) -> Self where T : ObjectMapper.BaseMappable
+  @discardableResult
+  public func responseObject<T>(queue: Dispatch.DispatchQueue = .main, keyPath: Swift.String? = nil, mapToObject object: T? = nil, context: ObjectMapper.MapContext? = nil, completionHandler: @escaping (Alamofire.AFDataResponse<T>) -> Swift.Void) -> Self where T : ObjectMapper.ImmutableMappable
+  public static func ObjectMapperArraySerializer<T>(_ keyPath: Swift.String?, context: ObjectMapper.MapContext? = nil) -> ZTCoreKit.MappableArrayResponseSerializer<T> where T : ObjectMapper.BaseMappable
+  public static func ObjectMapperImmutableArraySerializer<T>(_ keyPath: Swift.String?, context: ObjectMapper.MapContext? = nil) -> ZTCoreKit.MappableArrayResponseSerializer<T> where T : ObjectMapper.ImmutableMappable
+  @discardableResult
+  public func responseArray<T>(queue: Dispatch.DispatchQueue = .main, keyPath: Swift.String? = nil, context: ObjectMapper.MapContext? = nil, completionHandler: @escaping (Alamofire.AFDataResponse<[T]>) -> Swift.Void) -> Self where T : ObjectMapper.BaseMappable
+  @discardableResult
+  public func responseArray<T>(queue: Dispatch.DispatchQueue = .main, keyPath: Swift.String? = nil, context: ObjectMapper.MapContext? = nil, completionHandler: @escaping (Alamofire.AFDataResponse<[T]>) -> Swift.Void) -> Self where T : ObjectMapper.ImmutableMappable
+}
+final public class MappableResponseSerializer<T> : Alamofire.ResponseSerializer where T : ObjectMapper.BaseMappable {
+  final public let decoder: Alamofire.DataDecoder
+  final public let emptyResponseCodes: Swift.Set<Swift.Int>
+  final public let emptyRequestMethods: Swift.Set<Alamofire.HTTPMethod>
+  final public let keyPath: Swift.String?
+  final public let context: ObjectMapper.MapContext?
+  final public let object: T?
+  final public let serializeCallback: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, Swift.Error?) throws -> T
+  public init(_ keyPath: Swift.String?, mapToObject object: T? = nil, context: ObjectMapper.MapContext? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = MappableResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<Alamofire.HTTPMethod> = MappableResponseSerializer.defaultEmptyRequestMethods, serializeCallback: @escaping (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, Swift.Error?) throws -> T)
+  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) throws -> T
+  public typealias SerializedObject = T
+  @objc deinit
+}
+final public class MappableArrayResponseSerializer<T> : Alamofire.ResponseSerializer where T : ObjectMapper.BaseMappable {
+  final public let decoder: Alamofire.DataDecoder
+  final public let emptyResponseCodes: Swift.Set<Swift.Int>
+  final public let emptyRequestMethods: Swift.Set<Alamofire.HTTPMethod>
+  final public let keyPath: Swift.String?
+  final public let context: ObjectMapper.MapContext?
+  final public let serializeCallback: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, Swift.Error?) throws -> [T]
+  public init(_ keyPath: Swift.String?, context: ObjectMapper.MapContext? = nil, serializeCallback: @escaping (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, Swift.Error?) throws -> [T], emptyResponseCodes: Swift.Set<Swift.Int> = MappableArrayResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<Alamofire.HTTPMethod> = MappableArrayResponseSerializer.defaultEmptyRequestMethods)
+  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) throws -> [T]
+  public typealias SerializedObject = [T]
+  @objc deinit
+}
+public enum ZTReachabilityError : Swift.Error {
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ZTReachabilityChangedNotification: Foundation.NSNotification.Name
+extension NSNotification.Name {
+  public static let ZTReachabilityChanged: Foundation.Notification.Name
+}
+public class ZTReachability {
+  public typealias ZTNetworkReachable = (ZTCoreKit.ZTReachability) -> ()
+  public typealias ZTNetworkUnreachable = (ZTCoreKit.ZTReachability) -> ()
+  @available(*, unavailable, renamed: "Connection")
+  public enum ZTNetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: ZTCoreKit.ZTReachability.ZTNetworkStatus, b: ZTCoreKit.ZTReachability.ZTNetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum ZTConnection : Swift.CustomStringConvertible {
+    case unavailable, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    @available(*, deprecated, renamed: "unavailable")
+    public static let none: ZTCoreKit.ZTReachability.ZTConnection
+    public static func == (a: ZTCoreKit.ZTReachability.ZTConnection, b: ZTCoreKit.ZTReachability.ZTConnection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var whenReachable: ZTCoreKit.ZTReachability.ZTNetworkReachable?
+  public var whenUnreachable: ZTCoreKit.ZTReachability.ZTNetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  public var allowsCellularConnection: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  public var currentReachabilityStatus: ZTCoreKit.ZTReachability.ZTConnection {
+    get
+  }
+  public var connection: ZTCoreKit.ZTReachability.ZTConnection {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  @objc deinit
+}
+extension ZTReachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+public typealias ZTBaseResult = (Swift.Error?) -> ()
+public typealias ZTResultObject<T> = (T?, Swift.Error?) -> ()
+public typealias ZTResultArray<T> = ([T]?, Swift.Error?) -> ()
+@_hasMissingDesignatedInitializers final public class ZTApi {
+  public static let shared: ZTCoreKit.ZTApi
+  final public let onInternetConnectionChanged: ZTCoreKit.ZTSignal<(Swift.Bool)>
+  final public let onSavedRequestSent: ZTCoreKit.ZTSignal<(Swift.String?)>
+  final public let onActivityStopRequestSent: ZTCoreKit.ZTSignal<(Swift.Error?)>
+  final public var appAttributes: [Swift.String : Any]? {
+    get
+  }
+  final public var isNetworkReachable: Swift.Bool
+  final public func linkUser(userId: Swift.String, attributes: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func getUserShoes(completion: @escaping (ZTCoreKit.ZTResultArray<ZTCoreKit.ZTUserShoe>))
+  final public func uploadProfileImage(_ image: Foundation.Data, completion: (ZTCoreKit.ZTBaseResult)? = nil)
+  final public func getActivities<T>(code: Swift.String?, start: Foundation.Date, end: Foundation.Date, fields: [Swift.String] = [], include: [Swift.String]? = nil, completion: (([T]?, Swift.Error?) -> ())? = nil) where T : ObjectMapper.Mappable
+  final public func getActivities<T>(code: Swift.String?, offset: Swift.Int, limit: Swift.Int, fields: [Swift.String] = [], include: [Swift.String]? = nil, completion: (([T]?, Swift.Error?) -> ())? = nil) where T : ObjectMapper.Mappable
+  final public func getActivity<T>(id: Swift.String, fields: [Swift.String] = [], include: [Swift.String]? = nil, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ObjectMapper.Mappable
+  final public func startActivity(id: Swift.String, code: Swift.String, startTime: Swift.Int64 = Date().timestamp, attributes: [Swift.String : Any]? = nil, completion: ((Swift.String?, Swift.Error?) -> ())?)
+  final public func addActivitySegments(activityId: Swift.String, duration: Swift.Int? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ZTCoreKit.ZTBaseResult? = nil)
+  final public func deleteActivity(id: Swift.String, completion: ZTCoreKit.ZTBaseResult? = nil)
+  final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, data: [Swift.String]?, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ObjectMapper.Mappable
+  final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ObjectMapper.Mappable
+  final public func getData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ObjectMapper.Mappable
+  final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, Swift.Error?) -> ()))
+  final public func getAppAttributes(completion: @escaping ([Swift.String : Any]?, Swift.Error?) -> Swift.Void)
+  final public func checkFirmwareUpdate(completion: @escaping ((Swift.Bool, Swift.Error?) -> ()))
+  final public func postData(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
+  final public func postData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (ZTCoreKit.ZTResultObject<T>)) where T : ObjectMapper.Mappable
+  @available(*, deprecated, renamed: "addActivityData", message: "The parameter type for 'data' have changed to Any")
+  final public func addActivityData(activityId: Swift.String, timestamp: Foundation.TimeInterval, data: [Swift.String : Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
+  final public func addActivityData(activityId: Swift.String, timestamp: Foundation.TimeInterval, data: [Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
+  final public func updateActivityAttributes(activityId: Swift.String, attributes: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func updatePushNotificationToken(_ token: Swift.String, completion: ZTCoreKit.ZTBaseResult? = nil)
+  final public func deleteUser(completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func existUser(attribute: Swift.String, value: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  final public func suborgExist(code: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  final public func trackEvent(name: Swift.String, data: Swift.String? = nil, attributes: [Swift.String : Any]? = nil)
+  final public func log(severity: ZTCoreKit.ZTLoggerSeverity = ZTLoggerSeverity.debug, component: ZTCoreKit.ZTLoggerComponent = ZTLoggerComponent.sdk, message: Swift.String)
+  final public func addActivityComment(activityId: Swift.String, text: Swift.String, mediaFileTemplates: [ZTCoreKit.ZTMediaFileTemplate]?, completion: @escaping ZTCoreKit.ZTResultObject<ZTCoreKit.ZTActivityComment>)
+  final public func saveActivityComment(commentId: Swift.String, text: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func getActivityComments(activityId: Swift.String, completion: @escaping ZTCoreKit.ZTResultArray<ZTCoreKit.ZTActivityComment>)
+  final public func getActivityComment(commentId: Swift.String, completion: @escaping ZTCoreKit.ZTResultObject<ZTCoreKit.ZTActivityComment>)
+  final public func getActivityRealtimeData(activityId: Swift.String, fields: [Swift.String], completion: @escaping (([Swift.String : Any]?, Swift.Error?) -> Swift.Void))
+  final public func addMediaFileToActivityComment(commentId: Swift.String, mediaFileTemplate: ZTCoreKit.ZTMediaFileTemplate, completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func deleteActivityComment(commentId: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func deleteMediaFile(mediaFileId: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func getAchievements(completion: @escaping ZTCoreKit.ZTResultArray<ZTCoreKit.ZTAchievement>)
+  final public func complianceTestRetry(timeout: Swift.Int, attempts: Swift.Int, statusCode: Swift.Int, completion: @escaping ((Foundation.Data?, Swift.Error?) -> Swift.Void))
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers final public class ZTBleManager : ObjectiveC.NSObject {
+  final public var advertisingServices: [CoreBluetooth.CBUUID]?
+  final public var managerState: ZTCoreKit.ZTBleManagerState {
+    get
+    set
+  }
+  final public class var instance: ZTCoreKit.ZTBleManager {
+    get
+  }
+  final public var centralManager: CoreBluetooth.CBCentralManager! {
+    get
+  }
+  final public var macAddress: Swift.String? {
+    get
+  }
+  final public var deviceInfo: ZTCoreKit.ZTDeviceInfo?
+  final public var serviceTypes: [Swift.String : ZTCoreKit.ZTService.Type] {
+    get
+  }
+  final public var product: ZTCoreKit.ZTProductType?
+  final public var connectedDevice: ZTCoreKit.ZTDevice? {
+    get
+  }
+  final public var foundPeripherals: [CoreBluetooth.CBPeripheral]! {
+    get
+  }
+  final public var scanning: Swift.Bool {
+    get
+  }
+  final public let onBluetoothStateChange: ZTCoreKit.ZTSignal<CoreBluetooth.CBManagerState>
+  final public let onDeviceStateChange: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice?, Swift.Error?)>
+  final public let onDeviceDiscovered: ZTCoreKit.ZTSignal<ZTCoreKit.ZTDevice>
+  final public let onDeviceConnectionFailed: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice?, Swift.Error?)>
+  final public let onReconnectFailed: ZTCoreKit.ZTSignal<(Swift.Error?)>
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension ZTBleManager : CoreBluetooth.CBCentralManagerDelegate {
+  @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, willRestoreState dict: [Swift.String : Any])
+  @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
+  @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didFailToConnect peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didConnect peripheral: CoreBluetooth.CBPeripheral)
+  @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  @objc final public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
+}
+extension ZTCore : iOSDFULibrary.DFUServiceDelegate, iOSDFULibrary.DFUProgressDelegate, iOSDFULibrary.LoggerDelegate {
+  final public func updateFirmware()
+  @objc final public func dfuStateDidChange(to state: iOSDFULibrary.DFUState)
+  @objc final public func dfuError(_ error: iOSDFULibrary.DFUError, didOccurWithMessage message: Swift.String)
+  @objc final public func dfuProgressDidChange(for part: Swift.Int, outOf totalParts: Swift.Int, to progress: Swift.Int, currentSpeedBytesPerSecond: Swift.Double, avgSpeedBytesPerSecond: Swift.Double)
+  @objc final public func logWith(_ level: iOSDFULibrary.LogLevel, message: Swift.String)
+}
+public typealias ConnectResultBlock = (ZTCoreKit.ZTDevice?, Swift.Error?) -> Swift.Void
+@_hasMissingDesignatedInitializers final public class ZTCore {
+  public static let shared: ZTCoreKit.ZTCore
+  final public var settings: ZTCoreKit.ZTSettings {
+    get
+  }
+  final public var connectedDevice: ZTCoreKit.ZTDevice? {
+    get
+  }
+  final public var lastDeviceSerialNumber: Swift.String? {
+    get
+  }
+  final public var lastCommand: ZTCoreKit.ZTCommand?
+  final public var lastCommandResponses: [ZTCoreKit.ZTCommandResponse]
+  final public var lastActivityId: Swift.String? {
+    get
+  }
+  final public var leftModuleCommandStatus: ZTCoreKit.ZTCommandStatus {
+    get
+  }
+  weak final public var dfuDelegate: ZTCoreKit.ZTDfuDelegate?
+  final public let bleManager: ZTCoreKit.ZTBleManager
+  final public func scan(for product: ZTCoreKit.ZTProductType? = nil, completion: ZTCoreKit.ConnectResultBlock? = nil)
+  final public func stopScan()
+  final public func connectWithDevice(_ device: ZTCoreKit.ZTDevice?, timeout: Swift.Double? = 5, completion: ZTCoreKit.ConnectResultBlock? = nil)
+  final public func connectWithCode(_ code: Swift.String, timeout: Swift.Double? = 20, completion: ZTCoreKit.ConnectResultBlock? = nil)
+  final public func tryReconnect()
+  final public func checkConnectedDevice(completion: ZTCoreKit.ConnectResultBlock? = nil)
+  final public func setup(apiKey: Swift.String, secret: Swift.String, appId: Swift.String, completion: ((Swift.Error?) -> Swift.Void)? = nil)
+  final public func updateOrganization(code: Swift.String? = nil, appType: Swift.String? = nil)
+  @objc deinit
+}
+public protocol ZTDfuDelegate : AnyObject {
+  func dfuDelegate(firmwareDownloaded: Swift.Bool, version: Swift.String?)
+  func dfuDelegate(didFinish: Swift.Bool)
+  func dfuDelegate(progress: Swift.Float?)
+  func dfuDelegate(didFail error: Swift.Error?)
+  func dfuDelegate(leftDidFinish newVersion: Swift.String?)
+  func dfuDelegate(rightDidFinish newVersion: Swift.String?)
+}
+@_hasMissingDesignatedInitializers final public class ZTSettings {
+  public static let shared: ZTCoreKit.ZTSettings
+  final public var version: Swift.String?
+  final public var logLevel: ZTCoreKit.ZTLogLevel
+  final public var environment: ZTCoreKit.ZTEnvironment
+  final public var autoConnect: Swift.Bool
+  final public var enableEventLogging: Swift.Bool
+  final public func clear()
+  @objc deinit
+}
+extension ZTCoreKit.ZTEnvironment : Swift.Equatable {}
+extension ZTCoreKit.ZTEnvironment : Swift.Hashable {}
+extension ZTCoreKit.ZTModuleSide : Swift.Equatable {}
+extension ZTCoreKit.ZTModuleSide : Swift.Hashable {}
+extension ZTCoreKit.ZTModuleSide : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTBleManagerState : Swift.Equatable {}
+extension ZTCoreKit.ZTBleManagerState : Swift.Hashable {}
+extension ZTCoreKit.ZTCommand : Swift.Equatable {}
+extension ZTCoreKit.ZTCommand : Swift.Hashable {}
+extension ZTCoreKit.ZTCommand : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTCommandStatus : Swift.Equatable {}
+extension ZTCoreKit.ZTCommandStatus : Swift.Hashable {}
+extension ZTCoreKit.ZTCommandStatus : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTProductType : Swift.Equatable {}
+extension ZTCoreKit.ZTProductType : Swift.Hashable {}
+extension ZTCoreKit.ZTProductType : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTProjectCodeType : Swift.Equatable {}
+extension ZTCoreKit.ZTProjectCodeType : Swift.Hashable {}
+extension ZTCoreKit.ZTProjectCodeType : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTProductCodeType : Swift.Equatable {}
+extension ZTCoreKit.ZTProductCodeType : Swift.Hashable {}
+extension ZTCoreKit.ZTProductCodeType : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTManufacturerCodeType : Swift.Equatable {}
+extension ZTCoreKit.ZTManufacturerCodeType : Swift.Hashable {}
+extension ZTCoreKit.ZTManufacturerCodeType : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTProductTypeCode : Swift.Equatable {}
+extension ZTCoreKit.ZTProductTypeCode : Swift.Hashable {}
+extension ZTCoreKit.ZTProductTypeCode : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTGenderCodeType : Swift.Equatable {}
+extension ZTCoreKit.ZTGenderCodeType : Swift.Hashable {}
+extension ZTCoreKit.ZTGenderCodeType : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTGenderSizeCodeType : Swift.Equatable {}
+extension ZTCoreKit.ZTGenderSizeCodeType : Swift.Hashable {}
+extension ZTCoreKit.ZTGenderSizeCodeType : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTUnitSizeCodeType : Swift.Equatable {}
+extension ZTCoreKit.ZTUnitSizeCodeType : Swift.Hashable {}
+extension ZTCoreKit.ZTUnitSizeCodeType : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTError.Enums.ScanningError : Swift.Equatable {}
+extension ZTCoreKit.ZTError.Enums.ScanningError : Swift.Hashable {}
+extension ZTCoreKit.ZTError.Enums.BleError : Swift.Equatable {}
+extension ZTCoreKit.ZTError.Enums.BleError : Swift.Hashable {}
+extension ZTCoreKit.ZTError.Enums.DfuError : Swift.Equatable {}
+extension ZTCoreKit.ZTError.Enums.DfuError : Swift.Hashable {}
+extension ZTCoreKit.ZTError.Enums.ActivityError : Swift.Equatable {}
+extension ZTCoreKit.ZTError.Enums.ActivityError : Swift.Hashable {}
+extension ZTCoreKit.ZTError.Enums.DecodableError : Swift.Equatable {}
+extension ZTCoreKit.ZTError.Enums.DecodableError : Swift.Hashable {}
+extension ZTCoreKit.ZTLogLevel : Swift.Equatable {}
+extension ZTCoreKit.ZTLogLevel : Swift.Hashable {}
+extension ZTCoreKit.ZTLogLevel : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTLogCategory : Swift.Equatable {}
+extension ZTCoreKit.ZTLogCategory : Swift.Hashable {}
+extension ZTCoreKit.ZTLogCategory : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTNotifyData.GroupID : Swift.Equatable {}
+extension ZTCoreKit.ZTNotifyData.GroupID : Swift.Hashable {}
+extension ZTCoreKit.ZTNotifyData.GroupID : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTNotifyData.CommonMessageId : Swift.Equatable {}
+extension ZTCoreKit.ZTNotifyData.CommonMessageId : Swift.Hashable {}
+extension ZTCoreKit.ZTNotifyData.CommonMessageId : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTNotifyData.WarmMessageId : Swift.Equatable {}
+extension ZTCoreKit.ZTNotifyData.WarmMessageId : Swift.Hashable {}
+extension ZTCoreKit.ZTNotifyData.WarmMessageId : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTNotifyData.RunningMessageId : Swift.Equatable {}
+extension ZTCoreKit.ZTNotifyData.RunningMessageId : Swift.Hashable {}
+extension ZTCoreKit.ZTNotifyData.RunningMessageId : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTNotifyData.CyclingMessageId : Swift.Equatable {}
+extension ZTCoreKit.ZTNotifyData.CyclingMessageId : Swift.Hashable {}
+extension ZTCoreKit.ZTNotifyData.CyclingMessageId : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTNotifyData.SafetyMessageId : Swift.Equatable {}
+extension ZTCoreKit.ZTNotifyData.SafetyMessageId : Swift.Hashable {}
+extension ZTCoreKit.ZTNotifyData.SafetyMessageId : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTDeviceActualState : Swift.Equatable {}
+extension ZTCoreKit.ZTDeviceActualState : Swift.Hashable {}
+extension ZTCoreKit.ZTDeviceActualState : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTServices.Primary.Characteristic : Swift.Equatable {}
+extension ZTCoreKit.ZTServices.Primary.Characteristic : Swift.Hashable {}
+extension ZTCoreKit.ZTServices.PrimaryOld.Characteristic : Swift.Equatable {}
+extension ZTCoreKit.ZTServices.PrimaryOld.Characteristic : Swift.Hashable {}
+extension ZTCoreKit.ZTServices.DeviceInformation.Characteristic : Swift.Equatable {}
+extension ZTCoreKit.ZTServices.DeviceInformation.Characteristic : Swift.Hashable {}
+extension ZTCoreKit.ZTServices.DeviceDFU.Characteristic : Swift.Equatable {}
+extension ZTCoreKit.ZTServices.DeviceDFU.Characteristic : Swift.Hashable {}
+extension ZTCoreKit.ZTActivityMode : Swift.Equatable {}
+extension ZTCoreKit.ZTActivityMode : Swift.Hashable {}
+extension ZTCoreKit.ZTActivityMode : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTSegmentData.Status : Swift.Equatable {}
+extension ZTCoreKit.ZTSegmentData.Status : Swift.Hashable {}
+extension ZTCoreKit.ZTSegmentData.Status : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTActivitySummaryStatus : Swift.Equatable {}
+extension ZTCoreKit.ZTActivitySummaryStatus : Swift.Hashable {}
+extension ZTCoreKit.ZTActivitySummaryStatus : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTPeriod : Swift.Equatable {}
+extension ZTCoreKit.ZTPeriod : Swift.Hashable {}
+extension ZTCoreKit.ZTPeriod : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTLoggerComponent : Swift.Equatable {}
+extension ZTCoreKit.ZTLoggerComponent : Swift.Hashable {}
+extension ZTCoreKit.ZTLoggerComponent : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTLoggerSeverity : Swift.Equatable {}
+extension ZTCoreKit.ZTLoggerSeverity : Swift.Hashable {}
+extension ZTCoreKit.ZTLoggerSeverity : Swift.RawRepresentable {}
+@available(*, unavailable, renamed: "Connection")
+extension ZTCoreKit.ZTReachability.ZTNetworkStatus : Swift.Equatable {}
+@available(*, unavailable, renamed: "Connection")
+extension ZTCoreKit.ZTReachability.ZTNetworkStatus : Swift.Hashable {}
+extension ZTCoreKit.ZTReachability.ZTConnection : Swift.Equatable {}
+extension ZTCoreKit.ZTReachability.ZTConnection : Swift.Hashable {}

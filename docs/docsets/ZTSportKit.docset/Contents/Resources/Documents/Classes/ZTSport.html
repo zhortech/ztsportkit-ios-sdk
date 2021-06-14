@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ZTSport Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ZTSport" class="dashAnchor"></a>
+    <a title="ZTSport Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ZTSportKit 1.0.51 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/zhortech/ztsportkit-ios-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ZTSportKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ZTSport Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ZTActivityAnalysis.html">ZTActivityAnalysis</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTActivityLeftRightAnalysis.html">ZTActivityLeftRightAnalysis</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTActivityLeftRightAnalysis/ProgressionAnalysis.html">– ProgressionAnalysis</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTActivityLeftRightTextAnalysis.html">ZTActivityLeftRightTextAnalysis</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTActivityRunAnalysis.html">ZTActivityRunAnalysis</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTAnalysisCadence.html">ZTAnalysisCadence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTAnalysisContactQuality.html">ZTAnalysisContactQuality</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTAnalysisContactTime.html">ZTAnalysisContactTime</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTAnalysisImpactForce.html">ZTAnalysisImpactForce</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTAnalysisPronation.html">ZTAnalysisPronation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTAnalysisPropulsion.html">ZTAnalysisPropulsion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTAnalysisStats.html">ZTAnalysisStats</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTAnalysisStrike.html">ZTAnalysisStrike</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTAnalysisStrikePattern.html">ZTAnalysisStrikePattern</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTAnalysisValueRecommendations.html">ZTAnalysisValueRecommendations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSpeedCadenceAnalysis.html">ZTSpeedCadenceAnalysis</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSport.html">ZTSport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSport.html#/s:10ZTSportKit0A0C12ActivityGoalO">– ActivityGoal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:10ZTSportKit0A8ActivityC">ZTSportActivity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSportActivityAttributes.html">ZTSportActivityAttributes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:10ZTSportKit0A15ActivitySummaryC">ZTSportActivitySummary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSportSegmentData.html">ZTSportSegmentData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTStrideQualityIndex.html">ZTStrideQualityIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSymmetryAnalysis.html">ZTSymmetryAnalysis</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTTimelineRollup.html">ZTTimelineRollup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTTrendValueData.html">ZTTrendValueData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:10ZTSportKit20ZTUserDataParametersC">ZTUserDataParameters</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:10ZTSportKit28ZTAnalysisContactQualityTypeO">ZTAnalysisContactQualityType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:10ZTSportKit23ZTAnalysisPronationTypeO">ZTAnalysisPronationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:10ZTSportKit24ZTAnalysisPropulsionTypeO">ZTAnalysisPropulsionType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ZTSport</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ZTSport</span></code></pre>
+
+                </div>
+              </div>
+            <p>ZTSport  provides methods to ork with ZTSport insoles &amp; shoes</p>
+
+              <div class="slightly-smaller">
+                <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L16-L723">Show on GitHub</a>
+              </div>
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C10sdkVersionSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/sdkVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C10sdkVersionSSvpZ">sdkVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ZTSportKit SDK version</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sdkVersion</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L24">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C21activityPluginVersionSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/activityPluginVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C21activityPluginVersionSSvpZ">activityPluginVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ZTSportKit SDK activity version</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">activityPluginVersion</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C6sharedACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C6sharedACvpZ">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shared instance</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">ZTSport</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C17isActivityRunningSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/isActivityRunning" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C17isActivityRunningSbSgvp">isActivityRunning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Activity is runnign on modules
+If nil is returned <code>ZTSport.shared.readGeneralState()</code> should be called to update it</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isActivityRunning</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L71-L78">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C15currentActivityAA0aD0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/currentActivity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C15currentActivityAA0aD0CSgvp">currentActivity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current running activity instance</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">currentActivity</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:10ZTSportKit0A8ActivityC">ZTSportActivity</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L81-L89">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C16lastSerialNumberSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastSerialNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C16lastSerialNumberSSSgvp">lastSerialNumber</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Last serial number of device connected</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lastSerialNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L92-L94">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C11currentMode06ZTCoreB0010ZTActivityD0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/currentMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C11currentMode06ZTCoreB0010ZTActivityD0OSgvp">currentMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current algorithm mode</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">currentMode</span><span class="p">:</span> <span class="kt">ZTActivityMode</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L97-L108">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C21onActivityStateChange06ZTCoreB08ZTSignalCySSSg_AE014ZTDeviceActualE0Os5Error_pSgtGvp"></a>
+                    <a name="//apple_ref/swift/Property/onActivityStateChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C21onActivityStateChange06ZTCoreB08ZTSignalCySSSg_AE014ZTDeviceActualE0Os5Error_pSgtGvp">onActivityStateChange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Activity state change observer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onActivityStateChange</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">String</span><span class="p">?,</span> <span class="kt">ZTDeviceActualState</span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L111">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C17onActivityStopped06ZTCoreB08ZTSignalCySSSg_AE19ZTDeviceActualStateOs5Error_pSgtGvp"></a>
+                    <a name="//apple_ref/swift/Property/onActivityStopped" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C17onActivityStopped06ZTCoreB08ZTSignalCySSSg_AE19ZTDeviceActualStateOs5Error_pSgtGvp">onActivityStopped</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Activity state change observer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onActivityStopped</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">String</span><span class="p">?,</span> <span class="kt">ZTDeviceActualState</span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L114">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C22onActivityDataReceived06ZTCoreB08ZTSignalCy10Foundation0E0VSgGvp"></a>
+                    <a name="//apple_ref/swift/Property/onActivityDataReceived" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C22onActivityDataReceived06ZTCoreB08ZTSignalCy10Foundation0E0VSgGvp">onActivityDataReceived</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Activity segment data received</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onActivityDataReceived</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">Data</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L117">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C24onActivityRestoreStarted06ZTCoreB08ZTSignalCySbGvp"></a>
+                    <a name="//apple_ref/swift/Property/onActivityRestoreStarted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C24onActivityRestoreStarted06ZTCoreB08ZTSignalCySbGvp">onActivityRestoreStarted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notify about activity from previous session exist without calling stop</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onActivityRestoreStarted</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">Bool</span><span class="p">)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L120">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C25onActivityStopRequestSent06ZTCoreB08ZTSignalCySSSg_s5Error_pSgtGvp"></a>
+                    <a name="//apple_ref/swift/Property/onActivityStopRequestSent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C25onActivityStopRequestSent06ZTCoreB08ZTSignalCySSSg_s5Error_pSgtGvp">onActivityStopRequestSent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notify about activity data was sent when activity is stopped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onActivityStopRequestSent</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">String</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L123">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C15connectedDevice06ZTCoreB08ZTDeviceCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/connectedDevice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C15connectedDevice06ZTCoreB08ZTDeviceCSgvp">connectedDevice</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Connected ZTDevice. Connection is done using ZTCoreKit.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">connectedDevice</span><span class="p">:</span> <span class="kt">ZTDevice</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L126-L128">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Private%20methods"></a>
+                <a name="//apple_ref/swift/Section/Private methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Private%20methods"></a>
+                  <h3 class="section-name"><p>Private methods</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C16readGeneralStateyyF"></a>
+                    <a name="//apple_ref/swift/Method/readGeneralState()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C16readGeneralStateyyF">readGeneralState()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initiate command to read general state. Notifications are send to subscriber <code>onGeneralStateUpdated</code> for connected ZTDevice.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">readGeneralState</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L217-L244">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C7setMode4mode10completiony06ZTCoreB0010ZTActivityD0O_ys5Error_pSgctF"></a>
+                    <a name="//apple_ref/swift/Method/setMode(mode:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C7setMode4mode10completiony06ZTCoreB0010ZTActivityD0O_ys5Error_pSgctF">setMode(mode:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Algorithm selection to use with activity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setMode</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="kt">ZTActivityMode</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ZTBaseResult</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTActivityMode</code> - algo type</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L248-L281">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C17setUserParameters10parameters10completionyAA010ZTUserDataE0C_ys5Error_pSgctF"></a>
+                    <a name="//apple_ref/swift/Method/setUserParameters(parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C17setUserParameters10parameters10completionyAA010ZTUserDataE0C_ys5Error_pSgctF">setUserParameters(parameters:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send user parameters to be used in firmware algorythm</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setUserParameters</span><span class="p">(</span><span class="nv">parameters</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:10ZTSportKit20ZTUserDataParametersC">ZTUserDataParameters</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ZTBaseResult</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes.html#/s:10ZTSportKit20ZTUserDataParametersC">ZTUserDataParameters</a></code> instance</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L324-L380">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C13startActivity4goal0E5ValueyAC0D4GoalO_SdtF"></a>
+                    <a name="//apple_ref/swift/Method/startActivity(goal:goalValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C13startActivity4goal0E5ValueyAC0D4GoalO_SdtF">startActivity(goal:<wbr>goalValue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start activity. Result of activity start command can be observed in <code><a href="../Classes/ZTSport.html#/s:10ZTSportKit0A0C21onActivityStateChange06ZTCoreB08ZTSignalCySSSg_AE014ZTDeviceActualE0Os5Error_pSgtGvp">onActivityStateChange</a></code> for connected ZTDevice.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startActivity</span><span class="p">(</span><span class="nv">goal</span><span class="p">:</span> <span class="kt">ZTSport</span><span class="o">.</span><span class="kt"><a href="../Classes/ZTSport.html#/s:10ZTSportKit0A0C12ActivityGoalO">ActivityGoal</a></span><span class="p">,</span> <span class="nv">goalValue</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>goal</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/ZTSport.html#/s:10ZTSportKit0A0C12ActivityGoalO">ZTSport.ActivityGoal</a></code> type</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>goalValue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Double</code> value (Units for &ldquo;distance&rdquo; shall be kilometers.  Units for &ldquo;duration&rdquo; shall be seconds.)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L386-L442">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C12stopActivityyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopActivity()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C12stopActivityyyF">stopActivity()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stop activity. Result of activity stop command can be observed in <code><a href="../Classes/ZTSport.html#/s:10ZTSportKit0A0C17onActivityStopped06ZTCoreB08ZTSignalCySSSg_AE19ZTDeviceActualStateOs5Error_pSgtGvp">onActivityStopped</a></code> and <code><a href="../Classes/ZTSport.html#/s:10ZTSportKit0A0C21onActivityStateChange06ZTCoreB08ZTSignalCySSSg_AE014ZTDeviceActualE0Os5Error_pSgtGvp">onActivityStateChange</a></code> for connected ZTDevice.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopActivity</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L445-L464">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Data%20related%20methods"></a>
+                <a name="//apple_ref/swift/Section/Data related methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Data%20related%20methods"></a>
+                  <h3 class="section-name"><p>Data related methods</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C15getMapRouteData10activityId10completionySS_ySDySSypGSg_10Foundation0F0VSgs5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getMapRouteData(activityId:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C15getMapRouteData10activityId10completionySS_ySDySSypGSg_10Foundation0F0VSgs5Error_pSgtctF">getMapRouteData(activityId:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve routing data for activity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMapRouteData</span><span class="p">(</span><span class="nv">activityId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(([</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Activity id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>( array of <code><a href="../Classes.html#/s:10ZTSportKit0A15ActivitySummaryC">ZTSportActivitySummary</a></code>, <code>Error</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L542-L546">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C17getSegmentDetails10activityId07segmentG010completionySS_SSyAA21ZTActivityRunAnalysisCSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getSegmentDetails(activityId:segmentId:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C17getSegmentDetails10activityId07segmentG010completionySS_SSyAA21ZTActivityRunAnalysisCSg_s5Error_pSgtctF">getSegmentDetails(activityId:<wbr>segmentId:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve route segment details</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getSegmentDetails</span><span class="p">(</span><span class="nv">activityId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">segmentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Classes/ZTActivityRunAnalysis.html">ZTActivityRunAnalysis</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activityId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>segmentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>segment id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>( <code>ZTSportSegmentDetails</code>, <code>Error</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L553-L557">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C17getSegmentDetails10activityId07segmentG010completionySS_SSySDySSypGSg_10Foundation4DataVSgs5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getSegmentDetails(activityId:segmentId:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C17getSegmentDetails10activityId07segmentG010completionySS_SSySDySSypGSg_10Foundation4DataVSgs5Error_pSgtctF">getSegmentDetails(activityId:<wbr>segmentId:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve route segment details</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getSegmentDetails</span><span class="p">(</span><span class="nv">activityId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">segmentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(([</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activityId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>segmentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>segment id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>( <code>[String: Any]]</code>, <code>Error</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L564-L568">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C18getActivitySummary2id6fields7include10completionySS_SayAA0aD0C5FieldOGSaySSGSgyAA0adE0CSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getActivitySummary(id:fields:include:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C18getActivitySummary2id6fields7include10completionySS_SayAA0aD0C5FieldOGSaySSGSgyAA0adE0CSg_s5Error_pSgtctF">getActivitySummary(id:<wbr>fields:<wbr>include:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve activity data for time range</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getActivitySummary</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                               <span class="nv">fields</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes.html#/s:10ZTSportKit0A8ActivityC">ZTSportActivity</a></span><span class="o">.</span><span class="kt">Field</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+                               <span class="nv">include</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                               <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ZTResultObject</span><span class="o">&lt;</span><span class="kt"><a href="../Classes.html#/s:10ZTSportKit0A15ActivitySummaryC">ZTSportActivitySummary</a></span><span class="o">&gt;</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fields</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of <code>ZTSportActivity.Field</code> to include in response</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>include</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>addtitional information to include, e.g. &ldquo;supplimentalData.geoThumbnail&rdquo; , &ldquo;attributes.goalType&rdquo;, &ldquo;attributes.goalValue&rdquo;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>( <code><a href="../Classes.html#/s:10ZTSportKit0A15ActivitySummaryC">ZTSportActivitySummary</a></code>,  <code>Error</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L576-L584">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C20getActivitiesSummary4code5start3end6fields7include10completionySSSg_10Foundation4DateVANSayAA0A8ActivityC5FieldOGSaySSGSgySayAA0anE0CGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getActivitiesSummary(code:start:end:fields:include:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C20getActivitiesSummary4code5start3end6fields7include10completionySSSg_10Foundation4DateVANSayAA0A8ActivityC5FieldOGSaySSGSgySayAA0anE0CGSg_s5Error_pSgtctF">getActivitiesSummary(code:<wbr>start:<wbr>end:<wbr>fields:<wbr>include:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve activity summary list for time range</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS, deprecated, message: "offset/limit parameters should be passed instead of start/end")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getActivitiesSummary</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                                 <span class="nv">start</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span>
+                                 <span class="nv">end</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span>
+                                 <span class="nv">fields</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes.html#/s:10ZTSportKit0A8ActivityC">ZTSportActivity</a></span><span class="o">.</span><span class="kt">Field</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+                                 <span class="nv">include</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                 <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ZTResultArray</span><span class="o">&lt;</span><span class="kt"><a href="../Classes.html#/s:10ZTSportKit0A15ActivitySummaryC">ZTSportActivitySummary</a></span><span class="o">&gt;</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>shoe code <code>Optional</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>start</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>to include activities from <code>Date</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>end</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>to include activites up to <code>Date</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fields</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of <code>ZTSportActivity.Field</code> to include in response</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>include</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>addtitional information to include, e.g. &ldquo;supplimentalData.geoThumbnail&rdquo; , &ldquo;attributes.goalType&rdquo;, &ldquo;attributes.goalValue&rdquo;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>callback with array of activities</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L595-L605">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C20getActivitiesSummary4code6offset5limit6fields7include10completionySSSg_S2iSayAA0A8ActivityC5FieldOGSaySSGSgySayAA0alE0CGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getActivitiesSummary(code:offset:limit:fields:include:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C20getActivitiesSummary4code6offset5limit6fields7include10completionySSSg_S2iSayAA0A8ActivityC5FieldOGSaySSGSgySayAA0alE0CGSg_s5Error_pSgtctF">getActivitiesSummary(code:<wbr>offset:<wbr>limit:<wbr>fields:<wbr>include:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve activity summary list</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS, introduced: 0.0.31, message: "offset/limit parameters should be passed")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getActivitiesSummary</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                                 <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                                 <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                                 <span class="nv">fields</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes.html#/s:10ZTSportKit0A8ActivityC">ZTSportActivity</a></span><span class="o">.</span><span class="kt">Field</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+                                 <span class="nv">include</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                 <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ZTResultArray</span><span class="o">&lt;</span><span class="kt"><a href="../Classes.html#/s:10ZTSportKit0A15ActivitySummaryC">ZTSportActivitySummary</a></span><span class="o">&gt;</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>shoe code <code>Optional</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>starting index of the activities</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>number of objects to return</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fields</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of <code>ZTSportActivity.Field</code> to include in response</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>include</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>addtitional information to include, e.g. &ldquo;supplimentalData.geoThumbnail&rdquo; , &ldquo;attributes.goalType&rdquo;, &ldquo;attributes.goalValue&rdquo;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>callback with array of activities</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L616-L626">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C15addActivityData9timestamp4data10completionySd_SDySSypGys5Error_pSgctF"></a>
+                    <a name="//apple_ref/swift/Method/addActivityData(timestamp:data:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C15addActivityData9timestamp4data10completionySd_SDySSypGys5Error_pSgctF">addActivityData(timestamp:<wbr>data:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add activity data for current activity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, renamed: "addActivityData", message: "The parameter type for 'data' have changed to Any")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addActivityData</span><span class="p">(</span><span class="nv">timestamp</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ZTBaseResult</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timestamp</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>TimeInterval</code> current timestamp</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>[String: Any]</code> dictionary representing activity data:
+[
+&ldquo;coordinates&rdquo;: [LONGITUDE, LATITUDE],
+&ldquo;properties&rdquo;: [
+&ldquo;altitude&rdquo;: someValue,
+&ldquo;speed&rdquo;: someValue,
+&ldquo;course&rdquo;: someValue,
+&ldquo;paused&rdquo;: true/false
+]
+]</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure called when the <code>Data</code> is saved.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L643-L651">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C15addActivityData9timestamp4data10completionySd_SayypGys5Error_pSgctF"></a>
+                    <a name="//apple_ref/swift/Method/addActivityData(timestamp:data:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C15addActivityData9timestamp4data10completionySd_SayypGys5Error_pSgctF">addActivityData(timestamp:<wbr>data:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add activity data for current activity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addActivityData</span><span class="p">(</span><span class="nv">timestamp</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ZTBaseResult</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timestamp</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>TimeInterval</code> current timestamp</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>[Any]</code> array of activity data</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure called when the <code>Data</code> is saved.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L658-L666">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C25getActivityTimelineRollup5start3end10completiony10Foundation4DateV_AJyAA010ZTTimelineF0CSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getActivityTimelineRollup(start:end:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C25getActivityTimelineRollup5start3end10completiony10Foundation4DateV_AJyAA010ZTTimelineF0CSg_s5Error_pSgtctF">getActivityTimelineRollup(start:<wbr>end:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve timeline rollup</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getActivityTimelineRollup</span><span class="p">(</span><span class="nv">start</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span>
+                                      <span class="nv">end</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span>
+                                      <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ZTResultObject</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/ZTTimelineRollup.html">ZTTimelineRollup</a></span><span class="o">&gt;</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>start</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>to include activities from <code>Date</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>end</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>to include activites up to <code>Date</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code>ZTSportTimelineRollup</code>?,<code>Error</code>?)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L673-L682">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C22getActivityRunAnalysis10activityId10completionySS_yAA010ZTActivityeF0CSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getActivityRunAnalysis(activityId:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C22getActivityRunAnalysis10activityId10completionySS_yAA010ZTActivityeF0CSg_s5Error_pSgtctF">getActivityRunAnalysis(activityId:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve run analysis for activity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getActivityRunAnalysis</span><span class="p">(</span><span class="nv">activityId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ZTResultObject</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/ZTActivityRunAnalysis.html">ZTActivityRunAnalysis</a></span><span class="o">&gt;</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activityId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Activity id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>callback with array of activities</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L688-L692">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C25getPeriodActivityAnalysis4code6period10completionySSSg_06ZTCoreB08ZTPeriodOyAA010ZTActivityF0CSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getPeriodActivityAnalysis(code:period:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C25getPeriodActivityAnalysis4code6period10completionySSSg_06ZTCoreB08ZTPeriodOyAA010ZTActivityF0CSg_s5Error_pSgtctF">getPeriodActivityAnalysis(code:<wbr>period:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve activity analysis</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPeriodActivityAnalysis</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                                 <span class="nv">period</span><span class="p">:</span> <span class="kt">ZTPeriod</span><span class="p">,</span>
+                                 <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ZTResultObject</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/ZTActivityAnalysis.html">ZTActivityAnalysis</a></span><span class="o">&gt;</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>shoe code</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>period</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>to include activities from <code>Date</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>callback with array of activities</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport.swift#L715-L722">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C12ActivityGoalO"></a>
+                    <a name="//apple_ref/swift/Enum/ActivityGoal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C12ActivityGoalO">ActivityGoal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Goals enum</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">ActivityGoal</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+Enums.swift#L14-L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-06-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
