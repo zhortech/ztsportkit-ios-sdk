@@ -1,9 +1,7 @@
 # ZTSportKit
 
 [![Platforms](https://img.shields.io/cocoapods/p/ZTSportKit.svg)](https://cocoapods.org/pods/ZTSportKit)
-[![License](https://img.shields.io/cocoapods/l/ZTSportKit.svg)](https://raw.githubusercontent.com/zhortech/ztsportkit-ios-sdk/main/LICENSE)
-
-[![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+[![License](https://img.shields.io/cocoapods/l/ZTSportKit)](https://raw.githubusercontent.com/zhortech/ztsportkit-ios-sdk/main/LICENSE)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/ZTSportKit.svg)](https://cocoapods.org/pods/ZTSportKit)
 
 - [Requirements](#requirements)
@@ -135,7 +133,7 @@ ZTSport.shared.setMode(mode: .running) { (error) in
 
 ### Activity Start
 
-To start activity first set user parameters:
+Before starting activity user parameters/attributes should be passed into SDK. These attributes are used for activity analysis. If attributes were not passed vefore activity start - analysis will have wrong numbers. User attributes can be passed once for the same user.
 ```swift
 let userDataParameters = ZTUserDataParameters(bodyWeight: 80, bodyHeight: 185, shoeSize: 44)
 
@@ -147,19 +145,21 @@ ZTSport.shared.setUserParameters(parameters: userDataParameters, completion: { (
 ```
 Next, subscribe to activity state change
 ```swift
+
 ZTSport.shared.onActivityStateChange.subscribeOnce(with: self) { (activityId, actualState, error) in
     debugPrint("onActivityStateChange - activityId: \(activityId ?? " -- "), state: \(actualState), error: \(error?.localizedDescription ?? "")")
 }
 ```
 And finally call start activity with chosen goal
 ```swift
+
 ZTSport.shared.startActivity(goal: ZTSport.ActivityGoal.distance, goalValue: 200)
 ```
 
 ### Activity stop. 
 Activity can be stopped calling `stopActivity()`. 
 Initially subscribe to activity stopped event
-```swifft
+```swift
 
 ZTSport.shared.onActivityStopped.subscribeOnce(with: self) { (activityId, actualState, error) in
     debugPrint("Activity stopped with activityId: \(activityId ?? ""), state: \(actualState), error: \(error?.localizedDescription ?? "")")
@@ -173,6 +173,7 @@ ZTSport.shared.stopActivity()
 Activity can be also stopped automatically because of idle state and insoles went into sleep mode or battery low level. 
 You should subscribe for this event to be notified:
 ```swift
+
 ZTSport.shared.onActivityRestoreStarted.subscribe(with: self) { (wasRestored) in
     debugPrint("Previous activity restored: \(wasRestored)")
 }
