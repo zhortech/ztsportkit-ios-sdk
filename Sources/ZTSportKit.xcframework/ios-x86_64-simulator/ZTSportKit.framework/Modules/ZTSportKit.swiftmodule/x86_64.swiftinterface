@@ -107,6 +107,7 @@ final public class ZTActivityRunAnalysis : ObjectMapper.Mappable {
   final public var strideLength: ZTSportKit.ZTAnalysisValueRecommendations?
   final public var contactTime: ZTSportKit.ZTAnalysisContactTime?
   final public var contactQuality: ZTSportKit.ZTAnalysisContactQuality?
+  final public var strideQualityIndexV2: ZTSportKit.ZTStrideQualityIndexV2?
   required public init?(map: ObjectMapper.Map)
   final public func mapping(map: ObjectMapper.Map)
   @objc deinit
@@ -268,6 +269,52 @@ final public class ZTAnalysisValueRecommendations : ObjectMapper.Mappable {
   required public init?(map: ObjectMapper.Map)
   final public func mapping(map: ObjectMapper.Map)
   @objc deinit
+}
+final public class ZTStrideQualityIndexV2 : ObjectMapper.Mappable {
+  final public var health: ZTSportKit.ZTStrideQualityIndexV2.Health?
+  final public var performance: ZTSportKit.ZTStrideQualityIndexV2.Performance?
+  final public var speedDistanceRatio: Swift.Int?
+  required public init?(map: ObjectMapper.Map)
+  final public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+extension ZTStrideQualityIndexV2 {
+  final public class Health : ObjectMapper.Mappable {
+    final public var index: Swift.Int?
+    final public var bucket: Swift.Int?
+    final public var comment: Swift.String?
+    final public var recommendations: [Swift.String]?
+    final public var spider: ZTSportKit.ZTStrideQualityIndexV2.Spider?
+    required public init?(map: ObjectMapper.Map)
+    final public func mapping(map: ObjectMapper.Map)
+    @objc deinit
+  }
+  final public class Performance : ObjectMapper.Mappable {
+    final public var index: Swift.Int?
+    final public var bucket: Swift.Int?
+    final public var comment: Swift.String?
+    final public var recommendations: [Swift.String]?
+    final public var spider: ZTSportKit.ZTStrideQualityIndexV2.Spider?
+    required public init?(map: ObjectMapper.Map)
+    final public func mapping(map: ObjectMapper.Map)
+    @objc deinit
+  }
+  final public class Spider : ObjectMapper.Mappable {
+    final public var axis: Swift.Int?
+    final public var max: Swift.Double?
+    final public var points: [ZTSportKit.ZTStrideQualityIndexV2.Points]?
+    required public init?(map: ObjectMapper.Map)
+    final public func mapping(map: ObjectMapper.Map)
+    @objc deinit
+  }
+  final public class Points : ObjectMapper.Mappable {
+    final public var label: Swift.String?
+    final public var value: Swift.Double?
+    final public var previous: Swift.Double?
+    required public init?(map: ObjectMapper.Map)
+    final public func mapping(map: ObjectMapper.Map)
+    @objc deinit
+  }
 }
 @_inheritsConvenienceInitializers final public class ZTSportActivity : ZTCoreKit.ZTActivity {
   override final public func save()

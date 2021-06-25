@@ -1,5 +1,21 @@
 # Changelog
 
+## [v1.0.53](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/v.1.0.53) (2021-06-25)
+
+[Full Changelog](https://github.com/zhortech/ztsportkit-ios-sdk/CHANGELOG.md)
+
+**Issues done:**
+
+- Added support for `Stride Quality Index V2`. It can be obtained in 'ZTSport.shared.getActivityRunAnalysis'.
+
+## [v1.0.52](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/v.1.0.52) (2021-06-18)
+
+[Full Changelog](https://github.com/zhortech/ztsportkit-ios-sdk/CHANGELOG.md)
+
+**Issues done:**
+
+- Added support for `SQIV2`. It can be obtained in run analysis in field `strideQualityIndexV2`.
+
 ## [v1.0.51](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.0.51) (2021-06-14)
 
 [Full Changelog](https://github.com/zhortech/ztsportkit-ios-sdk/CHANGELOG.md)
