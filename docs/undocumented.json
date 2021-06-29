@@ -155,6 +155,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTActivityRunAnalysis.swift",
+      "line": 25,
+      "symbol": "ZTActivityRunAnalysis.strideQualityIndexV2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTActivitySegmentAnalysis.swift",
       "line": 13,
       "symbol": "ZTActivitySegmentAnalysis",
@@ -680,6 +687,34 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTStrideQualityIndexV2.swift",
+      "line": 34,
+      "symbol": "ZTStrideQualityIndexV2.Health",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTStrideQualityIndexV2.swift",
+      "line": 56,
+      "symbol": "ZTStrideQualityIndexV2.Performance",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTStrideQualityIndexV2.swift",
+      "line": 78,
+      "symbol": "ZTStrideQualityIndexV2.Spider",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTStrideQualityIndexV2.swift",
+      "line": 97,
+      "symbol": "ZTStrideQualityIndexV2.Points",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSymmetryAnalysis.swift",
       "line": 14,
       "symbol": "ZTSymmetryAnalysis.symmetry",
@@ -782,13 +817,6 @@
       "line": 15,
       "symbol": "ZTTrendValueData.trend",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/ZTUserDataParameters.swift",
-      "line": 18,
-      "symbol": "ZTUserDataParameters.init(bodyWeight:bodyHeight:shoeSize:threadmillSpeed:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {

@@ -280,7 +280,7 @@ final public class ZTStrideQualityIndexV2 : ObjectMapper.Mappable {
 }
 extension ZTStrideQualityIndexV2 {
   final public class Health : ObjectMapper.Mappable {
-    final public var index: Swift.Int?
+    final public var index: Swift.Double?
     final public var bucket: Swift.Int?
     final public var comment: Swift.String?
     final public var recommendations: [Swift.String]?
@@ -290,7 +290,7 @@ extension ZTStrideQualityIndexV2 {
     @objc deinit
   }
   final public class Performance : ObjectMapper.Mappable {
-    final public var index: Swift.Int?
+    final public var index: Swift.Double?
     final public var bucket: Swift.Int?
     final public var comment: Swift.String?
     final public var recommendations: [Swift.String]?
