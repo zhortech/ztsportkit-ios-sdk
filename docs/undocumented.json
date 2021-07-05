@@ -687,34 +687,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTStrideQualityIndexV2.swift",
-      "line": 34,
-      "symbol": "ZTStrideQualityIndexV2.Health",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTStrideQualityIndexV2.swift",
-      "line": 56,
-      "symbol": "ZTStrideQualityIndexV2.Performance",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTStrideQualityIndexV2.swift",
-      "line": 78,
-      "symbol": "ZTStrideQualityIndexV2.Spider",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTStrideQualityIndexV2.swift",
-      "line": 97,
-      "symbol": "ZTStrideQualityIndexV2.Points",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSymmetryAnalysis.swift",
       "line": 14,
       "symbol": "ZTSymmetryAnalysis.symmetry",

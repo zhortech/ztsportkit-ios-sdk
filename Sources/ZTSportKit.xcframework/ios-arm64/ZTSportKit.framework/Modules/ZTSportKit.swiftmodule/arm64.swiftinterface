@@ -273,7 +273,8 @@ final public class ZTAnalysisValueRecommendations : ObjectMapper.Mappable {
 final public class ZTStrideQualityIndexV2 : ObjectMapper.Mappable {
   final public var health: ZTSportKit.ZTStrideQualityIndexV2.Health?
   final public var performance: ZTSportKit.ZTStrideQualityIndexV2.Performance?
-  final public var speedDistanceRatio: Swift.Int?
+  final public var speedDistanceRatio: Swift.Double?
+  final public var speedDistanceCategory: ZTSportKit.ZTStrideQualityIndexV2.DistanceCategory?
   required public init?(map: ObjectMapper.Map)
   final public func mapping(map: ObjectMapper.Map)
   @objc deinit
@@ -311,6 +312,14 @@ extension ZTStrideQualityIndexV2 {
     final public var label: Swift.String?
     final public var value: Swift.Double?
     final public var previous: Swift.Double?
+    required public init?(map: ObjectMapper.Map)
+    final public func mapping(map: ObjectMapper.Map)
+    @objc deinit
+  }
+  final public class DistanceCategory : ObjectMapper.Mappable {
+    final public var name: Swift.String?
+    final public var description: Swift.String?
+    final public var index: Swift.Int?
     required public init?(map: ObjectMapper.Map)
     final public func mapping(map: ObjectMapper.Map)
     @objc deinit
