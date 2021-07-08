@@ -162,6 +162,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTActivityRunAnalysis.swift",
+      "line": 26,
+      "symbol": "ZTActivityRunAnalysis.cadence",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTActivitySegmentAnalysis.swift",
       "line": 13,
       "symbol": "ZTActivitySegmentAnalysis",
@@ -282,7 +289,14 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTAnalysisImpactForce.swift",
-      "line": 24,
+      "line": 16,
+      "symbol": "ZTAnalysisImpactForce.recommendations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTAnalysisImpactForce.swift",
+      "line": 26,
       "symbol": "ZTAnalysisImpactForce.ImpactForceType",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
@@ -520,7 +534,14 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTAnalysisStrikePattern.swift",
-      "line": 24,
+      "line": 16,
+      "symbol": "ZTAnalysisStrikePattern.recommendations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTAnalysisStrikePattern.swift",
+      "line": 26,
       "symbol": "ZTAnalysisStrikePattern.StrikePatternType",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"

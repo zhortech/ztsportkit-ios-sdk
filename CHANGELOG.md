@@ -1,6 +1,15 @@
 # Changelog
 
-## [v1.0.54](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.0.53) (2021-07-05)
+## [v1.0.55](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/v.1.0.55) (2021-07-08)
+
+[Full Changelog](https://github.com/zhortech/ztsportkit-ios-sdk.git/CHANGELOG.md)
+
+**Issues done:**
+
+- Added recommendations for `strike` in activity analysis.
+- Added `cadence` object in activity analysis.
+
+## [v1.0.54](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.0.54) (2021-07-05)
 
 [Full Changelog](https://github.com/zhortech/ztsportkit-ios-sdk/CHANGELOG.md)
 

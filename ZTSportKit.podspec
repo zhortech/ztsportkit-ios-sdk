@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ZTSportKit'
-  s.version = '1.0.54'
+  s.version = '1.0.55'
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = 'Official Zhortech ZTSportKit SDK for iOS to work with Sport products.'
   s.homepage = 'https://zhortech.com/'

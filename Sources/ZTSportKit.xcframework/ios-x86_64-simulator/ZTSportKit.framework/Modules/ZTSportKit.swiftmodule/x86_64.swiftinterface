@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTSportKit
 import Alamofire
 import CoreBluetooth
@@ -108,6 +108,7 @@ final public class ZTActivityRunAnalysis : ObjectMapper.Mappable {
   final public var contactTime: ZTSportKit.ZTAnalysisContactTime?
   final public var contactQuality: ZTSportKit.ZTAnalysisContactQuality?
   final public var strideQualityIndexV2: ZTSportKit.ZTStrideQualityIndexV2?
+  final public var cadence: ZTSportKit.ZTAnalysisValueRecommendations?
   required public init?(map: ObjectMapper.Map)
   final public func mapping(map: ObjectMapper.Map)
   @objc deinit
@@ -165,6 +166,7 @@ final public class ZTAnalysisContactTime : ObjectMapper.Mappable {
 final public class ZTAnalysisImpactForce : ObjectMapper.Mappable {
   final public var left: ZTSportKit.ZTAnalysisImpactForce.ImpactForceType?
   final public var right: ZTSportKit.ZTAnalysisImpactForce.ImpactForceType?
+  final public var recommendations: [Swift.String]?
   required public init?(map: ObjectMapper.Map)
   final public func mapping(map: ObjectMapper.Map)
   public enum ImpactForceType : Swift.String {
@@ -247,6 +249,7 @@ final public class ZTAnalysisStrike : ObjectMapper.Mappable {
 final public class ZTAnalysisStrikePattern : ObjectMapper.Mappable {
   final public var left: ZTSportKit.ZTAnalysisStrikePattern.StrikePatternType?
   final public var right: ZTSportKit.ZTAnalysisStrikePattern.StrikePatternType?
+  final public var recommendations: [Swift.String]?
   required public init?(map: ObjectMapper.Map)
   final public func mapping(map: ObjectMapper.Map)
   public enum StrikePatternType : Swift.String {
