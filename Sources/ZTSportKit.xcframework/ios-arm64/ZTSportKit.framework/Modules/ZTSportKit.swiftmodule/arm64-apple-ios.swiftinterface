@@ -1,103 +1,101 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTSportKit
-import Alamofire
 import CoreBluetooth
 import Foundation
-import ObjectMapper
 import Swift
 import ZTCoreKit
-final public class ZTActivityAnalysis : ObjectMapper.Mappable {
+final public class ZTActivityAnalysis : ZTCoreKit.ZTMappable {
   final public var total: Swift.Int
   final public var stats: ZTSportKit.ZTActivityAnalysis.Stats?
   final public var charts: ZTSportKit.ZTActivityAnalysis.Charts?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
 extension ZTActivityAnalysis {
-  final public class Stats : ObjectMapper.Mappable {
+  final public class Stats : ZTCoreKit.ZTMappable {
     final public var totalSteps: Swift.Int
     final public var runningSteps: Swift.Int
     final public var walkingSteps: Swift.Int
     final public var speed: Swift.Double
     final public var calories: Swift.Int
-    required public init?(map: ObjectMapper.Map)
-    final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
-  final public class Charts : ObjectMapper.Mappable {
+  final public class Charts : ZTCoreKit.ZTMappable {
     final public var totalSteps: [ZTSportKit.ZTActivityAnalysis.Charts.TotalSteps]?
     final public var speed: [ZTSportKit.ZTActivityAnalysis.Charts.Speed]?
     final public var calories: [ZTSportKit.ZTActivityAnalysis.Charts.Calories]?
     final public var steps: [ZTSportKit.ZTActivityAnalysis.Charts.Steps]?
     final public var walkingSpeed: [ZTSportKit.ZTActivityAnalysis.Charts.Speed]?
     final public var runningSpeed: [ZTSportKit.ZTActivityAnalysis.Charts.Speed]?
-    required public init?(map: ObjectMapper.Map)
-    final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
 }
 extension ZTActivityAnalysis.Charts {
-  final public class TotalSteps : ObjectMapper.Mappable {
+  final public class TotalSteps : ZTCoreKit.ZTMappable {
     final public var timestamp: Foundation.Date?
     final public var stepsCount: Swift.Int
     final public var walkingStepsCount: Swift.Int
-    required public init?(map: ObjectMapper.Map)
-    final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
-  public class ChartData : ObjectMapper.Mappable {
+  public class ChartData : ZTCoreKit.ZTMappable {
     public var timestamp: Foundation.Date?
     public var value: Swift.Int
-    required public init?(map: ObjectMapper.Map)
-    public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
   @_inheritsConvenienceInitializers final public class Speed : ZTSportKit.ZTActivityAnalysis.Charts.ChartData {
-    required public init?(map: ObjectMapper.Map)
-    override final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    override final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
   @_inheritsConvenienceInitializers final public class Calories : ZTSportKit.ZTActivityAnalysis.Charts.ChartData {
-    required public init?(map: ObjectMapper.Map)
-    override final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    override final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
   @_inheritsConvenienceInitializers final public class Steps : ZTSportKit.ZTActivityAnalysis.Charts.ChartData {
-    required public init?(map: ObjectMapper.Map)
-    override final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    override final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
 }
-final public class ZTActivityLeftRightAnalysis : ObjectMapper.Mappable {
+final public class ZTActivityLeftRightAnalysis : ZTCoreKit.ZTMappable {
   final public var left: ZTSportKit.ZTActivityLeftRightAnalysis.ProgressionAnalysis?
   final public var right: ZTSportKit.ZTActivityLeftRightAnalysis.ProgressionAnalysis?
   final public var recommendations: [Swift.String]?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
 extension ZTActivityLeftRightAnalysis {
-  final public class ProgressionAnalysis : ObjectMapper.Mappable {
+  final public class ProgressionAnalysis : ZTCoreKit.ZTMappable {
     final public var contactTime: ZTSportKit.ZTTrendValueData<Swift.Double>?
     final public var flightTime: ZTSportKit.ZTTrendValueData<Swift.Double>?
     final public var impactForce: ZTSportKit.ZTTrendValueData<Swift.Double>?
     final public var strikePattern: ZTSportKit.ZTTrendValueData<Swift.String>?
-    required public init?(map: ObjectMapper.Map)
-    final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
 }
-final public class ZTActivityLeftRightTextAnalysis : ObjectMapper.Mappable {
+final public class ZTActivityLeftRightTextAnalysis : ZTCoreKit.ZTMappable {
   final public var left: Swift.String
   final public var right: Swift.String
   final public var recommendations: [Swift.String]?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-final public class ZTActivityRunAnalysis : ObjectMapper.Mappable {
+final public class ZTActivityRunAnalysis : ZTCoreKit.ZTMappable {
   final public var activityStart: Foundation.Date?
   final public var stats: ZTSportKit.ZTAnalysisStats?
   final public var strike: ZTSportKit.ZTAnalysisStrike?
@@ -109,12 +107,12 @@ final public class ZTActivityRunAnalysis : ObjectMapper.Mappable {
   final public var contactQuality: ZTSportKit.ZTAnalysisContactQuality?
   final public var strideQualityIndexV2: ZTSportKit.ZTStrideQualityIndexV2?
   final public var cadence: ZTSportKit.ZTAnalysisValueRecommendations?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
 @available(*, deprecated, message: "Use ZTActivityRunAnalysis")
-public class ZTActivitySegmentAnalysis : ObjectMapper.Mappable {
+public class ZTActivitySegmentAnalysis : ZTCoreKit.ZTMappable {
   public var stats: ZTSportKit.ZTAnalysisStats?
   public var strideQualityIndex: ZTSportKit.ZTStrideQualityIndex?
   public var strike: ZTSportKit.ZTAnalysisStrike?
@@ -123,16 +121,16 @@ public class ZTActivitySegmentAnalysis : ObjectMapper.Mappable {
   public var strideLength: ZTSportKit.ZTAnalysisValueRecommendations?
   public var contactTime: ZTSportKit.ZTAnalysisContactTime?
   public var contactQuality: ZTSportKit.ZTAnalysisValueRecommendations?
-  required public init?(map: ObjectMapper.Map)
-  public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-final public class ZTAnalysisCadence : ObjectMapper.Mappable {
+final public class ZTAnalysisCadence : ZTCoreKit.ZTMappable {
   final public var timestamp: Foundation.Date?
   final public var activitySpeedAvg: Swift.Int
   final public var cadenceAvg: Swift.Int
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
 public enum ZTAnalysisContactQualityType : Swift.String {
@@ -146,29 +144,29 @@ public enum ZTAnalysisContactQualityType : Swift.String {
     get
   }
 }
-final public class ZTAnalysisContactQuality : ObjectMapper.Mappable {
+final public class ZTAnalysisContactQuality : ZTCoreKit.ZTMappable {
   final public var left: ZTSportKit.ZTAnalysisContactQualityType?
   final public var right: ZTSportKit.ZTAnalysisContactQualityType?
   final public var recommendations: [Swift.String]?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-final public class ZTAnalysisContactTime : ObjectMapper.Mappable {
+final public class ZTAnalysisContactTime : ZTCoreKit.ZTMappable {
   final public var left: Swift.Double
   final public var right: Swift.Double
   final public var percentDifference: Swift.Double
   final public var recommendations: [Swift.String]?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-final public class ZTAnalysisImpactForce : ObjectMapper.Mappable {
+final public class ZTAnalysisImpactForce : ZTCoreKit.ZTMappable {
   final public var left: ZTSportKit.ZTAnalysisImpactForce.ImpactForceType?
   final public var right: ZTSportKit.ZTAnalysisImpactForce.ImpactForceType?
   final public var recommendations: [Swift.String]?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   public enum ImpactForceType : Swift.String {
     case ok
     case good
@@ -193,12 +191,12 @@ public enum ZTAnalysisPronationType : Swift.String {
     get
   }
 }
-public class ZTAnalysisPronation : ObjectMapper.Mappable {
+public class ZTAnalysisPronation : ZTCoreKit.ZTMappable {
   public var leftType: ZTSportKit.ZTAnalysisPronationType?
   public var rightType: ZTSportKit.ZTAnalysisPronationType?
   public var recommendations: [Swift.String]?
-  required public init?(map: ObjectMapper.Map)
-  public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
 public enum ZTAnalysisPropulsionType : Swift.String {
@@ -212,15 +210,15 @@ public enum ZTAnalysisPropulsionType : Swift.String {
     get
   }
 }
-public class ZTAnalysisPropulsion : ObjectMapper.Mappable {
+public class ZTAnalysisPropulsion : ZTCoreKit.ZTMappable {
   public var left: ZTSportKit.ZTAnalysisPropulsionType?
   public var right: ZTSportKit.ZTAnalysisPropulsionType?
   public var recommendations: [Swift.String]?
-  required public init?(map: ObjectMapper.Map)
-  public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-final public class ZTAnalysisStats : ObjectMapper.Mappable {
+final public class ZTAnalysisStats : ZTCoreKit.ZTMappable {
   final public var speed: Swift.Double?
   final public var pace: Swift.Double?
   final public var cadence: Swift.Double?
@@ -233,25 +231,25 @@ final public class ZTAnalysisStats : ObjectMapper.Mappable {
   final public var walkingSteps: Swift.Int?
   final public var calories: Swift.Double
   final public var duration: Swift.Int
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-final public class ZTAnalysisStrike : ObjectMapper.Mappable {
+final public class ZTAnalysisStrike : ZTCoreKit.ZTMappable {
   final public var strikePattern: ZTSportKit.ZTAnalysisStrikePattern?
   final public var impactForce: ZTSportKit.ZTAnalysisImpactForce?
   final public var contactTime: ZTSportKit.ZTAnalysisContactTime?
   final public var recommendations: [Swift.String]?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-final public class ZTAnalysisStrikePattern : ObjectMapper.Mappable {
+final public class ZTAnalysisStrikePattern : ZTCoreKit.ZTMappable {
   final public var left: ZTSportKit.ZTAnalysisStrikePattern.StrikePatternType?
   final public var right: ZTSportKit.ZTAnalysisStrikePattern.StrikePatternType?
   final public var recommendations: [Swift.String]?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   public enum StrikePatternType : Swift.String {
     case heal
     case mid
@@ -264,67 +262,67 @@ final public class ZTAnalysisStrikePattern : ObjectMapper.Mappable {
   }
   @objc deinit
 }
-final public class ZTAnalysisValueRecommendations : ObjectMapper.Mappable {
+final public class ZTAnalysisValueRecommendations : ZTCoreKit.ZTMappable {
   final public var value: Swift.Double
   final public var left: Swift.Double
   final public var right: Swift.Double
   final public var recommendations: [Swift.String]?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-final public class ZTStrideQualityIndexV2 : ObjectMapper.Mappable {
+final public class ZTStrideQualityIndexV2 : ZTCoreKit.ZTMappable {
   final public var health: ZTSportKit.ZTStrideQualityIndexV2.Health?
   final public var performance: ZTSportKit.ZTStrideQualityIndexV2.Performance?
   final public var speedDistanceRatio: Swift.Double?
   final public var speedDistanceCategory: ZTSportKit.ZTStrideQualityIndexV2.DistanceCategory?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
 extension ZTStrideQualityIndexV2 {
-  final public class Health : ObjectMapper.Mappable {
+  final public class Health : ZTCoreKit.ZTMappable {
     final public var index: Swift.Double?
     final public var bucket: Swift.Int?
     final public var comment: Swift.String?
     final public var recommendations: [Swift.String]?
     final public var spider: ZTSportKit.ZTStrideQualityIndexV2.Spider?
-    required public init?(map: ObjectMapper.Map)
-    final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
-  final public class Performance : ObjectMapper.Mappable {
+  final public class Performance : ZTCoreKit.ZTMappable {
     final public var index: Swift.Double?
     final public var bucket: Swift.Int?
     final public var comment: Swift.String?
     final public var recommendations: [Swift.String]?
     final public var spider: ZTSportKit.ZTStrideQualityIndexV2.Spider?
-    required public init?(map: ObjectMapper.Map)
-    final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
-  final public class Spider : ObjectMapper.Mappable {
+  final public class Spider : ZTCoreKit.ZTMappable {
     final public var axis: Swift.Int?
     final public var max: Swift.Double?
     final public var points: [ZTSportKit.ZTStrideQualityIndexV2.Points]?
-    required public init?(map: ObjectMapper.Map)
-    final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
-  final public class Points : ObjectMapper.Mappable {
+  final public class Points : ZTCoreKit.ZTMappable {
     final public var label: Swift.String?
     final public var value: Swift.Double?
     final public var previous: Swift.Double?
-    required public init?(map: ObjectMapper.Map)
-    final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
-  final public class DistanceCategory : ObjectMapper.Mappable {
+  final public class DistanceCategory : ZTCoreKit.ZTMappable {
     final public var name: Swift.String?
     final public var description: Swift.String?
     final public var index: Swift.Int?
-    required public init?(map: ObjectMapper.Map)
-    final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
 }
@@ -384,12 +382,12 @@ extension ZTSportActivity {
   final public var isPhoneless: Swift.Bool
   final public var comments: [ZTCoreKit.ZTActivityComment]?
   final public var attributes: [Swift.String : Any]?
-  required public init?(map: ObjectMapper.Map)
-  override final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  override final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
 extension ZTSportActivitySummary {
-  final public class Data : ObjectMapper.Mappable {
+  final public class Data : ZTCoreKit.ZTMappable {
     final public var chunk: Swift.Int
     final public var stillTime: Swift.Int
     final public var stepsCount: Swift.Int
@@ -452,8 +450,8 @@ extension ZTSportActivitySummary {
     final public var paceAvg: Swift.Double
     final public var calories: Swift.Double
     final public var stepsCountWalk: Swift.Int
-    required public init?(map: ObjectMapper.Map)
-    final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
 }
@@ -466,33 +464,33 @@ extension ZTSportSegmentData {
     get
   }
 }
-final public class ZTSpeedCadenceAnalysis : ObjectMapper.Mappable {
+final public class ZTSpeedCadenceAnalysis : ZTCoreKit.ZTMappable {
   final public var averageSpeed: Swift.Double
   final public var averageCadence: Swift.Double
   final public var recommendations: [Swift.String]?
   final public var charts: [ZTSportKit.ZTSpeedCadenceAnalysis.Chart]?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
-  final public class Chart : ObjectMapper.Mappable {
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
+  final public class Chart : ZTCoreKit.ZTMappable {
     final public var timestamp: Foundation.Date?
     final public var activitySpeedAvg: Swift.Double
     final public var cadenceAvg: Swift.Double
-    required public init?(map: ObjectMapper.Map)
-    final public func mapping(map: ObjectMapper.Map)
+    required public init?(map: ZTCoreKit.ZTMap)
+    final public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
   @objc deinit
 }
-final public class ZTStrideQualityIndex : ObjectMapper.Mappable {
+final public class ZTStrideQualityIndex : ZTCoreKit.ZTMappable {
   final public var index: Swift.Double
   final public var bucket: Swift.Int
   final public var comment: Swift.String
   final public var recommendations: [Swift.String]?
-  required public init?(map: ObjectMapper.Map)
-  final public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-public class ZTSymmetryAnalysis : ObjectMapper.Mappable {
+public class ZTSymmetryAnalysis : ZTCoreKit.ZTMappable {
   public var symmetry: Swift.Double
   public var bucket: Swift.Int
   public var balanceLeft: Swift.Double?
@@ -500,11 +498,11 @@ public class ZTSymmetryAnalysis : ObjectMapper.Mappable {
   public var balanceDiff: Swift.Double?
   public var balanceFavoredFoot: Swift.String
   public var recommendations: [Swift.String]?
-  required public init?(map: ObjectMapper.Map)
-  public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-public class ZTTimelineRollup : ObjectMapper.Mappable {
+public class ZTTimelineRollup : ZTCoreKit.ZTMappable {
   public var joinDate: Foundation.Date?
   public var total: Swift.Int
   public var totalDistance: Swift.Int
@@ -512,15 +510,15 @@ public class ZTTimelineRollup : ObjectMapper.Mappable {
   public var avgPace: Swift.Double
   public var start: Foundation.Date?
   public var end: Foundation.Date?
-  required public init?(map: ObjectMapper.Map)
-  public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-public class ZTTrendValueData<T> : ObjectMapper.Mappable {
+public class ZTTrendValueData<T> : ZTCoreKit.ZTMappable {
   public var value: T?
   public var trend: Swift.Int
-  required public init?(map: ObjectMapper.Map)
-  public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ZTCoreKit.ZTMap)
+  public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
 final public class ZTUserDataParameters {
