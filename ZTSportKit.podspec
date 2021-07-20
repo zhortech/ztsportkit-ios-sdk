@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/zhortech/ztsportkit-ios-sdk.git', :tag => s.version.to_s }
   s.vendored_frameworks = 'Sources/ZTSportKit.xcframework'
   
-  s.dependency 'ZTCoreKit', '~> '+s.version.to_s
+  s.dependency 'ZTCoreKit', '~> 1.1.0' #+s.version.to_s
 
   s.ios.deployment_target   = '13.0'
   s.ios.weak_frameworks = 'Foundation'
