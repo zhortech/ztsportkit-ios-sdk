@@ -146,6 +146,7 @@ ZTSport.shared.setMode(mode: .running) { (error) in
 
 Before starting activity user parameters/attributes should be passed into SDK. These attributes are used for activity analysis. If attributes were not passed vefore activity start - analysis will have wrong numbers. User attributes can be passed once for the same user.
 ```swift
+
 let userDataParameters = ZTUserDataParameters(bodyWeight: 80, bodyHeight: 185, shoeSize: 44)
 
 ZTSport.shared.setUserParameters(parameters: userDataParameters, completion: { (error) in
@@ -154,35 +155,25 @@ ZTSport.shared.setUserParameters(parameters: userDataParameters, completion: { (
     }
 })
 ```
-Next, subscribe to activity state change
+And call start activity with chosen goal
 ```swift
 
-ZTSport.shared.onActivityStateChange.subscribeOnce(with: self) { (activityId, actualState, error) in
-    debugPrint("onActivityStateChange - activityId: \(activityId ?? " -- "), state: \(actualState), error: \(error?.localizedDescription ?? "")")
+ZTSport.shared.startActivity(goal: .distance, goalValue: 3) { activityId, error in
+    debugPrint("Activity started with activityId: \(activityId ?? ""), error: \(error?.localizedDescription ?? "")")
 }
-```
-And finally call start activity with chosen goal
-```swift
-
-ZTSport.shared.startActivity(goal: ZTSport.ActivityGoal.distance, goalValue: 200)
 ```
 
 ### Activity stop. 
-Activity can be stopped calling `stopActivity()`. 
-Initially subscribe to activity stopped event
+Activity can be stopped calling `stopActivity(completion:)`. 
+Call stop activity
 ```swift
 
-ZTSport.shared.onActivityStopped.subscribeOnce(with: self) { (activityId, actualState, error) in
-    debugPrint("Activity stopped with activityId: \(activityId ?? ""), state: \(actualState), error: \(error?.localizedDescription ?? "")")
+ZTSport.shared.stopActivity { activityId, error in
+    debugPrint("Activity with activityId: \(activityId ?? "") stopped, error: \(error?.localizedDescription ?? "")")
 }
 ```
-And finally call stop activity
-```swift
-
-ZTSport.shared.stopActivity()
-```
 Activity can be also stopped automatically because of idle state and insoles went into sleep mode or battery low level. 
-You should subscribe for this event to be notified:
+You should subscribe for this event to be notified if needed:
 ```swift
 
 ZTSport.shared.onActivityRestoreStarted.subscribe(with: self) { (wasRestored) in

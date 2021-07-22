@@ -125,6 +125,10 @@ public class ZTActivitySegmentAnalysis : ZTCoreKit.ZTMappable {
   public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
+extension ZTSport {
+  final public func startActivity(goal: ZTSportKit.ZTSport.ActivityGoal, goalValue: Swift.Double = 0.0, completion: ZTSportKit.ZTActivityResult?)
+  final public func stopActivity(completion: ZTSportKit.ZTActivityResult?)
+}
 final public class ZTAnalysisCadence : ZTCoreKit.ZTMappable {
   final public var timestamp: Foundation.Date?
   final public var activitySpeedAvg: Swift.Int
@@ -490,6 +494,18 @@ final public class ZTStrideQualityIndex : ZTCoreKit.ZTMappable {
   final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
+extension ZTSport {
+  final public func getMapRouteData(activityId: Swift.String, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, Swift.Error?) -> Swift.Void))
+  final public func getSegmentDetails(activityId: Swift.String, segmentId: Swift.String, completion: @escaping ((ZTSportKit.ZTActivityRunAnalysis?, Swift.Error?) -> Swift.Void))
+  final public func getSegmentDetails(activityId: Swift.String, segmentId: Swift.String, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, Swift.Error?) -> Swift.Void))
+  final public func getActivitySummary(id: Swift.String, fields: [ZTSportKit.ZTSportActivity.Field] = [], include: [Swift.String]? = nil, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTSportActivitySummary>))
+  @available(iOS, introduced: 0.0.31, message: "offset/limit parameters should be passed")
+  final public func getActivitiesSummary(code: Swift.String?, offset: Swift.Int, limit: Swift.Int, fields: [ZTSportKit.ZTSportActivity.Field] = [], include: [Swift.String]? = nil, completion: @escaping (ZTCoreKit.ZTResultArray<ZTSportKit.ZTSportActivitySummary>))
+  final public func addActivityData(timestamp: Foundation.TimeInterval, data: [Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
+  final public func getActivityTimelineRollup(start: Foundation.Date, end: Foundation.Date, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTTimelineRollup>))
+  final public func getActivityRunAnalysis(activityId: Swift.String, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTActivityRunAnalysis>))
+  final public func getPeriodActivityAnalysis(code: Swift.String?, period: ZTCoreKit.ZTPeriod, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTActivityAnalysis>))
+}
 public class ZTSymmetryAnalysis : ZTCoreKit.ZTMappable {
   public var symmetry: Swift.Double
   public var bucket: Swift.Int
@@ -538,6 +554,7 @@ extension ZTSport {
     }
   }
 }
+public typealias ZTActivityResult = (Swift.String?, ZTCoreKit.ZTError?) -> Swift.Void
 @_hasMissingDesignatedInitializers final public class ZTSport {
   public static let sdkVersion: Swift.String
   public static let activityPluginVersion: Swift.String
@@ -565,25 +582,19 @@ extension ZTSport {
   final public func readGeneralState()
   final public func setMode(mode: ZTCoreKit.ZTActivityMode, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func setUserParameters(parameters: ZTSportKit.ZTUserDataParameters, completion: @escaping ZTCoreKit.ZTBaseResult)
+  @objc deinit
+}
+extension ZTSport {
+  @available(*, deprecated, renamed: "startActivity", message: "This method is deprecated, use method with same name and completion handler")
   final public func startActivity(goal: ZTSportKit.ZTSport.ActivityGoal, goalValue: Swift.Double = 0.0)
+  @available(*, deprecated, renamed: "stopActivity", message: "This method is deprecated, use method with same name and completion handler")
   final public func stopActivity()
-  final public func getMapRouteData(activityId: Swift.String, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, Swift.Error?) -> Swift.Void))
-  final public func getSegmentDetails(activityId: Swift.String, segmentId: Swift.String, completion: @escaping ((ZTSportKit.ZTActivityRunAnalysis?, Swift.Error?) -> Swift.Void))
-  final public func getSegmentDetails(activityId: Swift.String, segmentId: Swift.String, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, Swift.Error?) -> Swift.Void))
-  final public func getActivitySummary(id: Swift.String, fields: [ZTSportKit.ZTSportActivity.Field] = [], include: [Swift.String]? = nil, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTSportActivitySummary>))
   @available(iOS, deprecated, message: "offset/limit parameters should be passed instead of start/end")
   final public func getActivitiesSummary(code: Swift.String?, start: Foundation.Date, end: Foundation.Date, fields: [ZTSportKit.ZTSportActivity.Field] = [], include: [Swift.String]? = nil, completion: @escaping (ZTCoreKit.ZTResultArray<ZTSportKit.ZTSportActivitySummary>))
-  @available(iOS, introduced: 0.0.31, message: "offset/limit parameters should be passed")
-  final public func getActivitiesSummary(code: Swift.String?, offset: Swift.Int, limit: Swift.Int, fields: [ZTSportKit.ZTSportActivity.Field] = [], include: [Swift.String]? = nil, completion: @escaping (ZTCoreKit.ZTResultArray<ZTSportKit.ZTSportActivitySummary>))
   @available(*, deprecated, renamed: "addActivityData", message: "The parameter type for 'data' have changed to Any")
   final public func addActivityData(timestamp: Foundation.TimeInterval, data: [Swift.String : Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
-  final public func addActivityData(timestamp: Foundation.TimeInterval, data: [Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
-  final public func getActivityTimelineRollup(start: Foundation.Date, end: Foundation.Date, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTTimelineRollup>))
-  final public func getActivityRunAnalysis(activityId: Swift.String, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTActivityRunAnalysis>))
   @available(*, unavailable, renamed: "getPeriodActivityAnalysis")
   final public func getActivityAnalysis(code: Swift.String?, period: ZTCoreKit.ZTPeriod, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTActivityAnalysis>))
-  final public func getPeriodActivityAnalysis(code: Swift.String?, period: ZTCoreKit.ZTPeriod, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTActivityAnalysis>))
-  @objc deinit
 }
 extension ZTSportKit.ZTAnalysisContactQualityType : Swift.Equatable {}
 extension ZTSportKit.ZTAnalysisContactQualityType : Swift.Hashable {}
