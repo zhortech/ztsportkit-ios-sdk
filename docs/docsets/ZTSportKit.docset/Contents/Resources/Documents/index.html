@@ -16,7 +16,7 @@
     <a title="ZTSportKit  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">ZTSportKit 1.1.1 Docs</a></p>
+        <p><a href="index.html">ZTSportKit 1.1.2 Docs</a></p>
         <p class="header-right"><a href="https://github.com/zhortech/ztsportkit-ios-sdk"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="search.json">
@@ -320,7 +320,7 @@ $ git submodule update &ndash;init &ndash;recursive
 
 <p>public func setMode(mode: ZTActivityMode, completion: @escaping ZTBaseResult) {</p>
 <pre class="highlight swift"><code><span class="kt">ZTSport</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setMode</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">running</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-    <span class="kt">ZTLogger</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"Error setting mode to running: </span><span class="se">\(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="kt">ZTLogger</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"Error setting mode to running: </span><span class="se">\(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
 <h3 id='activity-start' class='heading'>Activity Start</h3>
@@ -330,14 +330,14 @@ $ git submodule update &ndash;init &ndash;recursive
 
 <span class="kt">ZTSport</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setUserParameters</span><span class="p">(</span><span class="nv">parameters</span><span class="p">:</span> <span class="n">userDataParameters</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
     <span class="k">if</span> <span class="k">let</span> <span class="nv">error</span> <span class="o">=</span> <span class="n">error</span> <span class="p">{</span>
-        <span class="kt">ZTLogger</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"Error setting userParameters: </span><span class="se">\(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="kt">ZTLogger</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"Error setting userParameters: </span><span class="se">\(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">})</span>
 </code></pre>
 
 <p>Next, subscribe to activity state change</p>
 <pre class="highlight swift"><code><span class="kt">ZTSport</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">onActivityStateChange</span><span class="o">.</span><span class="nf">subscribeOnce</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">activityId</span><span class="p">,</span> <span class="n">actualState</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-    <span class="kt">ZTLogger</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"onActivityStateChange - activityId: </span><span class="se">\(</span><span class="n">activityId</span> <span class="p">??</span> <span class="s">" -- "</span><span class="se">)</span><span class="s">, state: </span><span class="se">\(</span><span class="n">actualState</span><span class="se">)</span><span class="s">, error: </span><span class="se">\(</span><span class="n">error</span><span class="p">?</span><span class="o">.</span><span class="n">localizedDescription</span> <span class="p">??</span> <span class="s">""</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="kt">ZTLogger</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"onActivityStateChange - activityId: </span><span class="se">\(</span><span class="n">activityId</span> <span class="p">??</span> <span class="s">" -- "</span><span class="se">)</span><span class="s">, state: </span><span class="se">\(</span><span class="n">actualState</span><span class="se">)</span><span class="s">, error: </span><span class="se">\(</span><span class="n">error</span><span class="p">?</span><span class="o">.</span><span class="n">localizedDescription</span> <span class="p">??</span> <span class="s">""</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -350,7 +350,7 @@ $ git submodule update &ndash;init &ndash;recursive
 Initially subscribe to activity stopped event</p>
 <pre class="highlight plaintext"><code>
 ZTSport.shared.onActivityStopped.subscribeOnce(with: self) { (activityId, actualState, error) in
-    ZTLogger.shared.debug("Activity stopped with activityId: \(activityId ?? ""), state: \(actualState), error: \(error?.localizedDescription ?? "")")
+    ZTLogger.instance.debug("Activity stopped with activityId: \(activityId ?? ""), state: \(actualState), error: \(error?.localizedDescription ?? "")")
 }
 </code></pre>
 
@@ -362,7 +362,7 @@ ZTSport.shared.onActivityStopped.subscribeOnce(with: self) { (activityId, actual
 <p>Activity can be also stopped automatically because of idle state and insoles went into sleep mode or battery low level. 
 You should subscribe for this event to be notified:</p>
 <pre class="highlight swift"><code><span class="kt">ZTSport</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">onActivityRestoreStarted</span><span class="o">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">wasRestored</span><span class="p">)</span> <span class="k">in</span>
-    <span class="kt">ZTLogger</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"Previous activity restored: </span><span class="se">\(</span><span class="n">wasRestored</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="kt">ZTLogger</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"Previous activity restored: </span><span class="se">\(</span><span class="n">wasRestored</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
 <h3 id='activity-data' class='heading'>Activity data</h3>
@@ -371,7 +371,7 @@ You should subscribe for this event to be notified:</p>
 <p>To request activity data in real time use:</p>
 <pre class="highlight swift"><code><span class="n">val</span> <span class="n">fields</span> <span class="o">=</span> <span class="n">list</span> <span class="n">of</span> <span class="n">desired</span> <span class="n">fields</span>
 <span class="kt">ZTApi</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getActivityRealtimeData</span><span class="p">(</span><span class="nv">activityId</span><span class="p">:</span> <span class="n">activityId</span><span class="p">,</span><span class="nv">fields</span><span class="p">:</span> <span class="p">[</span><span class="s">"steps_count, "</span><span class="n">cadence_avg</span><span class="s">", "</span><span class="n">activity_time</span><span class="s">"]) { response, error in
-    ZTLogger.shared.debug(String(describing: response))
+    ZTLogger.instance.debug(String(describing: response))
 }
 </span></code></pre>
 <h3 id='application-data' class='heading'>Application data</h3>
@@ -381,7 +381,7 @@ You should subscribe for this event to be notified:</p>
 <span class="c1">//e.g. let data = [timestamp, latitude, longitude]</span>
 <span class="kt">ZTSport</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">addActivityData</span><span class="p">(</span><span class="nv">timestamp</span><span class="p">:</span> <span class="n">timestamp</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
     <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-        <span class="kt">ZTLogger</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"addActivityData error - </span><span class="se">\(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">error</span><span class="p">)</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="kt">ZTLogger</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"addActivityData error - </span><span class="se">\(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">error</span><span class="p">)</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
@@ -391,7 +391,7 @@ You should subscribe for this event to be notified:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">fields</span><span class="p">:</span> <span class="p">[</span><span class="kt">ZTSportActivity</span><span class="o">.</span><span class="kt">Field</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">steps_count</span><span class="p">,</span> <span class="o">.</span><span class="n">cadence_avg</span><span class="p">,</span> <span class="o">.</span><span class="n">activity_time</span><span class="p">]</span>
 <span class="k">let</span> <span class="nv">include</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"attributes.activityTitle"</span><span class="p">]</span>
 <span class="kt">ZTSport</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getActivitySummary</span><span class="p">(</span><span class="n">activityId</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">include</span><span class="p">){</span> <span class="n">activity</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
-    <span class="kt">ZTLogger</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"activity: </span><span class="se">\(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">activity</span><span class="p">)</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="kt">ZTLogger</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"activity: </span><span class="se">\(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">activity</span><span class="p">)</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -406,7 +406,7 @@ You should subscribe for this event to be notified:</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-07-22)</p>
+          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-07-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

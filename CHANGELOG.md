@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.2](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.2) (2021-07-27)
+
+- Refactoring to support changes in ZTCoreKit
+
 ## [1.1.1](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.1) (2021-07-22)
 
 - Improved logging for `.debug` mode
