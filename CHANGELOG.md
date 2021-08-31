@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.3](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.3)  (2021-08-31)
+
+- Added new parameter `ZTUserDataParameters` which is required to start new activity
+- Refactored observers for `ZTDevice`
+
 ## [1.1.2](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.2) (2021-07-27)
 
 - Refactoring to support changes in ZTCoreKit

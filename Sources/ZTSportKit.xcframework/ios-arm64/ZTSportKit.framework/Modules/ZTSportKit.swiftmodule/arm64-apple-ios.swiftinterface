@@ -126,7 +126,7 @@ public class ZTActivitySegmentAnalysis : ZTCoreKit.ZTMappable {
   @objc deinit
 }
 extension ZTSport {
-  final public func startActivity(goal: ZTSportKit.ZTSport.ActivityGoal, goalValue: Swift.Double = 0.0, completion: ZTSportKit.ZTActivityResult?)
+  final public func startActivity(goal: ZTSportKit.ZTSport.ActivityGoal, goalValue: Swift.Double = 0.0, userParameters: ZTSportKit.ZTUserDataParameters, completion: ZTSportKit.ZTActivityResult?)
   final public func stopActivity(completion: ZTSportKit.ZTActivityResult?)
 }
 final public class ZTAnalysisCadence : ZTCoreKit.ZTMappable {
@@ -581,10 +581,11 @@ public typealias ZTActivityResult = (Swift.String?, ZTCoreKit.ZTError?) -> Swift
   }
   final public func readGeneralState()
   final public func setMode(mode: ZTCoreKit.ZTActivityMode, completion: @escaping ZTCoreKit.ZTBaseResult)
-  final public func setUserParameters(parameters: ZTSportKit.ZTUserDataParameters, completion: @escaping ZTCoreKit.ZTBaseResult)
   @objc deinit
 }
 extension ZTSport {
+  @available(*, deprecated, renamed: "startActivity", message: "This method is deprecated, use method with additional parameter")
+  final public func startActivity(goal: ZTSportKit.ZTSport.ActivityGoal, goalValue: Swift.Double = 0.0, completion: ZTSportKit.ZTActivityResult?)
   @available(*, deprecated, renamed: "startActivity", message: "This method is deprecated, use method with same name and completion handler")
   final public func startActivity(goal: ZTSportKit.ZTSport.ActivityGoal, goalValue: Swift.Double = 0.0)
   @available(*, deprecated, renamed: "stopActivity", message: "This method is deprecated, use method with same name and completion handler")
