@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.4](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.4)  (2021-09-01)
+
+-  Changed parameter  `ZTUserDataParameters` to be optional to start activity. Application is responsible to pass `ZTUserDataParameters` only for running algo.
+
 ## [1.1.3](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.3)  (2021-08-31)
 
 - Added new parameter `ZTUserDataParameters` which is required to start new activity
