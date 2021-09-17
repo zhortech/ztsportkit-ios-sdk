@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.6](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.6) (2021-09-17)
+
+-  Changed `onActivityInfoUpdated` observer to parse activity mode
+
 ## [1.1.5](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.5) (2021-09-03)
 
 -  Changed flow to pass  `ZTUserDataParameters` so failure will also have callback.
