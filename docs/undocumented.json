@@ -832,6 +832,13 @@
       "symbol": "ZTSport.ActivityGoal.noTarget",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/ZTSport.swift",
+      "line": 407,
+      "symbol": "ZTSport.forceStop(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit"

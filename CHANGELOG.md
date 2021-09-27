@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.7](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.7) (2021-09-27)
+
+-  added new method `func forceStop(completion:)` to force activity stop
+
 ## [1.1.6](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.6) (2021-09-17)
 
 -  Changed `onActivityInfoUpdated` observer to parse activity mode

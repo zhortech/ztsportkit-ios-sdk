@@ -581,6 +581,7 @@ public typealias ZTActivityResult = (Swift.String?, ZTCoreKit.ZTError?) -> Swift
   }
   final public func readGeneralState()
   final public func setMode(mode: ZTCoreKit.ZTActivityMode, completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func forceStop(completion: @escaping (Swift.Bool, ZTCoreKit.ZTError?) -> Swift.Void)
   @objc deinit
 }
 extension ZTSport {
