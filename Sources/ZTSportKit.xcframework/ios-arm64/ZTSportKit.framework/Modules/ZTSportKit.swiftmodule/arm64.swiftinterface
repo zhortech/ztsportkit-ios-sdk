@@ -549,6 +549,7 @@ extension ZTSport {
     case duration
     case phoneless
     case noTarget
+    case coaching
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
