@@ -576,7 +576,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTRunningActivity.swift",
-      "line": 43,
+      "line": 44,
       "symbol": "ZTSportActivity.Field",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
@@ -835,7 +835,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/ZTSport.swift",
-      "line": 407,
+      "line": 381,
       "symbol": "ZTSport.forceStop(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

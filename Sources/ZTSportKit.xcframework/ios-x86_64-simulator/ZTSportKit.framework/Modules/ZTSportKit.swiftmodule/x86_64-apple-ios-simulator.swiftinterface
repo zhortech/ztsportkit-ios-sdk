@@ -127,6 +127,7 @@ public class ZTActivitySegmentAnalysis : ZTCoreKit.ZTMappable {
 }
 extension ZTSport {
   final public func startActivity(goal: ZTSportKit.ZTSport.ActivityGoal, goalValue: Swift.Double = 0.0, userParameters: ZTSportKit.ZTUserDataParameters? = nil, completion: ZTSportKit.ZTActivityResult?)
+  final public func startActivity(attributes: [Swift.String : Any], userParameters: ZTSportKit.ZTUserDataParameters? = nil, completion: ZTSportKit.ZTActivityResult?)
   final public func stopActivity(completion: ZTSportKit.ZTActivityResult?)
 }
 final public class ZTAnalysisCadence : ZTCoreKit.ZTMappable {
@@ -498,13 +499,14 @@ extension ZTSport {
   final public func getMapRouteData(activityId: Swift.String, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, Swift.Error?) -> Swift.Void))
   final public func getSegmentDetails(activityId: Swift.String, segmentId: Swift.String, completion: @escaping ((ZTSportKit.ZTActivityRunAnalysis?, Swift.Error?) -> Swift.Void))
   final public func getSegmentDetails(activityId: Swift.String, segmentId: Swift.String, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, Swift.Error?) -> Swift.Void))
-  final public func getActivitySummary(id: Swift.String, fields: [ZTSportKit.ZTSportActivity.Field] = [], include: [Swift.String]? = nil, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTSportActivitySummary>))
-  @available(iOS, introduced: 0.0.31, message: "offset/limit parameters should be passed")
-  final public func getActivitiesSummary(code: Swift.String?, offset: Swift.Int, limit: Swift.Int, fields: [ZTSportKit.ZTSportActivity.Field] = [], include: [Swift.String]? = nil, completion: @escaping (ZTCoreKit.ZTResultArray<ZTSportKit.ZTSportActivitySummary>))
+  final public func getActivitySummary(id: Swift.String, fields: [ZTSportKit.ZTSportActivity.Field] = [], include: [Swift.String]? = nil, whereOptions: [Swift.String : Any]? = nil, duration: [Swift.String : Any]? = nil, start: Foundation.Date? = nil, end: Foundation.Date? = nil, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTSportActivitySummary>))
+  @available(iOS, introduced: 1.1.9, message: "added where, duration, start, end parameters")
+  final public func getActivitiesSummary(code: Swift.String?, offset: Swift.Int, limit: Swift.Int, fields: [ZTSportKit.ZTSportActivity.Field] = [], include: [Swift.String]? = nil, whereOptions: [Swift.String : Any]? = nil, duration: [Swift.String : Any]? = nil, start: Foundation.Date? = nil, end: Foundation.Date? = nil, completion: @escaping (ZTCoreKit.ZTResultArray<ZTSportKit.ZTSportActivitySummary>))
   final public func addActivityData(timestamp: Foundation.TimeInterval, data: [Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
   final public func getActivityTimelineRollup(start: Foundation.Date, end: Foundation.Date, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTTimelineRollup>))
   final public func getActivityRunAnalysis(activityId: Swift.String, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTActivityRunAnalysis>))
   final public func getPeriodActivityAnalysis(code: Swift.String?, period: ZTCoreKit.ZTPeriod, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTActivityAnalysis>))
+  final public func getAnalysisSqiOptimisation(activityId: Swift.String, targetSQI: Swift.String, completion: @escaping (([Swift.String : Any]?, Swift.Error?) -> Swift.Void))
 }
 public class ZTSymmetryAnalysis : ZTCoreKit.ZTMappable {
   public var symmetry: Swift.Double

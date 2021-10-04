@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.9](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.9) (2021-10-04)
+
+-  allow custom attributes to start activity in method `startActivity(attributes:,userParameters:,completion:)`
+- added additional parameters to `getActivitySummary` and `getActivitiesSummary` methods: `where`,  `duration`, `start`, `stop` 
+- added new method `getAnalysisSqiOptimisation(activityId:,targetSQI:,completion:` to get analysis sqi optimisation
+
 ## [1.1.8](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.8) (2021-10-01)
 
 -  using `ZTSettings.shared.chunkDuration` for activity
