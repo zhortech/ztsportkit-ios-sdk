@@ -1,10 +1,11 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTSportKit
 import CoreBluetooth
 import Foundation
 import Swift
 import ZTCoreKit
+import _Concurrency
 final public class ZTActivityAnalysis : ZTCoreKit.ZTMappable {
   final public var total: Swift.Int
   final public var stats: ZTSportKit.ZTActivityAnalysis.Stats?
@@ -13,7 +14,7 @@ final public class ZTActivityAnalysis : ZTCoreKit.ZTMappable {
   final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-extension ZTActivityAnalysis {
+extension ZTSportKit.ZTActivityAnalysis {
   final public class Stats : ZTCoreKit.ZTMappable {
     final public var totalSteps: Swift.Int
     final public var runningSteps: Swift.Int
@@ -36,7 +37,7 @@ extension ZTActivityAnalysis {
     @objc deinit
   }
 }
-extension ZTActivityAnalysis.Charts {
+extension ZTSportKit.ZTActivityAnalysis.Charts {
   final public class TotalSteps : ZTCoreKit.ZTMappable {
     final public var timestamp: Foundation.Date?
     final public var stepsCount: Swift.Int
@@ -76,7 +77,7 @@ final public class ZTActivityLeftRightAnalysis : ZTCoreKit.ZTMappable {
   final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-extension ZTActivityLeftRightAnalysis {
+extension ZTSportKit.ZTActivityLeftRightAnalysis {
   final public class ProgressionAnalysis : ZTCoreKit.ZTMappable {
     final public var contactTime: ZTSportKit.ZTTrendValueData<Swift.Double>?
     final public var flightTime: ZTSportKit.ZTTrendValueData<Swift.Double>?
@@ -125,7 +126,7 @@ public class ZTActivitySegmentAnalysis : ZTCoreKit.ZTMappable {
   public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-extension ZTSport {
+extension ZTSportKit.ZTSport {
   final public func startActivity(goal: ZTSportKit.ZTSport.ActivityGoal, goalValue: Swift.Double = 0.0, userParameters: ZTSportKit.ZTUserDataParameters? = nil, completion: ZTSportKit.ZTActivityResult?)
   final public func startActivity(attributes: [Swift.String : Any], userParameters: ZTSportKit.ZTUserDataParameters? = nil, completion: ZTSportKit.ZTActivityResult?)
   final public func stopActivity(completion: ZTSportKit.ZTActivityResult?)
@@ -285,7 +286,7 @@ final public class ZTStrideQualityIndexV2 : ZTCoreKit.ZTMappable {
   final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-extension ZTStrideQualityIndexV2 {
+extension ZTSportKit.ZTStrideQualityIndexV2 {
   final public class Health : ZTCoreKit.ZTMappable {
     final public var index: Swift.Double?
     final public var bucket: Swift.Int?
@@ -337,7 +338,7 @@ extension ZTStrideQualityIndexV2 {
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
 }
-extension ZTSportActivity {
+extension ZTSportKit.ZTSportActivity {
   public enum Field : Swift.String {
     case chunk
     case activity_type
@@ -391,7 +392,7 @@ extension ZTSportActivity {
   override final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-extension ZTSportActivitySummary {
+extension ZTSportKit.ZTSportActivitySummary {
   final public class Data : ZTCoreKit.ZTMappable {
     final public var chunk: Swift.Int
     final public var stillTime: Swift.Int
@@ -461,10 +462,9 @@ extension ZTSportActivitySummary {
   }
 }
 @_hasMissingDesignatedInitializers final public class ZTSportSegmentData : ZTCoreKit.ZTSegmentData {
-  override public init(data: Foundation.Data, activityId: Swift.String)
   @objc deinit
 }
-extension ZTSportSegmentData {
+extension ZTSportKit.ZTSportSegmentData {
   final public var description: Swift.String {
     get
   }
@@ -495,7 +495,7 @@ final public class ZTStrideQualityIndex : ZTCoreKit.ZTMappable {
   final public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-extension ZTSport {
+extension ZTSportKit.ZTSport {
   final public func getMapRouteData(activityId: Swift.String, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, Swift.Error?) -> Swift.Void))
   final public func getSegmentDetails(activityId: Swift.String, segmentId: Swift.String, completion: @escaping ((ZTSportKit.ZTActivityRunAnalysis?, Swift.Error?) -> Swift.Void))
   final public func getSegmentDetails(activityId: Swift.String, segmentId: Swift.String, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, Swift.Error?) -> Swift.Void))
@@ -543,7 +543,7 @@ final public class ZTUserDataParameters {
   public init(bodyWeight: Swift.Int?, bodyHeight: Swift.Int?, shoeSize: Swift.Int?, threadmillSpeed: Swift.Int? = nil)
   @objc deinit
 }
-extension ZTSport {
+extension ZTSportKit.ZTSport {
   public enum ActivityGoal : Swift.String, Swift.Codable {
     case distance
     case duration
@@ -587,7 +587,7 @@ public typealias ZTActivityResult = (Swift.String?, ZTCoreKit.ZTError?) -> Swift
   final public func forceStop(completion: @escaping (Swift.Bool, ZTCoreKit.ZTError?) -> Swift.Void)
   @objc deinit
 }
-extension ZTSport {
+extension ZTSportKit.ZTSport {
   @available(*, deprecated, renamed: "startActivity", message: "This method is deprecated, use method with same name and completion handler")
   final public func startActivity(goal: ZTSportKit.ZTSport.ActivityGoal, goalValue: Swift.Double = 0.0)
   @available(*, deprecated, renamed: "stopActivity", message: "This method is deprecated, use method with same name and completion handler")
