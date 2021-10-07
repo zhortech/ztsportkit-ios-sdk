@@ -834,8 +834,15 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/ZTSport+Enums.swift",
+      "line": 19,
+      "symbol": "ZTSport.ActivityGoal.coaching",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/ZTSport.swift",
-      "line": 381,
+      "line": 339,
       "symbol": "ZTSport.forceStop(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

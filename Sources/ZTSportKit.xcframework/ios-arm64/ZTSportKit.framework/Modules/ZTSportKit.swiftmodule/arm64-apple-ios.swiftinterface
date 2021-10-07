@@ -506,7 +506,7 @@ extension ZTSportKit.ZTSport {
   final public func getActivityTimelineRollup(start: Foundation.Date, end: Foundation.Date, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTTimelineRollup>))
   final public func getActivityRunAnalysis(activityId: Swift.String, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTActivityRunAnalysis>))
   final public func getPeriodActivityAnalysis(code: Swift.String?, period: ZTCoreKit.ZTPeriod, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTActivityAnalysis>))
-  final public func getAnalysisSqiOptimisation(activityId: Swift.String, targetSQI: Swift.String, completion: @escaping (([Swift.String : Any]?, Swift.Error?) -> Swift.Void))
+  final public func getAnalysisSqiOptimisation(activityId: Swift.String, completion: @escaping (([Swift.String : Any]?, Swift.Error?) -> Swift.Void))
 }
 public class ZTSymmetryAnalysis : ZTCoreKit.ZTMappable {
   public var symmetry: Swift.Double
