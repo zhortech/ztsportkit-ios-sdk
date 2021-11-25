@@ -6,35 +6,35 @@
 	<dict>
 		<key>Headers/ZTSportKit-Swift.h</key>
 		<data>
-		6RYfd4ZRtIDRNvmOpi1KkVFclVI=
+		t8JCo4kVhZTv+my6Lqzg1Y+K3X4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		G17CDLBqeAkC/K4f73WaFKQZ27s=
+		+j2IB+X34QTOQmuE22G/831qDdo=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		QSn7PyBbKRtdgg9IFNZOFsvY7HM=
+		jONIlRWunssZOm3jmQebg5l53Uo=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		tGnD9iXfVsWSM02OusRtQGTixzc=
+		jdQV5IPCphZr/wiIalkNLs10BPU=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rZeeMbr6cwXSJmRAvrdbVLgWRmc=
+		m4o9xREf5t6k5zo+MY2GNfp3iHk=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		QSn7PyBbKRtdgg9IFNZOFsvY7HM=
+		jONIlRWunssZOm3jmQebg5l53Uo=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		tGnD9iXfVsWSM02OusRtQGTixzc=
+		jdQV5IPCphZr/wiIalkNLs10BPU=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		rZeeMbr6cwXSJmRAvrdbVLgWRmc=
+		m4o9xREf5t6k5zo+MY2GNfp3iHk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -43,49 +43,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qxU6i51l1pS0G548on3jf7C1EMWQ9didFPfSwBfwrCo=
+			lyEnPpK9mcxHAPdOlsuiR3ADk7BCslI9dy3aGW1Vj9Y=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Och35uMElLujKj9skz9XM1XlaSGr8FnJ0dQfkW/KGDc=
+			IWI83/wjSToXQGfvybhDjTCXAqmiBHuGDe/EXJj8jfE=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6u0UvWdF+6Iqx2/HosZ3OlYxtSrDbOTkl7/UNTdG0YM=
+			iirRTl5HcZ+6rAyYZRasgJvyr0RfYAwa7/wb4BBTuCs=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K+3VZIB6q4aFv6lwspZ5mdSToEipouYDx3n9s1A1irg=
+			n+wjDk/a7mdwiXd92nvIFPodxa7NajJGM8zraYMxCHQ=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Och35uMElLujKj9skz9XM1XlaSGr8FnJ0dQfkW/KGDc=
+			IWI83/wjSToXQGfvybhDjTCXAqmiBHuGDe/EXJj8jfE=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6u0UvWdF+6Iqx2/HosZ3OlYxtSrDbOTkl7/UNTdG0YM=
+			iirRTl5HcZ+6rAyYZRasgJvyr0RfYAwa7/wb4BBTuCs=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K+3VZIB6q4aFv6lwspZ5mdSToEipouYDx3n9s1A1irg=
+			n+wjDk/a7mdwiXd92nvIFPodxa7NajJGM8zraYMxCHQ=
 			</data>
 		</dict>
 	</dict>

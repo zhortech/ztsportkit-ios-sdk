@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.10](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.10) (2021-11-25)
+
+- changed parameters for methods `getActivitySummary` and `getActivitiesSummary`
+- updated chunks timestamp variable type
+
 ## [1.1.9](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.9) (2021-10-04)
 
 -  allow custom attributes to start activity in method `startActivity(attributes:,userParameters:,completion:)`

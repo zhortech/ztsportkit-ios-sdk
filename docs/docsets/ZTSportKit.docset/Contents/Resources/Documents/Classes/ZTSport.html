@@ -17,7 +17,7 @@
     <a title="ZTSport Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ZTSportKit 1.1.9 Docs</a></p>
+        <p><a href="../index.html">ZTSportKit 1.1.10 Docs</a></p>
         <p class="header-right"><a href="https://github.com/zhortech/ztsportkit-ios-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -905,9 +905,9 @@ If nil is returned <code>ZTSport.shared.readGeneralState()</code> should be call
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10ZTSportKit0A0C18getActivitySummary2id6fields7include12whereOptions8duration5start3end10completionySS_SayAA0aD0C5FieldOGSaySSGSgSDySSypGSgAU10Foundation4DateVSgAYyAA0adE0CSg_s5Error_pSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/getActivitySummary(id:fields:include:whereOptions:duration:start:end:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10ZTSportKit0A0C18getActivitySummary2id6fields7include12whereOptions8duration5start3end10completionySS_SayAA0aD0C5FieldOGSaySSGSgSDySSypGSgAU10Foundation4DateVSgAYyAA0adE0CSg_s5Error_pSgtctF">getActivitySummary(id:<wbr>fields:<wbr>include:<wbr>whereOptions:<wbr>duration:<wbr>start:<wbr>end:<wbr>completion:<wbr>)</a>
+                    <a name="/s:10ZTSportKit0A0C18getActivitySummary2id6fields7include10completionySS_SayAA0aD0C5FieldOGSaySSGSgyAA0adE0CSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getActivitySummary(id:fields:include:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C18getActivitySummary2id6fields7include10completionySS_SayAA0aD0C5FieldOGSaySSGSgyAA0adE0CSg_s5Error_pSgtctF">getActivitySummary(id:<wbr>fields:<wbr>include:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -925,10 +925,6 @@ If nil is returned <code>ZTSport.shared.readGeneralState()</code> should be call
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getActivitySummary</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                                <span class="nv">fields</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ZTSportActivity.html">ZTSportActivity</a></span><span class="o">.</span><span class="kt">Field</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
                                <span class="nv">include</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                               <span class="nv">whereOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                               <span class="nv">duration</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                               <span class="nv">start</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                               <span class="nv">end</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                                <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ZTResultObject</span><span class="o">&lt;</span><span class="kt"><a href="../Models.html#/s:10ZTSportKit0A15ActivitySummaryC">ZTSportActivitySummary</a></span><span class="o">&gt;</span><span class="p">))</span></code></pre>
 
                         </div>
@@ -989,7 +985,7 @@ If nil is returned <code>ZTSport.shared.readGeneralState()</code> should be call
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L51-L63">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L52-L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1014,8 +1010,7 @@ If nil is returned <code>ZTSport.shared.readGeneralState()</code> should be call
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@available(iOS, introduced: 1.1.9, message: "added where, duration, start, end parameters")</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getActivitiesSummary</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getActivitiesSummary</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
                                  <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
                                  <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
                                  <span class="nv">fields</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ZTSportActivity.html">ZTSportActivity</a></span><span class="o">.</span><span class="kt">Field</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
@@ -1108,7 +1103,217 @@ If nil is returned <code>ZTSport.shared.readGeneralState()</code> should be call
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L74-L88">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L71-L85">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C18getActivitySummary2id6fields7include12whereOptions8duration5start3end10completionySS_SaySSGAMSgSDySSypGSgAP10Foundation4DateVSgATyAA0adE0CSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getActivitySummary(id:fields:include:whereOptions:duration:start:end:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C18getActivitySummary2id6fields7include12whereOptions8duration5start3end10completionySS_SaySSGAMSgSDySSypGSgAP10Foundation4DateVSgATyAA0adE0CSg_s5Error_pSgtctF">getActivitySummary(id:<wbr>fields:<wbr>include:<wbr>whereOptions:<wbr>duration:<wbr>start:<wbr>end:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve activity data for time range</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getActivitySummary</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                               <span class="nv">fields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+                               <span class="nv">include</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                               <span class="nv">whereOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                               <span class="nv">duration</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                               <span class="nv">start</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                               <span class="nv">end</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                               <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ZTResultObject</span><span class="o">&lt;</span><span class="kt"><a href="../Models.html#/s:10ZTSportKit0A15ActivitySummaryC">ZTSportActivitySummary</a></span><span class="o">&gt;</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fields</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of <code>ZTSportActivity.Field</code> to include in response</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>include</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>addtitional information to include, e.g. &ldquo;supplimentalData.geoThumbnail&rdquo; , &ldquo;attributes.goalType&rdquo;, &ldquo;attributes.goalValue&rdquo;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>( <code><a href="../Models.html#/s:10ZTSportKit0A15ActivitySummaryC">ZTSportActivitySummary</a></code>,  <code>Error</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L94-L105">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ZTSportKit0A0C20getActivitiesSummary4code6offset5limit6fields7include12whereOptions8duration5start3end10completionySSSg_S2iSaySSGAPSgSDySSypGSgAS10Foundation4DateVSgAWySayAA0a8ActivityE0CGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getActivitiesSummary(code:offset:limit:fields:include:whereOptions:duration:start:end:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ZTSportKit0A0C20getActivitiesSummary4code6offset5limit6fields7include12whereOptions8duration5start3end10completionySSSg_S2iSaySSGAPSgSDySSypGSgAS10Foundation4DateVSgAWySayAA0a8ActivityE0CGSg_s5Error_pSgtctF">getActivitiesSummary(code:<wbr>offset:<wbr>limit:<wbr>fields:<wbr>include:<wbr>whereOptions:<wbr>duration:<wbr>start:<wbr>end:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve activity summary list</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getActivitiesSummary</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                                 <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                                 <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                                 <span class="nv">fields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>
+                                 <span class="nv">include</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                 <span class="nv">whereOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                 <span class="nv">duration</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                 <span class="nv">start</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                 <span class="nv">end</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                 <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ZTResultArray</span><span class="o">&lt;</span><span class="kt"><a href="../Models.html#/s:10ZTSportKit0A15ActivitySummaryC">ZTSportActivitySummary</a></span><span class="o">&gt;</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>shoe code <code>Optional</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>starting index of the activities</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>number of objects to return</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fields</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of <code>ZTSportActivity.Field</code> to include in response</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>include</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>addtitional information to include, e.g. &ldquo;supplimentalData.geoThumbnail&rdquo; , &ldquo;attributes.goalType&rdquo;, &ldquo;attributes.goalValue&rdquo;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>callback with array of activities</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L116-L129">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1181,7 +1386,7 @@ If nil is returned <code>ZTSport.shared.readGeneralState()</code> should be call
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L95-L103">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L135-L143">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1256,7 +1461,7 @@ If nil is returned <code>ZTSport.shared.readGeneralState()</code> should be call
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L110-L119">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L150-L159">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1317,7 +1522,7 @@ If nil is returned <code>ZTSport.shared.readGeneralState()</code> should be call
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L125-L129">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L165-L169">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1392,7 +1597,7 @@ If nil is returned <code>ZTSport.shared.readGeneralState()</code> should be call
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L136-L143">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L176-L183">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1453,7 +1658,7 @@ If nil is returned <code>ZTSport.shared.readGeneralState()</code> should be call
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L149-L153">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztsportkit-ios-sdk/tree/master/Sources/ZTSportKit/ZTSport+API.swift#L189-L193">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1992,7 +2197,7 @@ Result of activity stop command can be observed in <code><a href="../Classes/ZTS
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-10-07)</p>
+          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-11-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

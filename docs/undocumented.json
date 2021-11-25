@@ -575,83 +575,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTRunningActivity.swift",
-      "line": 44,
-      "symbol": "ZTSportActivity.Field",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTRunningActivityAttributes.swift",
-      "line": 46,
-      "symbol": "ZTSportActivityAttributes.encode(from:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTRunningActivitySummary.swift",
-      "line": 15,
-      "symbol": "ZTSportActivitySummary.data",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTRunningActivitySummary.swift",
-      "line": 17,
-      "symbol": "ZTSportActivitySummary.include",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTRunningActivitySummary.swift",
-      "line": 18,
-      "symbol": "ZTSportActivitySummary.thumbnail",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTRunningActivitySummary.swift",
-      "line": 19,
-      "symbol": "ZTSportActivitySummary.isPhoneless",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTRunningActivitySummary.swift",
-      "line": 20,
-      "symbol": "ZTSportActivitySummary.comments",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTRunningActivitySummary.swift",
-      "line": 21,
-      "symbol": "ZTSportActivitySummary.attributes",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTRunningActivitySummary.swift",
-      "line": 23,
-      "symbol": "ZTSportActivitySummary.init(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTRunningActivitySummary.swift",
-      "line": 27,
-      "symbol": "ZTSportActivitySummary.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTRunningActivitySummary.swift",
-      "line": 40,
-      "symbol": "ZTSportActivitySummary.Data",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSpeedCadenceAnalysis.swift",
       "line": 15,
       "symbol": "ZTSpeedCadenceAnalysis.averageSpeed",
@@ -683,6 +606,83 @@
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSpeedCadenceAnalysis.swift",
       "line": 29,
       "symbol": "ZTSpeedCadenceAnalysis.Chart",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSportActivity.swift",
+      "line": 44,
+      "symbol": "ZTSportActivity.Field",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSportActivityAttributes.swift",
+      "line": 46,
+      "symbol": "ZTSportActivityAttributes.encode(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSportActivitySummary.swift",
+      "line": 15,
+      "symbol": "ZTSportActivitySummary.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSportActivitySummary.swift",
+      "line": 17,
+      "symbol": "ZTSportActivitySummary.include",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSportActivitySummary.swift",
+      "line": 18,
+      "symbol": "ZTSportActivitySummary.thumbnail",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSportActivitySummary.swift",
+      "line": 19,
+      "symbol": "ZTSportActivitySummary.isPhoneless",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSportActivitySummary.swift",
+      "line": 20,
+      "symbol": "ZTSportActivitySummary.comments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSportActivitySummary.swift",
+      "line": 21,
+      "symbol": "ZTSportActivitySummary.attributes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSportActivitySummary.swift",
+      "line": 23,
+      "symbol": "ZTSportActivitySummary.init(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSportActivitySummary.swift",
+      "line": 27,
+      "symbol": "ZTSportActivitySummary.mapping(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/Models/Activity/ZTSportActivitySummary.swift",
+      "line": 40,
+      "symbol": "ZTSportActivitySummary.Data",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
