@@ -144,42 +144,39 @@ ZTSport.shared.setMode(mode: .running) { (error) in
 
 ### Activity Start
 
-Before starting activity user parameters/attributes should be passed into SDK. These attributes are used for activity analysis. If attributes were not passed vefore activity start - analysis will have wrong numbers. User attributes can be passed once for the same user.
+To start activity first define user parameters:
 ```swift
-
 let userDataParameters = ZTUserDataParameters(bodyWeight: 80, bodyHeight: 185, shoeSize: 44)
-
-ZTSport.shared.setUserParameters(parameters: userDataParameters, completion: { (error) in
-    if let error = error {
-        debugPrint("Error setting userParameters: \(error.localizedDescription)")
-    }
-})
 ```
-And call start activity with chosen goal
-```swift
 
-ZTSport.shared.startActivity(goal: .distance, goalValue: 3) { activityId, error in
-    debugPrint("Activity started with activityId: \(activityId ?? ""), error: \(error?.localizedDescription ?? "")")
+Optionally `attributes` can be set:
+```swift
+    let attributes: [String: Any] = ["goal": ZTSport.ActivityGoal.duration.rawValue, "goalValue": 3]
+```
+
+And call start activity with chosen atributes and userParameters. Activity id or error why activity was not started can be seen in callback block
+```swift
+ZTSport.shared.startActivity(attributes: attributes, userParameters: userParameters) {[weak self] id, error in
+    debugPrint("Activity started: activityId=\(id ?? ""), error=\(error?.localizedDescription ?? "")")
 }
 ```
 
 ### Activity stop. 
-Activity can be stopped calling `stopActivity(completion:)`. 
-Call stop activity
-```swift
-
-ZTSport.shared.stopActivity { activityId, error in
-    debugPrint("Activity with activityId: \(activityId ?? "") stopped, error: \(error?.localizedDescription ?? "")")
-}
+Activity can be stopped by calling `stopActivity`. Callback may return activity id or error why activity was not stopped.
+```swifft
+    ZTSport.shared.stopActivity { [weak self] activityId, error in
+        debugPrint("Activity stopped: activityId=\(activityId ?? "") stopped, error=\(error?.localizedDescription ?? "")")
+    }
 ```
 Activity can be also stopped automatically because of idle state and insoles went into sleep mode or battery low level. 
-You should subscribe for this event to be notified if needed:
-```swift
 
+You can subscribe for this event to be notified:
+```swift
 ZTSport.shared.onActivityRestoreStarted.subscribe(with: self) { (wasRestored) in
-    debugPrint("Previous activity restored: \(wasRestored)")
+    ZTLogger.instance.debug("Previous activity restored: \(wasRestored)")
 }
 ```
+
 ### Activity data
 
 ### Realtime data
@@ -187,7 +184,7 @@ To request activity data in real time use:
 ```swift
 val fields = list of desired fields
 ZTApi.shared.getActivityRealtimeData(activityId: activityId,fields: ["steps_count, "cadence_avg", "activity_time"]) { response, error in
-    debugPrint(String(describing: response))
+    ZTLogger.instance.debug(String(describing: response))
 }
 ```
 
@@ -198,7 +195,7 @@ You can provide application data like gps coordinates or other information for c
 //e.g. let data = [timestamp, latitude, longitude]
 ZTSport.shared.addActivityData(timestamp: timestamp, data: data) { error in
     if error != nil {
-        debugPrint("addActivityData error - \(String(describing: error))")
+        ZTLogger.instance.debug("addActivityData error - \(String(describing: error))")
     }
 }
 ```
@@ -211,10 +208,40 @@ Activity summary can be received with additional fields or informationafter afte
 let fields: [ZTSportActivity.Field] = [.steps_count, .cadence_avg, .activity_time]
 let include: [String] = ["attributes.activityTitle"]
 ZTSport.shared.getActivitySummary(activityId, fields, include){ activity, error in
-    debugPrint("activity: \(String(describing: activity))")
+    ZTLogger.instance.debug("activity: \(String(describing: activity))")
 }
 ```
 Where fields is array of of type `ZTSportActivity.Field` and include is array of additional attributes which can be checked in ZCloud documentation.
+
+
+#### Raw data
+Activity can store raw data on modules. To initiate activity with raw data recording start activity with additional parameter `enableRawData`.
+Raw data will be automatically uploaded to ZCloud after activity is stopped. 
+
+```swift
+    let userDataParameters = ZTUserDataParameters(bodyWeight: 80, bodyHeight: 185, shoeSize: 44)
+    let attributes: [String: Any] = ["goal": ZTSport.ActivityGoal.duration.rawValue, "goalValue": 3]
+    
+    ZTSport.shared.startActivity(attributes: attributes, userParameters: userParameters, enableRawData: true) {[weak self] id, error in
+        debugPrint("Activity started with raw data enabled: activityId=\(id ?? ""), error=\(error?.localizedDescription ?? "")")
+    }
+```
+
+Downloading raw data is long process and new activity can't be started during it.
+
+There is way to know progress of this process
+ ```swift
+    ZTSport.shared.onRawDataFlowProgresss.subscribe(with: self) { progress in
+        debugPrint("Raw data progress=\(progress)")
+    }
+```
+
+And there is way to know state of this process.
+ ```swift
+    ZTSport.shared.onRawDataFlowStateChange.subscribe(with: self) { (state, error) in
+        debugPrint("Raw data state changed to \(state) with error \(error?.localizedDescription ?? "")")
+    }
+```
 
 ## Author
 

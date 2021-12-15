@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.11](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.11) (2021-12-14)
+
+- added support for universal firmware
+- added parameter `enableRawData` to start activity with raw data recording
+- raw data is automatically uploaded to ZCloud API
+- progress and current state of raw data flow can be observed in `ZTSport.shared.onRawDataFlowProgresss` and `ZTSport.shared.onRawDataFlowStateChange`
+
 ## [1.1.10](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.10) (2021-11-25)
 
 - changed parameters for methods `getActivitySummary` and `getActivitiesSummary`

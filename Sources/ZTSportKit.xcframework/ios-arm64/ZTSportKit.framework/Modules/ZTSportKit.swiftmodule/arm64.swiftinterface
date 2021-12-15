@@ -127,9 +127,8 @@ public class ZTActivitySegmentAnalysis : ZTCoreKit.ZTMappable {
   @objc deinit
 }
 extension ZTSportKit.ZTSport {
-  final public func startActivity(goal: ZTSportKit.ZTSport.ActivityGoal, goalValue: Swift.Double = 0.0, userParameters: ZTSportKit.ZTUserDataParameters? = nil, completion: ZTSportKit.ZTActivityResult?)
-  final public func startActivity(attributes: [Swift.String : Any], userParameters: ZTSportKit.ZTUserDataParameters? = nil, completion: ZTSportKit.ZTActivityResult?)
-  final public func stopActivity(completion: ZTSportKit.ZTActivityResult?)
+  final public func startActivity(attributes: [Swift.String : Any], userParameters: ZTSportKit.ZTUserDataParameters? = nil, enableRawData: Swift.Bool = false, timeout: Swift.Double = 15, completion: ZTSportKit.ZTActivityResult?)
+  final public func stopActivity(timeout: Swift.Double = 30, completion: ZTSportKit.ZTActivityResult?)
 }
 final public class ZTAnalysisCadence : ZTCoreKit.ZTMappable {
   final public var timestamp: Foundation.Date?
@@ -557,12 +556,35 @@ extension ZTSportKit.ZTSport {
       get
     }
   }
+  public enum RawDataFlowState : Swift.String, Swift.Codable {
+    case prepareRightModule
+    case startRightModule
+    case endRightModule
+    case disconnectRightModule
+    case startPeerConnection
+    case connectLeftModule
+    case prepareLeftModule
+    case startLeftModule
+    case endLeftModule
+    case disconnectLeftModule
+    case reconnectRightmodule
+    case uploadData
+    case none
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
 }
 public typealias ZTActivityResult = (Swift.String?, ZTCoreKit.ZTError?) -> Swift.Void
 @_hasMissingDesignatedInitializers final public class ZTSport {
   public static let sdkVersion: Swift.String
   public static let activityPluginVersion: Swift.String
   public static let shared: ZTSportKit.ZTSport
+  final public var connectedDevice: ZTCoreKit.ZTDevice? {
+    get
+  }
   final public var isActivityRunning: Swift.Bool? {
     get
   }
@@ -580,10 +602,9 @@ public typealias ZTActivityResult = (Swift.String?, ZTCoreKit.ZTError?) -> Swift
   final public let onActivityDataReceived: ZTCoreKit.ZTSignal<(Foundation.Data?)>
   final public let onActivityRestoreStarted: ZTCoreKit.ZTSignal<(Swift.Bool)>
   final public let onActivityStopRequestSent: ZTCoreKit.ZTSignal<(Swift.String?, Swift.Error?)>
-  final public var connectedDevice: ZTCoreKit.ZTDevice? {
-    get
-  }
-  final public func readGeneralState()
+  final public let onRawDataFlowStateChange: ZTCoreKit.ZTSignal<(ZTSportKit.ZTSport.RawDataFlowState?, Swift.Error?)>
+  final public let onRawDataFlowProgresss: ZTCoreKit.ZTSignal<(Swift.Float)>
+  final public func readGeneralState(completion: @escaping ((ZTCoreKit.ZTDeviceActualState?) -> Swift.Void))
   final public func setMode(mode: ZTCoreKit.ZTActivityMode, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func forceStop(completion: @escaping (Swift.Bool, ZTCoreKit.ZTError?) -> Swift.Void)
   @objc deinit
@@ -591,6 +612,7 @@ public typealias ZTActivityResult = (Swift.String?, ZTCoreKit.ZTError?) -> Swift
 extension ZTSportKit.ZTSport {
   @available(*, deprecated, renamed: "startActivity", message: "This method is deprecated, use method with same name and completion handler")
   final public func startActivity(goal: ZTSportKit.ZTSport.ActivityGoal, goalValue: Swift.Double = 0.0)
+  final public func startActivity(goal: ZTSportKit.ZTSport.ActivityGoal, goalValue: Swift.Double = 0.0, userParameters: ZTSportKit.ZTUserDataParameters? = nil, timeout: Swift.Double = 15, completion: ZTSportKit.ZTActivityResult?)
   @available(*, deprecated, renamed: "stopActivity", message: "This method is deprecated, use method with same name and completion handler")
   final public func stopActivity()
   @available(iOS, deprecated, message: "offset/limit parameters should be passed instead of start/end")
@@ -599,6 +621,8 @@ extension ZTSportKit.ZTSport {
   final public func addActivityData(timestamp: Foundation.TimeInterval, data: [Swift.String : Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
   @available(*, unavailable, renamed: "getPeriodActivityAnalysis")
   final public func getActivityAnalysis(code: Swift.String?, period: ZTCoreKit.ZTPeriod, completion: @escaping (ZTCoreKit.ZTResultObject<ZTSportKit.ZTActivityAnalysis>))
+  @available(*, deprecated, renamed: "readGeneralState", message: "use same method with completion block")
+  final public func readGeneralState()
 }
 extension ZTSportKit.ZTAnalysisContactQualityType : Swift.Equatable {}
 extension ZTSportKit.ZTAnalysisContactQualityType : Swift.Hashable {}
@@ -621,3 +645,6 @@ extension ZTSportKit.ZTSportActivity.Field : Swift.RawRepresentable {}
 extension ZTSportKit.ZTSport.ActivityGoal : Swift.Equatable {}
 extension ZTSportKit.ZTSport.ActivityGoal : Swift.Hashable {}
 extension ZTSportKit.ZTSport.ActivityGoal : Swift.RawRepresentable {}
+extension ZTSportKit.ZTSport.RawDataFlowState : Swift.Equatable {}
+extension ZTSportKit.ZTSport.RawDataFlowState : Swift.Hashable {}
+extension ZTSportKit.ZTSport.RawDataFlowState : Swift.RawRepresentable {}
