@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.13](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.13) (2022-03-07)
+
+- refactored activity start & stop
+
+## [1.1.12](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.12) (2022-02-10)
+
+- fixed `import Foundation` and added more logs for logLevel = .debug
+
 ## [1.1.11](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.11) (2021-12-14)
 
 - added support for universal firmware

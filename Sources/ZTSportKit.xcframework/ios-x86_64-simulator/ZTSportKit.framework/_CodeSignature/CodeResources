@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		a3pjwz2CdbLBpmPg4Uik/AOdy40=
+		ozNGZQher4gDjZU5QSalpItu3C8=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		KPnHpEGpNcMcQCN3h/phI2T3axI=
+		2MsD7knpW6W4aiqNNkGhhQI1fws=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		mMgIuCxqX7oEG9mDQUvyX8mlGwo=
+		zkjtwLgGlC8L0P0H7/tTeTA6o+w=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		KPnHpEGpNcMcQCN3h/phI2T3axI=
+		2MsD7knpW6W4aiqNNkGhhQI1fws=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		mMgIuCxqX7oEG9mDQUvyX8mlGwo=
+		zkjtwLgGlC8L0P0H7/tTeTA6o+w=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -50,7 +50,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9jScv04V6hvawfDhXdfQSTs30QX12VWWfysaCtZJdM8=
+			xpuWkFbyKgH2Evhr7ijdDg5wMBxdPlRk4Qtu3QXjFqo=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
@@ -64,14 +64,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i9AWOmQbOCmcpSBpqYrmP5ndPbO9RO42FKWlw88Zx44=
+			yZHShhYvtOaeBmCmob7Dxq4LJr0Z2YQebJvJ85SYPMA=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9jScv04V6hvawfDhXdfQSTs30QX12VWWfysaCtZJdM8=
+			xpuWkFbyKgH2Evhr7ijdDg5wMBxdPlRk4Qtu3QXjFqo=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftinterface</key>
@@ -85,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i9AWOmQbOCmcpSBpqYrmP5ndPbO9RO42FKWlw88Zx44=
+			yZHShhYvtOaeBmCmob7Dxq4LJr0Z2YQebJvJ85SYPMA=
 			</data>
 		</dict>
 	</dict>

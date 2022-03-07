@@ -17,7 +17,7 @@ let package = Package(
         .package(
             name: "ZTCoreKit", 
             url: "https://github.com/zhortech/ztcorekit-ios-sdk.git",
-            from: "1.1.2"
+            from: "1.1.20"
         )
     ],
     targets: [
