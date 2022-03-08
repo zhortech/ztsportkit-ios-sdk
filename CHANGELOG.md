@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.14](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.14) (2022-03-08)
+
+- fixed `setMode` method to return correct errors
+
 ## [1.1.13](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.13) (2022-03-07)
 
 - refactored activity start & stop
