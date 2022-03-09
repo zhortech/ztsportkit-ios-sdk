@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.15](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.15) (2022-03-09)
+## [1.1.16](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.16) (2022-03-09)
 
 - refactoring
 
