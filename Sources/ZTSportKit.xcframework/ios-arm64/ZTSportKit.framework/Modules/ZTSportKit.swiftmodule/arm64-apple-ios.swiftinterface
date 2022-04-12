@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTSportKit
 import CoreBluetooth
 import Foundation
@@ -380,6 +380,10 @@ extension ZTSportKit.ZTSportActivity {
   @objc deinit
   final public func encode(to encoder: Swift.Encoder) throws
 }
+final public class ZTUserDataParameters {
+  public init(bodyWeight: Swift.Int?, bodyHeight: Swift.Int?, shoeSize: Swift.Int?, threadmillSpeed: Swift.Int? = nil)
+  @objc deinit
+}
 @_inheritsConvenienceInitializers final public class ZTSportActivitySummary : ZTCoreKit.ZTActivitySummary {
   final public var data: ZTSportKit.ZTSportActivitySummary.Data?
   final public var include: [Swift.String : Any]?
@@ -537,10 +541,6 @@ public class ZTTrendValueData<T> : ZTCoreKit.ZTMappable {
   public var trend: Swift.Int
   required public init?(map: ZTCoreKit.ZTMap)
   public func mapping(map: ZTCoreKit.ZTMap)
-  @objc deinit
-}
-final public class ZTUserDataParameters {
-  public init(bodyWeight: Swift.Int?, bodyHeight: Swift.Int?, shoeSize: Swift.Int?, threadmillSpeed: Swift.Int? = nil)
   @objc deinit
 }
 extension ZTSportKit.ZTSport {

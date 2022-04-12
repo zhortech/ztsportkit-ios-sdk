@@ -6,35 +6,23 @@
 	<dict>
 		<key>Headers/ZTSportKit-Swift.h</key>
 		<data>
-		cHYaqe7lIfluDtwtIq56VYFmpSQ=
+		Bqy+VBZCTWjbllx5VJ+PrkbLtbI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZeHf3KXH6mO5HdywurFTrFLkzGo=
+		xNOyVcd7fLl7W7DHbnSp/ToiH8c=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		2MsD7knpW6W4aiqNNkGhhQI1fws=
+		26+7k74EKpR1jbKSLxZsMBLcqFg=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		pIfM+8QUyfgTCoFDt7Q7jBaMKV4=
+		bvp8o8eFTwntJq34aA+SXrjr1gU=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZluJtJeQkIU8BHR+N082SeEWlcw=
-		</data>
-		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		2MsD7knpW6W4aiqNNkGhhQI1fws=
-		</data>
-		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftinterface</key>
-		<data>
-		pIfM+8QUyfgTCoFDt7Q7jBaMKV4=
-		</data>
-		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		ZluJtJeQkIU8BHR+N082SeEWlcw=
+		hF3a1osF8qOGQab6sgNsirlRpRA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -43,49 +31,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ls2abnpFvaSoE/mtaTM6AeDgyXt4qaS5Qg+04E//HXI=
+			RT11vrY7TmMMr55sB+TTBwoox5xgarE3JqYGwvs5goM=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xpuWkFbyKgH2Evhr7ijdDg5wMBxdPlRk4Qtu3QXjFqo=
+			hvJ373d22GZcAeq0G0iBLt5w/RFeTMCwt9jEdLF3OQs=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YbdzJMyuYcyBkomxx/mYYylK3MqbupYhR20jZMhDKJw=
+			HmjYPN4uFROEWugfrBTBhg18WGPofKJ9bA3DB3YSlHc=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			653ZLnIHTzP0n2ZKQGHskEC2rdTvPqjQ8UNamSj3SpM=
-			</data>
-		</dict>
-		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xpuWkFbyKgH2Evhr7ijdDg5wMBxdPlRk4Qtu3QXjFqo=
-			</data>
-		</dict>
-		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			YbdzJMyuYcyBkomxx/mYYylK3MqbupYhR20jZMhDKJw=
-			</data>
-		</dict>
-		<key>Modules/ZTSportKit.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			653ZLnIHTzP0n2ZKQGHskEC2rdTvPqjQ8UNamSj3SpM=
+			BH1lLQsZcMscdS86JP72Cvn67fYyszOh2LZvaedRj44=
 			</data>
 		</dict>
 	</dict>
