@@ -806,13 +806,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/ZTSport+Deprecated.swift",
-      "line": 26,
-      "symbol": "ZTSport.startActivity(goal:goalValue:userParameters:timeout:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/ZTSport+Enums.swift",
       "line": 15,
       "symbol": "ZTSport.ActivityGoal.distance",
@@ -856,7 +849,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/ZTSport.swift",
-      "line": 420,
+      "line": 435,
       "symbol": "ZTSport.forceStop(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
