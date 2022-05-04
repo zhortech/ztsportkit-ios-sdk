@@ -849,7 +849,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztsportkit/Sources/ZTSportKit/ZTSport.swift",
-      "line": 435,
+      "line": 432,
       "symbol": "ZTSport.forceStop(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

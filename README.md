@@ -138,7 +138,7 @@ public func setMode(mode: ZTActivityMode, completion: @escaping ZTBaseResult) {
 
 ```swift
 ZTSport.shared.setMode(mode: .running) { (error) in
-    debugPrint("Error setting mode to running: \(error.localizedDescription)")
+    ZTLogger.instance.debug("Error setting mode to running: \(error.localizedDescription)")
 }
 ```
 
@@ -215,7 +215,8 @@ Where fields is array of of type `ZTSportActivity.Field` and include is array of
 
 
 #### Raw data
-Activity can store raw data on modules. To initiate activity with raw data recording start activity with additional parameter `enableRawData`.
+Activity can store raw data.
+To initiate activity with raw data recording start activity with additional parameter `enableRawData`.
 Raw data will be automatically uploaded to ZCloud after activity is stopped. 
 
 ```swift
@@ -242,6 +243,18 @@ And there is way to know state of this process.
         debugPrint("Raw data state changed to \(state) with error \(error?.localizedDescription ?? "")")
     }
 ```
+
+#### Set activity frequency
+Activity frequency can be changed using appropriate parameter to start activity. Frequency can't be changed during activity.
+
+To initiate activity with required frequency change start activity with additional parameter `samplingMode: ZTSamplingMode`.
+`samplingMode` currently supports 3 standard activities: Running, Walking, Jumping and allows to set custom values, e.g.
+```
+        ZTSamplingMode.custom(sequence: [5, 6, 1, 3, 0, 5, 1, 1, 3, 0, 2, 2, 8,0])
+```
+
+Gyroscope parameters: 5 bytes, Accelerometer parameters: 5 bytes, Magnetometer parameters: 4 bytes
+Refer to the [LSM6DSL AN5040 Application note](https://www.st.com/resource/en/application_note/dm00402563.pdf) and the [LSM6DSL datasheet](https://www.st.com/resource/en/datasheet/lsm6dsl.pdf) for MEMS register configurations, as well as the [LIS2MDL datasheet](https://www.st.com/resource/en/datasheet/lis2mdl.pdf) and the [LIS2MDL AN5069 Application note](https://www.st.com/resource/en/application_note/dm00427201.pdf) for Magnetometer register configuration.
 
 ## Author
 

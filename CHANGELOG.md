@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.20](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.20) (2022-05-04)
+
+- using mac address for connection in raw data mode
+
 ## [1.1.19](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.19) (2022-04-29)
 
 - ZTSamplingMode parameter added to start activity for universal firmware
