@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.24](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.24) (2022-05-20)
+
+- fix for raw data flow
+
+## [1.1.22](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.22) (2022-05-19)
+
+- fix for scanning in raw data mode 
+
 ## [1.1.21](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.21) (2022-05-04)
 
 - refactoring raw data mode

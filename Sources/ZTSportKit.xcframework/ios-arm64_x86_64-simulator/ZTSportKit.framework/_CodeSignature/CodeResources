@@ -6,23 +6,35 @@
 	<dict>
 		<key>Headers/ZTSportKit-Swift.h</key>
 		<data>
-		Bqy+VBZCTWjbllx5VJ+PrkbLtbI=
+		R56XXZTBeLTqCFcSgpC+6qhJp9U=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EkpHsq2rIqGWlIbIBpnm4db2Xck=
+		mBoc/hRGXd0851KayCohO746mLU=
+		</data>
+		<key>Modules/ZTSportKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		sEJj/XA2U2CY36pMh7BFOqc/Wqo=
+		</data>
+		<key>Modules/ZTSportKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		lL0vnxiT5dxzWfBhncuR4LIF9qY=
+		</data>
+		<key>Modules/ZTSportKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		tSBWyNErNDbcSEAk4P0h4tLe6G0=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ToAUjI+EulEcnmeYIQk2+5lpdqc=
+		r+TDtcujxfrrKEhvb8u8THijIiQ=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		vV1uQVrHTU8GoYrePbcT6B59x5E=
+		PpPpuRKNUofOsW6GDlJJODr3rk0=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		p2GeHYaEm8U29BSsSj7mLrkuxrY=
+		A/MasJgESlt2NxEeXhXPlHlks30=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -31,28 +43,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RT11vrY7TmMMr55sB+TTBwoox5xgarE3JqYGwvs5goM=
+			6rSYRjGkx+bxx0JV0f7kHRXNyEciMCEr5NXAGx+r90o=
+			</data>
+		</dict>
+		<key>Modules/ZTSportKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cU8xxcMUmuFk384UfB3L98djkavxKjiLcYYCOwx6bh8=
+			</data>
+		</dict>
+		<key>Modules/ZTSportKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AiMyVx9g91VlbyaATDXXU9T/UTnkya3p8vh2gRDI52E=
+			</data>
+		</dict>
+		<key>Modules/ZTSportKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XESTr2eQqtxV2jEjaq5ljbi+wwAm6T4PKSjRIBT/DBw=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4U7tPzTHU+F+pKb9tp34zmSyA/cyUS9FQqGNSDtbWiQ=
+			XAJ+67OlDDMT/rJNXVMLyQN99VWzwkCh2g+u73lOOc0=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GnfZXEy522ioUSUnMCz2WsMVhmwrGiMOqDSR/tNX8JA=
+			iSybJtDBiOi3DPHZtQ0RjlqcK+/W0nzzicErD33ZglY=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FFFekGlcvHnjfxpW3un085WtGzdwZA7ZG2k4R8crFiY=
+			gscLwchNM9LHBxLs5Ze0rpE20hfuCUW8q8xJq1XAIkY=
 			</data>
 		</dict>
 	</dict>
