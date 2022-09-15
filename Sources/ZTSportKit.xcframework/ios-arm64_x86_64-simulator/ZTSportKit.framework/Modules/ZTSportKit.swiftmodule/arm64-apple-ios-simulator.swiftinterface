@@ -579,7 +579,7 @@ extension ZTSportKit.ZTSport {
 }
 public typealias ZTActivityResult = (Swift.String?, ZTCoreKit.ZTError?) -> Swift.Void
 @_hasMissingDesignatedInitializers final public class ZTSport {
-  public static let sdkVersion: Swift.String
+  public static let version: Swift.String
   public static let activityPluginVersion: Swift.String
   public static let shared: ZTSportKit.ZTSport
   final public var connectedDevice: ZTCoreKit.ZTDevice? {

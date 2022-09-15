@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.27](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.26) (2022-09-15)
+
+- tweak for raw data upload
+
 ## [1.1.25](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.25) (2022-06-15)
 
 - fix for raw data flow
