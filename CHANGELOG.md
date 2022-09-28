@@ -1,6 +1,14 @@
 # Changelog
 
-## [1.1.27](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.26) (2022-09-15)
+## [1.1.30](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.30) (2022-09-28)
+
+- improved flow for raw data mode when connection is lost
+
+## [1.1.29](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.29) (2022-09-23)
+
+- fix for cancelled activity
+
+## [1.1.27](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.27) (2022-09-15)
 
 - tweak for raw data upload
 
