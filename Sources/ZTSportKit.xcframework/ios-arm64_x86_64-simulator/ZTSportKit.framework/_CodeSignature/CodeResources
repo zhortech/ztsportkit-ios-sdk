@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ynp8pdNnZ3SBL2HBWZ5CwIMfwlc=
+		EMQCzKitRFZlcBDh1IFZ2J2x+20=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		PXCABsjczpInp4dVUkVB41FSGF8=
+		m/s1vrkcDvjemVG5t7M8p6dbtTA=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Py/GggfNQezE74Vt85+WI0qcXaY=
+		nGgwgJZ90Kyfq4gs5d58twktVYM=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		PXCABsjczpInp4dVUkVB41FSGF8=
+		m/s1vrkcDvjemVG5t7M8p6dbtTA=
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		u5HhgKoQi4D3gYDWtMpmNKk5yys=
+		/ENUGgk57VNtAQRUBjOsQ5KZFgc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -66,7 +66,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hWR51LHxHND8UUKAW9ruW0NH+eWRBarBoQF3HhLcRHc=
+			0yps1xQ+cVy0OFxQDo0oyLoK/Eu53TUhzBQkYckli2I=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -94,14 +94,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XQ/vAvUiHTu8ESAAsvg/VKSmA3olGC/RKKOIpT7csWs=
+			tp9lnJyHShQtCaIbUJdGc4aPa2Kfy3QgCco5PAX/lJs=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hWR51LHxHND8UUKAW9ruW0NH+eWRBarBoQF3HhLcRHc=
+			0yps1xQ+cVy0OFxQDo0oyLoK/Eu53TUhzBQkYckli2I=
 			</data>
 		</dict>
 		<key>Modules/ZTSportKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -129,7 +129,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gQG+CnnUlqX76opFe4rild91Z1M7+Drsv3xsOx8AZtk=
+			/UZCS1DyuXxkEorR0R9NdFqBagdTNrCLoQlU4rfMiu4=
 			</data>
 		</dict>
 	</dict>

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.31](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.31) (2022-10-24)
+
+- using `ZTSettings.shared.shouldObtaineMissedChunks` during activity stop
+
 ## [1.1.30](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.30) (2022-09-28)
 
 - improved flow for raw data mode when connection is lost
