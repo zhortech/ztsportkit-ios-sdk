@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.33](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.33) (2022-10-28)
+- using `ZTSettings.shared.enableRawDataCheck` on reconnect to get or not get raw data automatically
+
+## [1.1.32](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.32) (2022-10-26)
+
+- new method `isPendingActivity(activityId: completion:)` to check if there is stored raw data for activity which was not uploaded
+- new method `pushPendingActivities(completion:)` to upload pending activities with raw data
+
 ## [1.1.31](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.31) (2022-10-24)
 
 - using `ZTSettings.shared.shouldObtaineMissedChunks` during activity stop

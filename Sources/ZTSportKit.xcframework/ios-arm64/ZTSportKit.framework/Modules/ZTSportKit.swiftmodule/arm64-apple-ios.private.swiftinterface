@@ -186,6 +186,10 @@ final public class ZTAnalysisImpactForce : ZTCoreKit.ZTMappable {
   }
   @objc deinit
 }
+extension ZTSportKit.ZTSport {
+  final public func isPendingActivity(activityId: Swift.String, completion: @escaping (Swift.Bool, ZTCoreKit.ZTError?) -> Swift.Void)
+  final public func pushPendingActivities(completion: @escaping (ZTCoreKit.ZTError?) -> Swift.Void)
+}
 public enum ZTAnalysisPronationType : Swift.String {
   case overPronation
   case pronation

@@ -3022,6 +3022,487 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZTSportKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZTAsyncOperation",
+        "printedName": "ZTAsyncOperation",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "stateQueue",
+            "printedName": "stateQueue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchQueue",
+                "printedName": "Dispatch.DispatchQueue",
+                "usr": "c:objc(cs)OS_dispatch_queue"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10ZTSportKit16ZTAsyncOperationC10stateQueue33_3E7F2B45CBE0B55197E4FC5039DCB91ELLSo17OS_dispatch_queueCvp",
+            "mangledName": "$s10ZTSportKit16ZTAsyncOperationC10stateQueue33_3E7F2B45CBE0B55197E4FC5039DCB91ELLSo17OS_dispatch_queueCvp",
+            "moduleName": "ZTSportKit",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 0,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "currentState",
+            "printedName": "currentState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OperationState",
+                "printedName": "ZTSportKit.ZTAsyncOperation.OperationState",
+                "usr": "s:10ZTSportKit16ZTAsyncOperationC0D5State33_3E7F2B45CBE0B55197E4FC5039DCB91ELLO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10ZTSportKit16ZTAsyncOperationC12currentState33_3E7F2B45CBE0B55197E4FC5039DCB91ELLAC0dF0AELLOvp",
+            "mangledName": "$s10ZTSportKit16ZTAsyncOperationC12currentState33_3E7F2B45CBE0B55197E4FC5039DCB91ELLAC0dF0AELLOvp",
+            "moduleName": "ZTSportKit",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 1,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "isReady",
+            "printedName": "isReady",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation(py)ready",
+            "mangledName": "$s10ZTSportKit16ZTAsyncOperationC7isReadySbvp",
+            "moduleName": "ZTSportKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "ready",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation(im)isReady",
+                "mangledName": "$s10ZTSportKit16ZTAsyncOperationC7isReadySbvg",
+                "moduleName": "ZTSportKit",
+                "overriding": true,
+                "isOpen": true,
+                "objc_name": "isReady",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isExecuting",
+            "printedName": "isExecuting",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation(py)executing",
+            "mangledName": "$s10ZTSportKit16ZTAsyncOperationC11isExecutingSbvp",
+            "moduleName": "ZTSportKit",
+            "overriding": true,
+            "objc_name": "executing",
+            "declAttributes": [
+              "ObjC",
+              "Override",
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation(im)isExecuting",
+                "mangledName": "$s10ZTSportKit16ZTAsyncOperationC11isExecutingSbvg",
+                "moduleName": "ZTSportKit",
+                "overriding": true,
+                "objc_name": "isExecuting",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isFinished",
+            "printedName": "isFinished",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation(py)finished",
+            "mangledName": "$s10ZTSportKit16ZTAsyncOperationC10isFinishedSbvp",
+            "moduleName": "ZTSportKit",
+            "overriding": true,
+            "objc_name": "finished",
+            "declAttributes": [
+              "ObjC",
+              "Override",
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation(im)isFinished",
+                "mangledName": "$s10ZTSportKit16ZTAsyncOperationC10isFinishedSbvg",
+                "moduleName": "ZTSportKit",
+                "overriding": true,
+                "objc_name": "isFinished",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isAsynchronous",
+            "printedName": "isAsynchronous",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation(py)asynchronous",
+            "mangledName": "$s10ZTSportKit16ZTAsyncOperationC14isAsynchronousSbvp",
+            "moduleName": "ZTSportKit",
+            "overriding": true,
+            "objc_name": "asynchronous",
+            "declAttributes": [
+              "ObjC",
+              "Override",
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation(im)isAsynchronous",
+                "mangledName": "$s10ZTSportKit16ZTAsyncOperationC14isAsynchronousSbvg",
+                "moduleName": "ZTSportKit",
+                "overriding": true,
+                "objc_name": "isAsynchronous",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "keyPathsForValuesAffectingValue",
+            "printedName": "keyPathsForValuesAffectingValue(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation(cm)keyPathsForValuesAffectingValueForKey:",
+            "mangledName": "$s10ZTSportKit16ZTAsyncOperationC31keyPathsForValuesAffectingValue6forKeyShySSGSS_tFZ",
+            "moduleName": "ZTSportKit",
+            "static": true,
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "keyPathsForValuesAffectingValueForKey:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation(im)start",
+            "mangledName": "$s10ZTSportKit16ZTAsyncOperationC5startyyF",
+            "moduleName": "ZTSportKit",
+            "overriding": true,
+            "objc_name": "start",
+            "declAttributes": [
+              "ObjC",
+              "Override",
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "main",
+            "printedName": "main()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation(im)main",
+            "mangledName": "$s10ZTSportKit16ZTAsyncOperationC4mainyyF",
+            "moduleName": "ZTSportKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "main",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finish",
+            "printedName": "finish()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10ZTSportKit16ZTAsyncOperationC6finishyyF",
+            "mangledName": "$s10ZTSportKit16ZTAsyncOperationC6finishyyF",
+            "moduleName": "ZTSportKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZTAsyncOperation",
+                "printedName": "ZTSportKit.ZTAsyncOperation",
+                "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation(im)init",
+            "mangledName": "$s10ZTSportKit16ZTAsyncOperationCACycfc",
+            "moduleName": "ZTSportKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation",
+        "mangledName": "$s10ZTSportKit16ZTAsyncOperationC",
+        "moduleName": "ZTSportKit",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSOperation",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "Foundation.Operation",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "ZTCoreKit",
         "printedName": "ZTCoreKit",
         "declKind": "Import",
@@ -20462,6 +20943,416 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "ZTCoreKit",
+        "printedName": "ZTCoreKit",
+        "declKind": "Import",
+        "moduleName": "ZTSportKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZTRawDataUploadOperation",
+        "printedName": "ZTRawDataUploadOperation",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "completion",
+            "printedName": "completion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<Swift.Bool, Swift.Error>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<Swift.Bool, Swift.Error>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<Swift.Bool, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10ZTSportKit24ZTRawDataUploadOperationC10completionys6ResultOySbs5Error_pGcSgvp",
+            "mangledName": "$s10ZTSportKit24ZTRawDataUploadOperationC10completionys6ResultOySbs5Error_pGcSgvp",
+            "moduleName": "ZTSportKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 0,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Result<Swift.Bool, Swift.Error>) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Result<Swift.Bool, Swift.Error>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<Swift.Bool, Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Bool",
+                                "printedName": "Swift.Bool",
+                                "usr": "s:Sb"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10ZTSportKit24ZTRawDataUploadOperationC10completionys6ResultOySbs5Error_pGcSgvg",
+                "mangledName": "$s10ZTSportKit24ZTRawDataUploadOperationC10completionys6ResultOySbs5Error_pGcSgvg",
+                "moduleName": "ZTSportKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Result<Swift.Bool, Swift.Error>) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Result<Swift.Bool, Swift.Error>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<Swift.Bool, Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Bool",
+                                "printedName": "Swift.Bool",
+                                "usr": "s:Sb"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10ZTSportKit24ZTRawDataUploadOperationC10completionys6ResultOySbs5Error_pGcSgvs",
+                "mangledName": "$s10ZTSportKit24ZTRawDataUploadOperationC10completionys6ResultOySbs5Error_pGcSgvs",
+                "moduleName": "ZTSportKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10ZTSportKit24ZTRawDataUploadOperationC10completionys6ResultOySbs5Error_pGcSgvM",
+                "mangledName": "$s10ZTSportKit24ZTRawDataUploadOperationC10completionys6ResultOySbs5Error_pGcSgvM",
+                "moduleName": "ZTSportKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fileUrl",
+            "printedName": "fileUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10ZTSportKit24ZTRawDataUploadOperationC7fileUrl10Foundation3URLVvp",
+            "mangledName": "$s10ZTSportKit24ZTRawDataUploadOperationC7fileUrl10Foundation3URLVvp",
+            "moduleName": "ZTSportKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 1,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10ZTSportKit24ZTRawDataUploadOperationC7fileUrl10Foundation3URLVvg",
+                "mangledName": "$s10ZTSportKit24ZTRawDataUploadOperationC7fileUrl10Foundation3URLVvg",
+                "moduleName": "ZTSportKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(fileUrl:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZTRawDataUploadOperation",
+                "printedName": "ZTSportKit.ZTRawDataUploadOperation",
+                "usr": "c:@M@ZTSportKit@objc(cs)ZTRawDataUploadOperation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10ZTSportKit24ZTRawDataUploadOperationC7fileUrlAC10Foundation3URLV_tcfc",
+            "mangledName": "$s10ZTSportKit24ZTRawDataUploadOperationC7fileUrlAC10Foundation3URLV_tcfc",
+            "moduleName": "ZTSportKit",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "main",
+            "printedName": "main()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZTSportKit@objc(cs)ZTRawDataUploadOperation(im)main",
+            "mangledName": "$s10ZTSportKit24ZTRawDataUploadOperationC4mainyyF",
+            "moduleName": "ZTSportKit",
+            "overriding": true,
+            "objc_name": "main",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZTRawDataUploadOperation",
+                "printedName": "ZTSportKit.ZTRawDataUploadOperation",
+                "usr": "c:@M@ZTSportKit@objc(cs)ZTRawDataUploadOperation"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZTSportKit@objc(cs)ZTRawDataUploadOperation(im)init",
+            "mangledName": "$s10ZTSportKit24ZTRawDataUploadOperationCACycfc",
+            "moduleName": "ZTSportKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZTSportKit@objc(cs)ZTRawDataUploadOperation",
+        "mangledName": "$s10ZTSportKit24ZTRawDataUploadOperationC",
+        "moduleName": "ZTSportKit",
+        "declAttributes": [
+          "AccessControl",
+          "Final",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@ZTSportKit@objc(cs)ZTAsyncOperation",
+        "superclassNames": [
+          "ZTSportKit.ZTAsyncOperation",
+          "Foundation.Operation",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZTSportKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "ZTUserDataParameters",
         "printedName": "ZTUserDataParameters",
@@ -36301,6 +37192,162 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "rawDataDirectory",
+            "printedName": "rawDataDirectory",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10ZTSportKit0A0C16rawDataDirectory10Foundation3URLVSgvp",
+            "mangledName": "$s10ZTSportKit0A0C16rawDataDirectory10Foundation3URLVSgvp",
+            "moduleName": "ZTSportKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10ZTSportKit0A0C16rawDataDirectory10Foundation3URLVSgvg",
+                "mangledName": "$s10ZTSportKit0A0C16rawDataDirectory10Foundation3URLVSgvg",
+                "moduleName": "ZTSportKit",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "uploadOperationQueue",
+            "printedName": "uploadOperationQueue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OperationQueue",
+                "printedName": "Foundation.OperationQueue",
+                "usr": "c:objc(cs)NSOperationQueue"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10ZTSportKit0A0C20uploadOperationQueueSo011NSOperationE0Cvp",
+            "mangledName": "$s10ZTSportKit0A0C20uploadOperationQueueSo011NSOperationE0Cvp",
+            "moduleName": "ZTSportKit",
+            "declAttributes": [
+              "Final",
+              "Lazy",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OperationQueue",
+                    "printedName": "Foundation.OperationQueue",
+                    "usr": "c:objc(cs)NSOperationQueue"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10ZTSportKit0A0C20uploadOperationQueueSo011NSOperationE0Cvg",
+                "mangledName": "$s10ZTSportKit0A0C20uploadOperationQueueSo011NSOperationE0Cvg",
+                "moduleName": "ZTSportKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OperationQueue",
+                    "printedName": "Foundation.OperationQueue",
+                    "usr": "c:objc(cs)NSOperationQueue"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10ZTSportKit0A0C20uploadOperationQueueSo011NSOperationE0Cvs",
+                "mangledName": "$s10ZTSportKit0A0C20uploadOperationQueueSo011NSOperationE0Cvs",
+                "moduleName": "ZTSportKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10ZTSportKit0A0C20uploadOperationQueueSo011NSOperationE0CvM",
+                "mangledName": "$s10ZTSportKit0A0C20uploadOperationQueueSo011NSOperationE0CvM",
+                "moduleName": "ZTSportKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "subscribeEvents",
             "printedName": "subscribeEvents()",
@@ -36432,7 +37479,8 @@
             "moduleName": "ZTSportKit",
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -37767,6 +38815,123 @@
           },
           {
             "kind": "Function",
+            "name": "isPendingActivity",
+            "printedName": "isPendingActivity(activityId:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, ZTCoreKit.ZTError?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, ZTCoreKit.ZTError?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "ZTCoreKit.ZTError?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ZTError",
+                            "printedName": "ZTCoreKit.ZTError",
+                            "usr": "s:9ZTCoreKit7ZTErrorO"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10ZTSportKit0A0C17isPendingActivity10activityId10completionySS_ySb_06ZTCoreB07ZTErrorOSgtctF",
+            "mangledName": "$s10ZTSportKit0A0C17isPendingActivity10activityId10completionySS_ySb_06ZTCoreB07ZTErrorOSgtctF",
+            "moduleName": "ZTSportKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pushPendingActivities",
+            "printedName": "pushPendingActivities(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZTCoreKit.ZTError?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZTCoreKit.ZTError?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZTError",
+                        "printedName": "ZTCoreKit.ZTError",
+                        "usr": "s:9ZTCoreKit7ZTErrorO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10ZTSportKit0A0C21pushPendingActivities10completionyy06ZTCoreB07ZTErrorOSgc_tF",
+            "mangledName": "$s10ZTSportKit0A0C21pushPendingActivities10completionyy06ZTCoreB07ZTErrorOSgc_tF",
+            "moduleName": "ZTSportKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "resetRawDataFlow",
             "printedName": "resetRawDataFlow(activityId:)",
             "children": [
@@ -38035,9 +39200,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10ZTSportKit0A0C10deleteFile8filePathy10Foundation3URLV_tF",
-            "mangledName": "$s10ZTSportKit0A0C10deleteFile8filePathy10Foundation3URLV_tF",
+            "usr": "s:10ZTSportKit0A0C10deleteFile8filePathy10Foundation3URLV_tFZ",
+            "mangledName": "$s10ZTSportKit0A0C10deleteFile8filePathy10Foundation3URLV_tFZ",
             "moduleName": "ZTSportKit",
+            "static": true,
             "declAttributes": [
               "Final",
               "AccessControl",
@@ -42289,6 +43455,48 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/Models\/ZTAsyncOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 255,
+      "length": 9,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/Models\/ZTAsyncOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 278,
+      "length": 8,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/Models\/ZTAsyncOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 255,
+      "length": 9,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/Models\/ZTAsyncOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 278,
+      "length": 8,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/Models\/ZTAsyncOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 348,
+      "length": 41,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/Models\/ZTAsyncOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 378,
+      "length": 1,
+      "value": "\".operation\""
+    },
+    {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/Models\/Activity\/ZTActivityLeftRightTextAnalysis.swift",
       "kind": "StringLiteral",
       "offset": 347,
@@ -42763,6 +43971,13 @@
       "offset": 416,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/Models\/ZTRawDataUploadOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 151,
+      "length": 24,
+      "value": "\"ZTSportKit.ZTRawDataUploadOperation\""
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/Models\/ZTUserDataParameters.swift",
@@ -43511,7 +44726,7 @@
       "kind": "StringLiteral",
       "offset": 597,
       "length": 8,
-      "value": "\"1.1.31\""
+      "value": "\"1.1.34\""
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
@@ -43523,121 +44738,135 @@
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "IntegerLiteral",
-      "offset": 3441,
+      "offset": 3436,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "StringLiteral",
-      "offset": 3613,
+      "offset": 3608,
       "length": 46,
       "value": "\"[ZTSportKit]: RawDataFlowState changed to %@\""
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "StringLiteral",
-      "offset": 3661,
+      "offset": 3656,
       "length": 28,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "StringLiteral",
-      "offset": 3688,
+      "offset": 3683,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "FloatLiteral",
-      "offset": 3944,
+      "offset": 3939,
       "length": 6,
       "value": "1000.0"
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "FloatLiteral",
-      "offset": 3954,
+      "offset": 3949,
       "length": 6,
       "value": "1000.0"
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "IntegerLiteral",
-      "offset": 3870,
+      "offset": 3865,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "BooleanLiteral",
-      "offset": 4221,
+      "offset": 4216,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "BooleanLiteral",
-      "offset": 4306,
+      "offset": 4301,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "BooleanLiteral",
-      "offset": 4401,
+      "offset": 4396,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "BooleanLiteral",
-      "offset": 4723,
+      "offset": 4718,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "BooleanLiteral",
-      "offset": 4799,
+      "offset": 4794,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "IntegerLiteral",
-      "offset": 5079,
+      "offset": 5074,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "StringLiteral",
-      "offset": 5332,
+      "offset": 5327,
       "length": 95,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "StringLiteral",
-      "offset": 5426,
+      "offset": 5421,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "StringLiteral",
-      "offset": 5515,
+      "offset": 5510,
       "length": 43,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
       "kind": "StringLiteral",
-      "offset": 5545,
+      "offset": 5540,
       "length": 1,
       "value": "\".currentMode\""
+    },
+    {
+      "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
+      "kind": "StringLiteral",
+      "offset": 6662,
+      "length": 20,
+      "value": "\"UploadRawDataQueue\""
+    },
+    {
+      "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6727,
+      "length": 1,
+      "value": "1"
     }
   ]
 }
