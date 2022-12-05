@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTSportKit
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CoreBluetooth
@@ -189,6 +189,7 @@ final public class ZTAnalysisImpactForce : ZTCoreKit.ZTMappable {
 extension ZTSportKit.ZTSport {
   final public func isPendingActivity(activityId: Swift.String, completion: @escaping (Swift.Bool, ZTCoreKit.ZTError?) -> Swift.Void)
   final public func pushPendingActivities(completion: @escaping (ZTCoreKit.ZTError?) -> Swift.Void)
+  final public func getLastActivityRawData(completion: @escaping ZTCoreKit.ZTBaseResult)
 }
 public enum ZTAnalysisPronationType : Swift.String {
   case overPronation

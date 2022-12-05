@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ZTSportKit'
-  s.version = '1.1.33'
+  s.version = '1.1.34'
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = 'Official Zhortech ZTSportKit SDK for iOS to work with Sport products.'
   s.homepage = 'https://zhortech.com/'
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/zhortech/ztsportkit-ios-sdk.git', :tag => s.version.to_s }
   s.vendored_frameworks = 'Sources/ZTSportKit.xcframework'
   
-  s.dependency 'ZTCoreKit', '~> 1.1.55'
+  s.dependency 'ZTCoreKit', '~> 1.1.57'
 
   s.ios.deployment_target   = '13.0'
   s.ios.weak_frameworks = 'Foundation'

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.34](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.34) (2022-12-05)
+- more logs for raw data mode
+- new method `getLastActivityRawData(completion:)` which can be used to obtain raw data for last activity if raw data was not sent to ZCloud. `isPendingActivity` should be used first to check if raw data was already downloaded from insoles.
+
 ## [1.1.33](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.33) (2022-10-28)
 - using `ZTSettings.shared.enableRawDataCheck` on reconnect to get or not get raw data automatically
 

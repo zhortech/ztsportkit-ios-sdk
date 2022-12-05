@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+w// swift-tools-version:5.3
 
 import PackageDescription
 
@@ -17,7 +17,7 @@ let package = Package(
         .package(
             name: "ZTCoreKit", 
             url: "https://github.com/zhortech/ztcorekit-ios-sdk.git",
-            .upToNextMajor(from: "1.1.55")
+            .upToNextMajor(from: "1.1.57")
         )
     ],
     targets: [
