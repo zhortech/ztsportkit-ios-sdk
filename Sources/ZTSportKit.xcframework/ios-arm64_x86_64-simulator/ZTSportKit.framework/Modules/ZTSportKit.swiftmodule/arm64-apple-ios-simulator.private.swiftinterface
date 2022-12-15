@@ -131,6 +131,8 @@ public class ZTActivitySegmentAnalysis : ZTCoreKit.ZTMappable {
 extension ZTSportKit.ZTSport {
   final public func startActivity(attributes: [Swift.String : Any], userParameters: ZTSportKit.ZTUserDataParameters? = nil, enableRawData: Swift.Bool = false, samplingMode: ZTCoreKit.ZTSamplingMode? = nil, timeout: Swift.Double = 15, completion: ZTSportKit.ZTActivityResult?)
   final public func stopActivity(timeout: Swift.Double = 30, completion: ZTSportKit.ZTActivityResult?)
+  final public func isPendingEmbeddedActivity(completion: @escaping (Swift.Bool, ZTCoreKit.ZTError?) -> Swift.Void)
+  final public func pushPendingEmbeddedActivities(completion: @escaping (ZTCoreKit.ZTError?) -> Swift.Void)
 }
 final public class ZTAnalysisCadence : ZTCoreKit.ZTMappable {
   final public var timestamp: Foundation.Date?

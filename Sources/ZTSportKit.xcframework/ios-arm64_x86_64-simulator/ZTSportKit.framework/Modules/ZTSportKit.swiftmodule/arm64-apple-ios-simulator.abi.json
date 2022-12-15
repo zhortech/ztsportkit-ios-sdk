@@ -38393,6 +38393,117 @@
           },
           {
             "kind": "Function",
+            "name": "isPendingEmbeddedActivity",
+            "printedName": "isPendingEmbeddedActivity(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, ZTCoreKit.ZTError?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, ZTCoreKit.ZTError?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "ZTCoreKit.ZTError?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ZTError",
+                            "printedName": "ZTCoreKit.ZTError",
+                            "usr": "s:9ZTCoreKit7ZTErrorO"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10ZTSportKit0A0C25isPendingEmbeddedActivity10completionyySb_06ZTCoreB07ZTErrorOSgtc_tF",
+            "mangledName": "$s10ZTSportKit0A0C25isPendingEmbeddedActivity10completionyySb_06ZTCoreB07ZTErrorOSgtc_tF",
+            "moduleName": "ZTSportKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pushPendingEmbeddedActivities",
+            "printedName": "pushPendingEmbeddedActivities(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZTCoreKit.ZTError?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZTCoreKit.ZTError?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZTError",
+                        "printedName": "ZTCoreKit.ZTError",
+                        "usr": "s:9ZTCoreKit7ZTErrorO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10ZTSportKit0A0C29pushPendingEmbeddedActivities10completionyy06ZTCoreB07ZTErrorOSgc_tF",
+            "mangledName": "$s10ZTSportKit0A0C29pushPendingEmbeddedActivities10completionyy06ZTCoreB07ZTErrorOSgc_tF",
+            "moduleName": "ZTSportKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "createNewActivity",
             "printedName": "createNewActivity()",
             "children": [
@@ -44944,7 +45055,7 @@
       "kind": "StringLiteral",
       "offset": 597,
       "length": 8,
-      "value": "\"1.1.34\""
+      "value": "\"1.1.35\""
     },
     {
       "filePath": "\/Users\/pavel\/Documents\/Work\/Zhortech\/Framework\/iOS\/ztexample\/sdks\/ztsportkit\/Sources\/ZTSportKit\/ZTSport.swift",

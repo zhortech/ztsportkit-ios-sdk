@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.35](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.35) (2022-12-15)
+
+- new method `isPendingEmbeddedActivity(completion:)` to check if there is activity with stop event and data not sent to ZCloud. It can be used when `ZTSettings.shared.shouldAutoResendData = false`
+- new method `pushPendingEmbeddedActivities(completion:)` to resend all saved embedded activities which were not sent. It will send stop event and not sent chunk data for it
+
 ## [1.1.34](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.34) (2022-12-05)
 - more logs for raw data mode
 - new method `getLastActivityRawData(completion:)` which can be used to obtain raw data for last activity if raw data was not sent to ZCloud. `isPendingActivity` should be used first to check if raw data was already downloaded from insoles.
