@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.36](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.36) (2023-01-06)
+
+- `ZTCoreKit` version up
+
 ## [1.1.35](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.35) (2022-12-15)
 
 - new method `isPendingEmbeddedActivity(completion:)` to check if there is activity with stop event and data not sent to ZCloud. It can be used when `ZTSettings.shared.shouldAutoResendData = false`
