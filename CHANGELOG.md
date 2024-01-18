@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.41](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.41) (2023-01-18)
+
+- ZTCoreKit framework is not embedded anymore, it is linked as a dependency
+
 ## [1.1.36](https://github.com/zhortech/ztsportkit-ios-sdk.git/-/tags/1.1.36) (2023-01-06)
 
 - `ZTCoreKit` version up
