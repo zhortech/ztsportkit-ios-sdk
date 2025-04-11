@@ -1,11 +1,11 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 
 import PackageDescription
 
 let package = Package(
     name: "ZTSportKit",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15)
     ],
     products: [
         .library(
@@ -17,7 +17,7 @@ let package = Package(
         .package(
             name: "ZTCoreKit", 
             url: "https://github.com/zhortech/ztcorekit-ios-sdk.git",
-            .upToNextMajor(from: "1.2.8")
+            .upToNextMajor(from: "1.5.4")
         )
     ],
     targets: [
@@ -26,7 +26,7 @@ let package = Package(
             dependencies: [
                 .product(
                     name: "ZTCoreKit",
-                    package: "ZTCoreKit"
+                    package: "ztcorekit-ios-sdk"
                 ),
                 .target(
                     name: "ZTSportKit"
