@@ -26,7 +26,7 @@ let package = Package(
             dependencies: [
                 .product(
                     name: "ZTCoreKit",
-                    package: "ztcorekit-ios-sdk"
+                    package: "ZTCoreKit"
                 ),
                 .target(
                     name: "ZTSportKit"
